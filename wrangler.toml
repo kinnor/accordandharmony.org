@@ -1,0 +1,6 @@
+name = "accordandharmony-org"
+compatibility_date = "2025-10-31"
+pages_build_output_dir = "."
+
+[env.production]
+name = "accordandharmony-org"

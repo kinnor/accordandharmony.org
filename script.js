@@ -43,13 +43,37 @@ if (newsletterForm) {
         e.preventDefault();
 
         const emailInput = this.querySelector('input[type="email"]');
+        const csrfInput = this.querySelector('input[name="csrf_token"]');
         const email = emailInput ? emailInput.value.trim() : '';
+        const csrfToken = csrfInput ? csrfInput.value : '';
 
         // Simple validation
         if (email && validateEmail(email)) {
-            // In a real implementation, this would send data to a server
-            showMessage('Thank you for subscribing! You will receive our newsletter soon.', 'success');
-            emailInput.value = '';
+            // Send data to server
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('csrf_token', csrfToken);
+
+            fetch('php/newsletter-handler.php', {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showMessage(data.message, 'success');
+                    emailInput.value = '';
+                } else {
+                    showMessage(data.message, 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showMessage('An error occurred. Please try again later.', 'error');
+            });
         } else {
             showMessage('Please enter a valid email address.', 'error');
         }
@@ -66,17 +90,44 @@ if (contactForm) {
         const emailInput = this.querySelector('#email');
         const subjectInput = this.querySelector('#subject');
         const messageInput = this.querySelector('#message');
+        const csrfInput = this.querySelector('input[name="csrf_token"]');
 
         const name = nameInput ? nameInput.value.trim() : '';
         const email = emailInput ? emailInput.value.trim() : '';
         const subject = subjectInput ? subjectInput.value.trim() : '';
         const message = messageInput ? messageInput.value.trim() : '';
+        const csrfToken = csrfInput ? csrfInput.value : '';
 
         // Validation
         if (name && email && subject && message && validateEmail(email)) {
-            // In a real implementation, this would send data to a server
-            showMessage('Thank you for your message! We will get back to you soon.', 'success');
-            contactForm.reset();
+            // Send data to server
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('subject', subject);
+            formData.append('message', message);
+            formData.append('csrf_token', csrfToken);
+
+            fetch('php/contact-handler.php', {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showMessage(data.message, 'success');
+                    contactForm.reset();
+                } else {
+                    showMessage(data.message, 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showMessage('An error occurred. Please try again later.', 'error');
+            });
         } else {
             showMessage('Please fill in all required fields correctly.', 'error');
         }

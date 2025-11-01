@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for your donation to Accord and Harmony Foundation">
+    <title>Thank You for Your Donation | Accord and Harmony Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .success-container {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+        .success-card {
+            max-width: 700px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease-out;
+        }
+        .success-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+        .donation-amount {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1684C9;
+            margin: 20px 0;
+        }
+        .success-message {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 20px 0 40px;
+            line-height: 1.8;
+        }
+        .next-steps {
+            background: #f0f8ff;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        .next-steps h3 {
+            color: #1684C9;
+            margin-top: 0;
+        }
+        .next-steps ul {
+            list-style: none;
+            padding: 0;
+        }
+        .next-steps li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .next-steps li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .action-buttons {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <main id="main-content" class="success-container">
+        <div class="success-card">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+            </div>
+
+            <h1 style="color: #1684C9; margin-bottom: 10px;">Thank You! 💚</h1>
+
+            <div class="donation-amount" id="donationAmount">€0.00</div>
+
+            <p class="success-message">
+                Your generous donation has been successfully processed through PayPal.
+                You are making a real difference in the lives of families and children across Bulgaria!
+            </p>
+
+            <div class="next-steps">
+                <h3>What Happens Next?</h3>
+                <ul>
+                    <li>You will receive a PayPal receipt at your email address</li>
+                    <li>We'll send you a thank you email from <strong>contact@acchm.org</strong></li>
+                    <li>Your donation will directly support education and community programs</li>
+                    <li>You can track our impact through our newsletter updates</li>
+                </ul>
+            </div>
+
+            <p style="color: #666; font-size: 0.95rem; margin: 30px 0;">
+                <strong>Order ID:</strong> <span id="orderID" style="font-family: monospace; color: #1684C9;">Processing...</span>
+            </p>
+
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-primary">Back to Home</a>
+                <a href="about.html" class="btn btn-secondary">Learn About Our Work</a>
+            </div>
+
+            <p style="margin-top: 40px; color: #999; font-size: 0.9rem;">
+                Questions? Contact us at <a href="mailto:contact@acchm.org" style="color: #1684C9;">contact@acchm.org</a>
+                or call <a href="tel:+359896097069" style="color: #1684C9;">+359 (89) 609 7069</a>
+            </p>
+        </div>
+    </main>
+
+    <script>
+        // Get donation amount and order ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const amount = urlParams.get('amount');
+        const orderID = urlParams.get('order');
+
+        if (amount) {
+            document.getElementById('donationAmount').textContent = '€' + parseFloat(amount).toFixed(2);
+        }
+
+        if (orderID) {
+            document.getElementById('orderID').textContent = orderID;
+        }
+
+        // Confetti animation (optional - simple celebration effect)
+        function celebrate() {
+            const colors = ['#1684C9', '#96CDD4', '#1893DF', '#4caf50'];
+            const confettiCount = 50;
+
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.cssText = `
+                    position: fixed;
+                    width: 10px;
+                    height: 10px;
+                    background-color: ${colors[Math.floor(Math.random() * colors.length)]};
+                    left: ${Math.random() * 100}%;
+                    top: -10px;
+                    opacity: ${Math.random()};
+                    transform: rotate(${Math.random() * 360}deg);
+                    pointer-events: none;
+                    animation: fall ${2 + Math.random() * 3}s linear forwards;
+                    z-index: 9999;
+                `;
+                document.body.appendChild(confetti);
+
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+
+        // Add animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    top: 100vh;
+                    transform: translateY(0) rotate(${Math.random() * 360}deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Trigger celebration on load
+        window.addEventListener('load', () => {
+            setTimeout(celebrate, 500);
+        });
+    </script>
+</body>
+</html>

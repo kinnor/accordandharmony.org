@@ -43,7 +43,7 @@ if (newsletterForm) {
         e.preventDefault();
 
         const emailInput = this.querySelector('input[type="email"]');
-        const email = emailInput.value;
+        const email = emailInput ? emailInput.value.trim() : '';
 
         // Simple validation
         if (email && validateEmail(email)) {
@@ -62,10 +62,15 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const name = this.querySelector('#name').value;
-        const email = this.querySelector('#email').value;
-        const subject = this.querySelector('#subject').value;
-        const message = this.querySelector('#message').value;
+        const nameInput = this.querySelector('#name');
+        const emailInput = this.querySelector('#email');
+        const subjectInput = this.querySelector('#subject');
+        const messageInput = this.querySelector('#message');
+
+        const name = nameInput ? nameInput.value.trim() : '';
+        const email = emailInput ? emailInput.value.trim() : '';
+        const subject = subjectInput ? subjectInput.value.trim() : '';
+        const message = messageInput ? messageInput.value.trim() : '';
 
         // Validation
         if (name && email && subject && message && validateEmail(email)) {
@@ -110,16 +115,19 @@ if (donationForm) {
     donationForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const name = this.querySelector('#donorName').value;
-        const email = this.querySelector('#donorEmail').value;
+        const nameInput = this.querySelector('#donorName');
+        const emailInput = this.querySelector('#donorEmail');
+
+        const name = nameInput ? nameInput.value.trim() : '';
+        const email = emailInput ? emailInput.value.trim() : '';
         let amount = selectedAmount;
 
-        if (customAmountGroup.classList.contains('is-visible')) {
-            amount = customAmountInput.value;
+        if (customAmountGroup && customAmountGroup.classList.contains('is-visible')) {
+            amount = customAmountInput ? customAmountInput.value : null;
         }
 
         // Validation
-        if (name && email && amount && validateEmail(email)) {
+        if (name && email && amount && validateEmail(email) && parseFloat(amount) > 0) {
             // In a real implementation, this would redirect to a payment processor
             showMessage(`Thank you for your generous donation of €${amount}! You will be redirected to our secure payment page.`, 'success');
 
@@ -138,6 +146,35 @@ if (donationForm) {
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
+}
+
+// Add animation style once on page load
+if (!document.getElementById('message-animation-style')) {
+    const style = document.createElement('style');
+    style.id = 'message-animation-style';
+    style.textContent = `
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-20px);
+            }
+        }
+    `;
+    document.head.appendChild(style);
 }
 
 // Show Message Helper
@@ -171,27 +208,11 @@ function showMessage(message, type) {
         text-align: center;
     `;
 
-    // Add animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-
     document.body.appendChild(messageDiv);
 
     // Remove message after 5 seconds
     setTimeout(() => {
-        messageDiv.style.animation = 'slideDown 0.3s ease reverse';
+        messageDiv.style.animation = 'slideUp 0.3s ease';
         setTimeout(() => {
             messageDiv.remove();
         }, 300);
@@ -219,17 +240,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 let lastScroll = 0;
 const header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+if (header) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
 
-    if (currentScroll <= 0) {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
-    }
+        if (currentScroll <= 0) {
+            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+        }
 
-    lastScroll = currentScroll;
-});
+        lastScroll = currentScroll;
+    });
+}
 
 // Fade in elements on scroll
 const observerOptions = {

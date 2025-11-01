@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const donorName = document.getElementById('donorName').value || 'Anonymous';
                     const donorEmail = document.getElementById('donorEmail').value || '';
 
-                    fetch('php/paypal-notify.php', {
+                    fetch('/api/paypal-notify', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'

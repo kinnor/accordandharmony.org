@@ -54,7 +54,7 @@ if (newsletterForm) {
             formData.append('email', email);
             formData.append('csrf_token', csrfToken);
 
-            fetch('php/newsletter-handler.php', {
+            fetch('/api/newsletter', {
                 method: 'POST',
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'
@@ -108,7 +108,7 @@ if (contactForm) {
             formData.append('message', message);
             formData.append('csrf_token', csrfToken);
 
-            fetch('php/contact-handler.php', {
+            fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'

@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
-    if (mobileMenuToggle) {
+    if (mobileMenuToggle && navMenu) {
         mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+            const isOpen = navMenu.classList.toggle('active');
 
             // Animate hamburger menu
             this.classList.toggle('active');
+            this.setAttribute('aria-expanded', String(isOpen));
         });
 
         // Close mobile menu when clicking on a link
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
@@ -28,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
             }
         });
     }
@@ -83,43 +86,23 @@ if (donationForm) {
     const customAmountInput = document.getElementById('customAmount');
     let selectedAmount = null;
 
-    // Add styling for amount buttons
     amountButtons.forEach(button => {
-        button.style.cssText = `
-            padding: 1rem;
-            border: 2px solid #e0e0e0;
-            background: white;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: var(--font-primary);
-        `;
-
         button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            amountButtons.forEach(btn => {
-                btn.style.borderColor = '#e0e0e0';
-                btn.style.background = 'white';
-                btn.style.color = '#333';
-            });
-
-            // Add active class to clicked button
-            this.style.borderColor = 'var(--primary-color)';
-            this.style.background = 'var(--primary-color)';
-            this.style.color = 'white';
+            amountButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
 
             const amount = this.getAttribute('data-amount');
 
             if (amount === 'other') {
-                customAmountGroup.style.display = 'block';
+                customAmountGroup.classList.add('is-visible');
                 selectedAmount = null;
                 customAmountInput.required = true;
+                customAmountInput.focus();
             } else {
-                customAmountGroup.style.display = 'none';
+                customAmountGroup.classList.remove('is-visible');
                 selectedAmount = amount;
                 customAmountInput.required = false;
+                customAmountInput.value = '';
             }
         });
     });
@@ -131,7 +114,7 @@ if (donationForm) {
         const email = this.querySelector('#donorEmail').value;
         let amount = selectedAmount;
 
-        if (customAmountGroup.style.display !== 'none') {
+        if (customAmountGroup.classList.contains('is-visible')) {
             amount = customAmountInput.value;
         }
 

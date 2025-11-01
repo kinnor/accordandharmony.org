@@ -1,0 +1,31 @@
+# Cloudflare Pages Configuration
+# For Accord and Harmony Foundation Website
+
+[build]
+# No build command needed for static site
+command = ""
+# Root directory for static files
+publish = "."
+
+# Files to exclude from deployment
+[build.processing]
+skip = [
+  "php/**",
+  "workers/**",
+  "*.md",
+  ".git/**",
+  "README.md",
+  "CLAUDE.md",
+  "DEPLOYMENT_GUIDE.md",
+  "PAYPAL_SETUP.md",
+  "TEST_REPORT.md"
+]
+
+# Environment variables (set these in Cloudflare dashboard)
+# Required for Workers:
+# - TO_EMAIL
+# - FROM_EMAIL
+# - SITE_NAME
+# - REPLY_TO_EMAIL
+# - RESEND_API_KEY (or MAILGUN_API_KEY + MAILGUN_DOMAIN)
+# - FROM_NAME

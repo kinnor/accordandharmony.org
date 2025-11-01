@@ -38,6 +38,23 @@ body {
     overflow-x: hidden;
 }
 
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 10px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    z-index: 2000;
+    transition: var(--transition);
+}
+
+.skip-link:focus {
+    left: 10px;
+    outline: none;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -58,6 +75,28 @@ a {
 
 ul {
     list-style: none;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.05rem;
+}
+
+.text-muted {
+    color: var(--text-light);
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.card-link:hover {
+    color: var(--secondary-color);
 }
 
 /* ============================================
@@ -233,6 +272,11 @@ ul {
     transition: var(--transition);
     border: 2px solid transparent;
     cursor: pointer;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 1.1rem 2rem;
 }
 
 .btn-primary {
@@ -614,6 +658,108 @@ ul {
     margin-bottom: 0.3rem;
 }
 
+.contact-form-title {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.contact-info-cta {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.contact-info-cta p {
+    margin-bottom: 1rem;
+}
+
+.section-alt {
+    background: var(--light-color);
+}
+
+.form-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group-label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.donation-amount-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.donate-amount-btn {
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    background: var(--white);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.donate-amount-btn:hover,
+.donate-amount-btn:focus {
+    border-color: var(--primary-color);
+}
+
+.donate-amount-btn.active {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 10px 25px rgba(44, 95, 141, 0.2);
+}
+
+.custom-amount-group {
+    display: none;
+}
+
+.custom-amount-group.is-visible {
+    display: block;
+}
+
+.checkbox-group {
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: auto;
+}
+
+.form-note {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.bank-transfer-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 3rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+}
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -695,6 +841,40 @@ ul {
 .gallery-caption p {
     color: var(--text-light);
     font-size: 0.95rem;
+}
+
+.location-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 15px;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--white);
+    margin-top: 2rem;
+}
+
+.location-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    opacity: 0.9;
+}
+
+.location-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.location-description {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.location-address {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 /* Donate Page */

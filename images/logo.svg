@@ -1,0 +1,75 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="skyBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B76A8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2E9DD8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5BB4E3;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="bronzeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B5B4E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B7355;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B87333;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Circle (subtle) -->
+  <circle cx="50" cy="60" r="45" fill="url(#skyBlueGradient)" opacity="0.15"/>
+
+  <!-- Stylized Musical Note 1 - Large -->
+  <g filter="url(#glow)">
+    <!-- Note head (organic shape) -->
+    <ellipse cx="35" cy="70" rx="12" ry="10" fill="url(#bronzeGradient)" transform="rotate(-20 35 70)"/>
+
+    <!-- Note stem -->
+    <rect x="45" y="35" width="4" height="36" rx="2" fill="url(#bronzeGradient)" transform="rotate(8 47 53)"/>
+
+    <!-- Musical wave/flag at top -->
+    <path d="M 47 36 Q 58 30, 60 38 Q 58 45, 52 43 Q 49 41, 47 36 Z" fill="url(#bronzeGradient)" opacity="0.9"/>
+  </g>
+
+  <!-- Stylized Musical Note 2 - Medium -->
+  <g filter="url(#glow)">
+    <!-- Note head -->
+    <ellipse cx="62" cy="75" rx="10" ry="8" fill="url(#bronzeGradient)" transform="rotate(-15 62 75)"/>
+
+    <!-- Note stem -->
+    <rect x="70" y="44" width="3.5" height="32" rx="1.5" fill="url(#bronzeGradient)" transform="rotate(10 71.75 60)"/>
+
+    <!-- Flag -->
+    <path d="M 72 44 Q 80 40, 82 46 Q 80 51, 76 49 Q 73 47, 72 44 Z" fill="url(#bronzeGradient)" opacity="0.9"/>
+  </g>
+
+  <!-- Abstract flowing lines (representing harmony) -->
+  <g opacity="0.4">
+    <path d="M 15 60 Q 35 50, 55 60 T 95 60" stroke="url(#skyBlueGradient)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 20 68 Q 40 58, 60 68 T 100 68" stroke="url(#skyBlueGradient)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Text: ACCORD & HARMONY -->
+  <text x="110" y="48" font-family="'Poppins', sans-serif" font-size="22" font-weight="800" fill="#2C1810" letter-spacing="-0.5">
+    ACCORD &amp; HARMONY
+  </text>
+
+  <!-- Text: FOUNDATION -->
+  <text x="110" y="72" font-family="'Poppins', sans-serif" font-size="13" font-weight="600" fill="url(#bronzeGradient)" letter-spacing="3">
+    FOUNDATION
+  </text>
+
+  <!-- Tagline -->
+  <text x="110" y="88" font-family="'Playfair Display', serif" font-size="10" font-weight="400" fill="#6B5B4E" font-style="italic" opacity="0.8">
+    Supporting Music Education in Bulgaria
+  </text>
+
+  <!-- Decorative accent line -->
+  <line x1="110" y1="79" x2="240" y2="79" stroke="url(#skyBlueGradient)" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+</svg>

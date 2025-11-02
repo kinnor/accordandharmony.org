@@ -71,27 +71,33 @@
                 </p>
 
                 <div class="mission-grid">
-                    <div class="mission-card">
+                    <div class="mission-card donation-tier-card" data-amount="50" data-impact="school-supplies" style="cursor: pointer;">
                         <div class="mission-icon">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20M4 19.5C4 20.163 4.26339 20.7989 4.73223 21.2678C5.20107 21.7366 5.83696 22 6.5 22H20V2H6.5C5.83696 2 5.20107 2.26339 4.73223 2.73223C4.26339 3.20107 4 3.83696 4 4.5V19.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
                         <h3>€50</h3>
-                        <p><strong>School Supplies</strong><br>Provides books, notebooks, and learning materials for 5 students for one semester.</p>
+                        <p><strong>School Supplies for 3 Students</strong><br>Backpacks, notebooks, pens, textbooks and art supplies for one semester</p>
+                        <div style="margin-top: 15px; padding: 10px; background: rgba(46, 157, 216, 0.1); border-radius: 8px; font-size: 14px;">
+                            <strong style="color: #1B76A8;">Click to donate →</strong>
+                        </div>
                     </div>
 
-                    <div class="mission-card">
+                    <div class="mission-card donation-tier-card" data-amount="100" data-impact="food-package" style="cursor: pointer;">
                         <div class="mission-icon">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17 9V7C17 5.67392 16.4732 4.40215 15.5355 3.46447C14.5979 2.52678 13.3261 2 12 2C10.6739 2 9.40215 2.52678 8.46447 3.46447C7.52678 4.40215 7 5.67392 7 7V9M5 9H19L20 21H4L5 9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
                         <h3>€100</h3>
-                        <p><strong>Family Food Support</strong><br>Provides essential groceries and nutrition for a family of four for one month.</p>
+                        <p><strong>Monthly Food Package for a Family</strong><br>Essential groceries, fresh produce, bread, milk, and staple foods for 4 people</p>
+                        <div style="margin-top: 15px; padding: 10px; background: rgba(107, 91, 78, 0.1); border-radius: 8px; font-size: 14px;">
+                            <strong style="color: #6B5B4E;">Click to donate →</strong>
+                        </div>
                     </div>
 
-                    <div class="mission-card">
+                    <div class="mission-card donation-tier-card" data-amount="250" data-impact="tutoring" style="cursor: pointer;">
                         <div class="mission-icon">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 14L11.4142 14.5858C11.7893 14.9609 12.2107 14.9609 12.5858 14.5858L12 14ZM6 8L6.58579 7.41421C6.21071 7.03914 5.58579 7.03914 5.17157 7.41421L6 8ZM10 12L9.41421 12.5858L10 13.1716L10.5858 12.5858L10 12ZM13.4142 11.4142L11.4142 13.4142L12.5858 14.5858L14.5858 12.5858L13.4142 11.4142ZM5.17157 8.58579L9.41421 12.5858L10.5858 11.4142L6.34314 7.41421L5.17157 8.58579ZM10.5858 12.5858L12.5858 14.5858L13.4142 13.4142L11.4142 11.4142L10.5858 12.5858ZM18 7L17.41 7.59L18 8.17L18.59 7.59L18 7Z" fill="currentColor"/>
@@ -99,7 +105,10 @@
                             </svg>
                         </div>
                         <h3>€250</h3>
-                        <p><strong>Educational Scholarship</strong><br>Supports one student's education, including tuition and materials, for a full academic year.</p>
+                        <p><strong>3 Months of After-School Tutoring</strong><br>Professional tutoring sessions for 5 students in mathematics, Bulgarian language, and sciences</p>
+                        <div style="margin-top: 15px; padding: 10px; background: rgba(255, 215, 0, 0.15); border-radius: 8px; font-size: 14px;">
+                            <strong style="color: #B87333;">Click to donate →</strong>
+                        </div>
                     </div>
                 </div>
         </div>
@@ -217,6 +226,62 @@
             </div>
         </section>
 
+        <!-- Donation Modal -->
+        <div id="donationModal" class="donation-modal" style="display: none;">
+            <div class="donation-modal-overlay"></div>
+            <div class="donation-modal-content">
+                <button class="donation-modal-close" aria-label="Close">&times;</button>
+
+                <div class="donation-modal-body">
+                    <!-- Impact Visualization -->
+                    <div class="donation-impact-visual">
+                        <img id="modalImpactImage" src="" alt="Donation Impact" style="width: 100%; max-width: 500px; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+                    </div>
+
+                    <!-- Donation Form -->
+                    <div class="donation-modal-form">
+                        <h2 id="modalTitle" style="margin-bottom: 1rem; color: #2C1810;"></h2>
+                        <p id="modalDescription" style="margin-bottom: 2rem; color: #696969; line-height: 1.6;"></p>
+
+                        <form id="modalDonationForm">
+                            <div class="form-group">
+                                <label for="modalDonorName">Your Name (Optional)</label>
+                                <input type="text" id="modalDonorName" name="donorName" placeholder="John Doe">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="modalDonorEmail">Email Address (Optional)</label>
+                                <input type="email" id="modalDonorEmail" name="donorEmail" placeholder="john@example.com">
+                                <small style="color: #666; display: block; margin-top: 5px;">We'll send you a thank-you email and receipt</small>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="modalRecurring" name="recurring">
+                                    <span><strong>Make this a monthly donation</strong> - Help us plan for sustainable impact</span>
+                                </label>
+                            </div>
+
+                            <div id="modal-paypal-button-container" style="margin: 30px 0;"></div>
+
+                            <p class="form-note">
+                                <svg width="16" height="16" style="vertical-align: middle; margin-right: 5px;" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                                    <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                </svg>
+                                Secure donation powered by PayPal
+                            </p>
+
+                            <div style="margin-top: 20px; padding: 15px; background: #f0f8ff; border-left: 3px solid #1B76A8; border-radius: 5px; font-size: 14px;">
+                                <strong>📧 Bank Transfer Alternative</strong><br>
+                                <span style="color: #666;">Prefer bank transfer? Email us at <a href="mailto:contact@acchm.org" style="color: #1B76A8;">contact@acchm.org</a> for details.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -261,5 +326,6 @@
     <script src="language-switcher.js"></script>
     <script src="script.js"></script>
     <script src="paypal-donate.js"></script>
+    <script src="donation-modal.js"></script>
 </body>
 </html>

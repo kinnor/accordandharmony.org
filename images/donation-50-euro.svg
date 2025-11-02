@@ -1,0 +1,57 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg50" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5BB4E3;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#2E9DD8;stop-opacity:0.15" />
+    </linearGradient>
+    <linearGradient id="bronze50" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B5B4E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B87333;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg50)"/>
+
+  <!-- School supplies illustration -->
+  <!-- Backpack -->
+  <path d="M 150 80 L 150 60 Q 150 50, 160 50 L 190 50 Q 200 50, 200 60 L 200 80 Z" fill="#2E9DD8" opacity="0.3"/>
+  <rect x="140" y="80" width="70" height="100" rx="8" fill="#2E9DD8"/>
+  <rect x="145" y="85" width="60" height="90" rx="6" fill="#5BB4E3"/>
+  <circle cx="160" cy="95" r="3" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="190" cy="95" r="3" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="170" y="110" width="10" height="40" rx="5" fill="#1B76A8"/>
+
+  <!-- Books stack -->
+  <rect x="220" y="150" width="60" height="10" rx="2" fill="url(#bronze50)"/>
+  <rect x="225" y="140" width="55" height="10" rx="2" fill="#6B5B4E"/>
+  <rect x="230" y="130" width="50" height="10" rx="2" fill="#8B7355"/>
+
+  <!-- Pencils -->
+  <g transform="translate(240, 90)">
+    <rect x="0" y="0" width="6" height="35" rx="3" fill="#FFD700"/>
+    <polygon points="3,35 0,40 6,40" fill="#6B5B4E"/>
+    <rect x="10" y="0" width="6" height="35" rx="3" fill="#2E9DD8"/>
+    <polygon points="13,35 10,40 16,40" fill="#1B76A8"/>
+    <rect x="20" y="0" width="6" height="35" rx="3" fill="#B87333"/>
+    <polygon points="23,35 20,40 26,40" fill="#6B5B4E"/>
+  </g>
+
+  <!-- Notebook -->
+  <rect x="120" y="190" width="50" height="60" rx="3" fill="#FFFFFF" stroke="#2E9DD8" stroke-width="2"/>
+  <line x1="135" y1="190" x2="135" y2="250" stroke="#2E9DD8" stroke-width="2"/>
+  <line x1="125" y1="200" x2="165" y2="200" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="125" y1="210" x2="165" y2="210" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="125" y1="220" x2="165" y2="220" stroke="#E0E0E0" stroke-width="1"/>
+
+  <!-- Text -->
+  <text x="200" y="240" font-family="'Poppins', sans-serif" font-size="24" font-weight="700" fill="#2C1810" text-anchor="middle">
+    €50 Donation
+  </text>
+  <text x="200" y="268" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#6B5B4E" text-anchor="middle">
+    School Supplies for 3 Students
+  </text>
+  <text x="200" y="286" font-family="'Inter', sans-serif" font-size="12" font-weight="400" fill="#696969" text-anchor="middle">
+    Backpacks, notebooks, pens & textbooks
+  </text>
+</svg>

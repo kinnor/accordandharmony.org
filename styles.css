@@ -10,6 +10,12 @@
 :root {
     /* Artistic Color Palette - Inspired by Chagall, Picasso, Dalí */
 
+    /* Logo Integration Colors */
+    --logo-sky-blue: #2E9DD8;
+    --logo-bronze: #6B5B4E;
+    --logo-deep-blue: #1B76A8;
+    --logo-light-blue: #5BB4E3;
+
     /* Chagall Dream Blues */
     --chagall-blue: #3B5998;
     --chagall-sky: #87CEEB;
@@ -64,18 +70,20 @@
     --info-color: var(--chagall-blue);
 
     /* Artistic Gradients - Dreamlike & Flowing */
+    --gradient-logo: linear-gradient(135deg, var(--logo-deep-blue) 0%, var(--logo-sky-blue) 50%, var(--logo-light-blue) 100%);
     --gradient-chagall: linear-gradient(135deg, #3B5998 0%, #87CEEB 50%, #B794F6 100%);
     --gradient-picasso: linear-gradient(45deg, #D4A574 0%, #C7522A 50%, #808000 100%);
     --gradient-dali: radial-gradient(ellipse at top, #FFD700 0%, #CD7F32 50%, #B87333 100%);
+    --gradient-bronze: linear-gradient(135deg, var(--logo-bronze) 0%, var(--dali-bronze) 50%, var(--dali-copper) 100%);
     --gradient-sunrise: linear-gradient(180deg, #FF7F50 0%, #FFD700 50%, #87CEEB 100%);
     --gradient-dream: linear-gradient(135deg, #8B00FF 0%, #40E0D0 50%, #50C878 100%);
     --gradient-canvas: linear-gradient(to bottom, #FFFEF0 0%, #F0EAD6 100%);
 
     /* Flowing Organic Gradients */
-    --gradient-primary: var(--gradient-chagall);
-    --gradient-secondary: var(--gradient-dali);
+    --gradient-primary: var(--gradient-logo);
+    --gradient-secondary: var(--gradient-bronze);
     --gradient-accent: var(--gradient-sunrise);
-    --gradient-hero: linear-gradient(135deg, rgba(59, 89, 152, 0.95) 0%, rgba(135, 206, 235, 0.8) 50%, rgba(183, 148, 246, 0.9) 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(27, 118, 168, 0.95) 0%, rgba(46, 157, 216, 0.85) 50%, rgba(91, 180, 227, 0.9) 100%);
     --gradient-overlay: linear-gradient(to bottom, rgba(44, 24, 16, 0) 0%, rgba(44, 24, 16, 0.7) 100%);
 
     /* Premium Typography */
@@ -164,9 +172,9 @@ body::before {
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(circle at 10% 20%, rgba(135, 206, 235, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(183, 148, 246, 0.08) 0%, transparent 70%);
+        radial-gradient(circle at 10% 20%, rgba(46, 157, 216, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(107, 91, 78, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(91, 180, 227, 0.06) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
 }
@@ -427,7 +435,7 @@ ul {
    Hero Section - Artistic & Dreamlike
    ============================================ */
 .hero {
-    background: var(--gradient-chagall);
+    background: var(--gradient-logo);
     position: relative;
     overflow: hidden;
     padding: var(--space-16) 0;
@@ -436,7 +444,7 @@ ul {
     align-items: center;
 }
 
-/* Floating Abstract Shapes - Chagall Style */
+/* Floating Abstract Shapes - Logo-Inspired Musical Notes */
 .hero::before {
     content: '';
     position: absolute;
@@ -444,7 +452,7 @@ ul {
     left: -10%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(ellipse, rgba(255, 215, 0, 0.3) 0%, rgba(255, 127, 80, 0.2) 50%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(107, 91, 78, 0.3) 0%, rgba(205, 127, 50, 0.2) 50%, transparent 70%);
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     animation: floatDream 20s ease-in-out infinite;
     z-index: 0;
@@ -457,7 +465,7 @@ ul {
     right: -8%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(183, 148, 246, 0.25) 0%, rgba(64, 224, 208, 0.15) 50%, transparent 70%);
+    background: radial-gradient(circle, rgba(91, 180, 227, 0.25) 0%, rgba(46, 157, 216, 0.15) 50%, transparent 70%);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     animation: floatDream 25s ease-in-out infinite reverse;
     z-index: 0;
@@ -471,7 +479,7 @@ ul {
     right: 10%;
     width: 300px;
     height: 300px;
-    background: linear-gradient(45deg, rgba(220, 20, 60, 0.2) 0%, rgba(255, 127, 80, 0.15) 100%);
+    background: linear-gradient(45deg, rgba(107, 91, 78, 0.25) 0%, rgba(205, 127, 50, 0.18) 100%);
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     animation: floatSlow 15s ease-in-out infinite;
     z-index: 0;
@@ -484,7 +492,7 @@ ul {
     left: 8%;
     width: 250px;
     height: 250px;
-    background: radial-gradient(ellipse, rgba(80, 200, 120, 0.2) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(46, 157, 216, 0.2) 0%, transparent 70%);
     border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
     animation: floatGentle 18s ease-in-out infinite;
     z-index: 0;
@@ -727,18 +735,18 @@ ul {
 
 .section-tag {
     display: inline-block;
-    color: var(--dali-gold);
+    color: var(--logo-bronze);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: var(--font-size-xs);
     margin-bottom: var(--space-3);
     padding: var(--space-2) var(--space-4);
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(205, 127, 50, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(107, 91, 78, 0.2) 0%, rgba(205, 127, 50, 0.15) 100%);
     border-radius: var(--radius-full);
-    border: 2px solid rgba(255, 215, 0, 0.3);
+    border: 2px solid rgba(107, 91, 78, 0.3);
     box-shadow:
-        0 4px 15px rgba(255, 215, 0, 0.2),
+        0 4px 15px rgba(107, 91, 78, 0.2),
         inset 0 1px 3px rgba(255, 255, 255, 0.3);
     animation: tagPulse 4s ease-in-out infinite;
 }
@@ -747,13 +755,13 @@ ul {
     0%, 100% {
         transform: scale(1);
         box-shadow:
-            0 4px 15px rgba(255, 215, 0, 0.2),
+            0 4px 15px rgba(107, 91, 78, 0.2),
             inset 0 1px 3px rgba(255, 255, 255, 0.3);
     }
     50% {
         transform: scale(1.05);
         box-shadow:
-            0 6px 20px rgba(255, 215, 0, 0.3),
+            0 6px 20px rgba(107, 91, 78, 0.3),
             inset 0 1px 3px rgba(255, 255, 255, 0.5);
     }
 }
@@ -767,8 +775,8 @@ ul {
     letter-spacing: -0.03em;
     line-height: 1.15;
     text-shadow:
-        2px 2px 0px rgba(59, 89, 152, 0.15),
-        4px 4px 0px rgba(255, 215, 0, 0.1);
+        2px 2px 0px rgba(46, 157, 216, 0.15),
+        4px 4px 0px rgba(107, 91, 78, 0.1);
     position: relative;
 }
 
@@ -780,7 +788,7 @@ ul {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: var(--gradient-dali);
+    background: var(--gradient-bronze);
     border-radius: var(--radius-full);
 }
 
@@ -881,7 +889,7 @@ ul {
     left: -3px;
     right: -3px;
     bottom: -3px;
-    background: var(--gradient-chagall);
+    background: var(--gradient-logo);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     z-index: -1;
     opacity: 0;
@@ -920,7 +928,7 @@ ul {
     border-radius: 25% 75% 75% 25% / 25% 25% 75% 75%;
     box-shadow:
         var(--shadow-2xl),
-        0 0 30px rgba(59, 89, 152, 0.3),
+        0 0 30px rgba(46, 157, 216, 0.3),
         inset 0 1px 5px rgba(255, 255, 255, 0.7);
 }
 
@@ -928,14 +936,14 @@ ul {
     width: 90px;
     height: 90px;
     margin: 0 auto var(--space-4);
-    background: var(--gradient-dali);
+    background: var(--gradient-bronze);
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
     box-shadow:
-        0 8px 25px rgba(255, 215, 0, 0.4),
+        0 8px 25px rgba(107, 91, 78, 0.4),
         inset -3px -3px 10px rgba(0, 0, 0, 0.2),
         inset 3px 3px 10px rgba(255, 255, 255, 0.3);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -954,7 +962,7 @@ ul {
 .mission-card:hover .mission-icon {
     transform: scale(1.1) rotate(-5deg);
     box-shadow:
-        0 12px 35px rgba(255, 215, 0, 0.5),
+        0 12px 35px rgba(107, 91, 78, 0.5),
         inset -3px -3px 10px rgba(0, 0, 0, 0.3),
         inset 3px 3px 10px rgba(255, 255, 255, 0.5);
 }
@@ -979,11 +987,11 @@ ul {
 }
 
 /* ============================================
-   Newsletter / CTA Section - Surrealist Design
+   Newsletter / CTA Section - Logo-Inspired Design
    ============================================ */
 .newsletter {
     padding: var(--space-16) 0;
-    background: var(--gradient-sunrise);
+    background: linear-gradient(135deg, var(--logo-sky-blue) 0%, var(--logo-light-blue) 50%, var(--logo-deep-blue) 100%);
     color: var(--white);
     position: relative;
     overflow: hidden;
@@ -996,7 +1004,7 @@ ul {
     left: -15%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(ellipse, rgba(139, 0, 255, 0.3) 0%, rgba(64, 224, 208, 0.2) 50%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(107, 91, 78, 0.25) 0%, rgba(205, 127, 50, 0.15) 50%, transparent 70%);
     border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
     animation: floatDream 22s ease-in-out infinite;
     z-index: 0;
@@ -1009,7 +1017,7 @@ ul {
     right: -10%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, rgba(255, 127, 80, 0.15) 50%, transparent 70%);
+    background: radial-gradient(circle, rgba(91, 180, 227, 0.25) 0%, rgba(46, 157, 216, 0.15) 50%, transparent 70%);
     border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
     animation: floatDream 28s ease-in-out infinite reverse;
     z-index: 0;
@@ -1158,7 +1166,7 @@ ul {
 
 /* About Page */
 .about-hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #1a3f5f 100%);
+    background: var(--gradient-logo);
     color: var(--white);
     padding: 100px 0 80px;
     text-align: center;

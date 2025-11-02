@@ -62,11 +62,11 @@
         <section class="about-content">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Your Impact</span>
-                    <h2>How Your Donation Helps</h2>
+                    <span class="section-tag" data-i18n="donate.impact.tag">Your Impact</span>
+                    <h2 data-i18n="donate.impact.heading">How Your Donation Helps</h2>
                 </div>
 
-                <p class="section-intro text-muted">
+                <p class="section-intro text-muted" data-i18n="donate.impact.intro">
                     Every contribution, no matter the size, makes a real difference in the lives of those we serve. Your support helps us provide educational opportunities, essential resources, and hope to families across Bulgaria.
                 </p>
 
@@ -78,9 +78,9 @@
                             </svg>
                         </div>
                         <h3>€50</h3>
-                        <p><strong>School Supplies for 3 Students</strong><br>Backpacks, notebooks, pens, textbooks and art supplies for one semester</p>
+                        <p><strong data-i18n="donate.tier1.title">School Supplies for 3 Students</strong><br><span data-i18n="donate.tier1.description">Backpacks, notebooks, pens, textbooks and art supplies for one semester</span></p>
                         <div style="margin-top: 15px; padding: 10px; background: rgba(46, 157, 216, 0.1); border-radius: 8px; font-size: 14px;">
-                            <strong style="color: #1B76A8;">Click to donate →</strong>
+                            <strong style="color: #1B76A8;" data-i18n="donate.tier.cta">Click to donate →</strong>
                         </div>
                     </div>
 
@@ -91,9 +91,9 @@
                             </svg>
                         </div>
                         <h3>€100</h3>
-                        <p><strong>Monthly Food Package for a Family</strong><br>Essential groceries, fresh produce, bread, milk, and staple foods for 4 people</p>
+                        <p><strong data-i18n="donate.tier2.title">Monthly Food Package for a Family</strong><br><span data-i18n="donate.tier2.description">Essential groceries, fresh produce, bread, milk, and staple foods for 4 people</span></p>
                         <div style="margin-top: 15px; padding: 10px; background: rgba(107, 91, 78, 0.1); border-radius: 8px; font-size: 14px;">
-                            <strong style="color: #6B5B4E;">Click to donate →</strong>
+                            <strong style="color: #6B5B4E;" data-i18n="donate.tier.cta">Click to donate →</strong>
                         </div>
                     </div>
 
@@ -105,9 +105,9 @@
                             </svg>
                         </div>
                         <h3>€250</h3>
-                        <p><strong>3 Months of After-School Tutoring</strong><br>Professional tutoring sessions for 5 students in mathematics, Bulgarian language, and sciences</p>
+                        <p><strong data-i18n="donate.tier3.title">3 Months of After-School Tutoring</strong><br><span data-i18n="donate.tier3.description">Professional tutoring sessions for 5 students in mathematics, Bulgarian language, and sciences</span></p>
                         <div style="margin-top: 15px; padding: 10px; background: rgba(255, 215, 0, 0.15); border-radius: 8px; font-size: 14px;">
-                            <strong style="color: #B87333;">Click to donate →</strong>
+                            <strong style="color: #B87333;" data-i18n="donate.tier.cta">Click to donate →</strong>
                         </div>
                     </div>
                 </div>
@@ -118,45 +118,45 @@
         <section class="contact-section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Support Our Mission</span>
-                    <h2>Choose Your Contribution</h2>
+                    <span class="section-tag" data-i18n="donate.form.tag">Support Our Mission</span>
+                    <h2 data-i18n="donate.form.heading">Choose Your Contribution</h2>
                 </div>
 
                 <div class="form-wrapper">
                     <div class="contact-form-wrapper">
                         <form id="donationForm">
                             <div class="form-group">
-                                <label class="form-group-label">Select Donation Amount</label>
+                                <label class="form-group-label" data-i18n="donate.form.selectAmount">Select Donation Amount</label>
                                 <div class="donation-amount-grid">
                                     <button type="button" class="donate-amount-btn" data-amount="10">€10</button>
                                     <button type="button" class="donate-amount-btn" data-amount="25">€25</button>
                                     <button type="button" class="donate-amount-btn" data-amount="50">€50</button>
                                     <button type="button" class="donate-amount-btn" data-amount="100">€100</button>
                                     <button type="button" class="donate-amount-btn" data-amount="250">€250</button>
-                                    <button type="button" class="donate-amount-btn" data-amount="other">Other</button>
+                                    <button type="button" class="donate-amount-btn" data-amount="other" data-i18n="donate.form.other">Other</button>
                                 </div>
                             </div>
 
                             <div class="form-group custom-amount-group" id="customAmountGroup">
-                                <label for="customAmount">Custom Amount (€)</label>
-                                <input type="number" id="customAmount" name="customAmount" min="1" step="1" placeholder="Enter amount">
+                                <label for="customAmount" data-i18n="donate.form.customAmount">Custom Amount (€)</label>
+                                <input type="number" id="customAmount" name="customAmount" min="1" step="1" data-i18n-placeholder="donate.form.enterAmount" placeholder="Enter amount">
                             </div>
 
                             <div class="form-group">
-                                <label for="donorName">Full Name (Optional)</label>
-                                <input type="text" id="donorName" name="donorName" placeholder="Your name">
+                                <label for="donorName" data-i18n="donate.form.name">Full Name (Optional)</label>
+                                <input type="text" id="donorName" name="donorName" data-i18n-placeholder="donate.form.namePlaceholder" placeholder="Your name">
                             </div>
 
                             <div class="form-group">
-                                <label for="donorEmail">Email Address (Optional)</label>
-                                <input type="email" id="donorEmail" name="donorEmail" placeholder="your@email.com">
-                                <small style="color: #666; display: block; margin-top: 5px;">We'll send you a thank you email and receipt</small>
+                                <label for="donorEmail" data-i18n="donate.form.email">Email Address (Optional)</label>
+                                <input type="email" id="donorEmail" name="donorEmail" data-i18n-placeholder="donate.form.emailPlaceholder" placeholder="your@email.com">
+                                <small style="color: #666; display: block; margin-top: 5px;" data-i18n="donate.form.emailNote">We'll send you a thank you email and receipt</small>
                             </div>
 
                             <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="recurring" name="recurring">
-                                    <span><strong>Make this a monthly donation</strong> - Recurring support helps us plan for the future</span>
+                                    <span><strong data-i18n="donate.form.recurringTitle">Make this a monthly donation</strong> - <span data-i18n="donate.form.recurringNote">Recurring support helps us plan for the future</span></span>
                                 </label>
                             </div>
 
@@ -168,25 +168,25 @@
                                     <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
                                     <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                                 </svg>
-                                Secure donation powered by PayPal. Your payment information is encrypted and never stored on our servers.
+                                <span data-i18n="donate.form.secureNote">Secure donation powered by PayPal. Your payment information is encrypted and never stored on our servers.</span>
                             </p>
 
                             <p class="form-note" style="margin-top: 15px; padding: 15px; background: #f0f8ff; border-left: 3px solid #1684C9; border-radius: 5px;">
-                                <strong>💡 Why PayPal?</strong> PayPal is a trusted, secure payment platform used worldwide. You don't need a PayPal account - you can donate with any credit or debit card.
+                                <strong data-i18n="donate.form.whyPaypalTitle">💡 Why PayPal?</strong> <span data-i18n="donate.form.whyPaypalText">PayPal is a trusted, secure payment platform used worldwide. You don't need a PayPal account - you can donate with any credit or debit card.</span>
                             </p>
                         </form>
 
                         <!-- Alternative Payment Methods -->
                         <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #e0e0e0;">
-                            <h3 style="margin-bottom: 20px; color: #1684C9;">Or Donate via Bank Transfer</h3>
+                            <h3 style="margin-bottom: 20px; color: #1684C9;" data-i18n="donate.bank.heading">Or Donate via Bank Transfer</h3>
                             <div style="background: #f9f9f9; padding: 20px; border-radius: 8px;">
-                                <p><strong>Bank Name:</strong> First Investment Bank (Fibank)</p>
-                                <p><strong>Account Name:</strong> Accord and Harmony Foundation</p>
+                                <p><strong data-i18n="donate.bank.bankName">Bank Name:</strong> First Investment Bank (Fibank)</p>
+                                <p><strong data-i18n="donate.bank.accountName">Account Name:</strong> Accord and Harmony Foundation</p>
                                 <p><strong>IBAN:</strong> BG12FINV91502017697589</p>
                                 <p><strong>BIC/SWIFT:</strong> FINVBGSF</p>
-                                <p><strong>Currency:</strong> EUR (Euro)</p>
-                                <p><strong>Reference:</strong> Donation - [Your Name]</p>
-                                <p style="margin-top: 15px; font-size: 14px; color: #666;">
+                                <p><strong data-i18n="donate.bank.currency">Currency:</strong> EUR (Euro)</p>
+                                <p><strong data-i18n="donate.bank.reference">Reference:</strong> <span data-i18n="donate.bank.referenceText">Donation - [Your Name]</span></p>
+                                <p style="margin-top: 15px; font-size: 14px; color: #666;" data-i18n="donate.bank.note">
                                     Please email us at <a href="mailto:contact@acchm.org">contact@acchm.org</a> after making a bank transfer so we can send you a receipt.
                                 </p>
                             </div>
@@ -200,27 +200,27 @@
         <section class="about-content">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">More Ways to Support</span>
-                    <h2>Other Ways to Help</h2>
+                    <span class="section-tag" data-i18n="donate.otherWays.tag">More Ways to Support</span>
+                    <h2 data-i18n="donate.otherWays.heading">Other Ways to Help</h2>
                 </div>
 
                 <div class="about-grid">
                     <div class="about-card">
-                        <h3>Volunteer Your Time</h3>
-                        <p>Join our team of dedicated volunteers and make a hands-on difference in your community. We welcome people from all backgrounds and skill levels.</p>
-                        <a href="contact.html" class="card-link">Learn More →</a>
+                        <h3 data-i18n="donate.otherWays.volunteer.title">Volunteer Your Time</h3>
+                        <p data-i18n="donate.otherWays.volunteer.text">Join our team of dedicated volunteers and make a hands-on difference in your community. We welcome people from all backgrounds and skill levels.</p>
+                        <a href="contact.html" class="card-link" data-i18n="donate.otherWays.volunteer.link">Learn More →</a>
                     </div>
 
                     <div class="about-card">
-                        <h3>Corporate Partnership</h3>
-                        <p>Partner with us through corporate sponsorships, employee giving programs, or in-kind donations to amplify your company's social impact.</p>
-                        <a href="contact.html" class="card-link">Get in Touch →</a>
+                        <h3 data-i18n="donate.otherWays.corporate.title">Corporate Partnership</h3>
+                        <p data-i18n="donate.otherWays.corporate.text">Partner with us through corporate sponsorships, employee giving programs, or in-kind donations to amplify your company's social impact.</p>
+                        <a href="contact.html" class="card-link" data-i18n="donate.otherWays.corporate.link">Get in Touch →</a>
                     </div>
 
                     <div class="about-card">
-                        <h3>Spread the Word</h3>
-                        <p>Help us reach more people by sharing our mission with your friends, family, and social networks. Awareness creates action.</p>
-                        <a href="about.html" class="card-link">Share Our Story →</a>
+                        <h3 data-i18n="donate.otherWays.share.title">Spread the Word</h3>
+                        <p data-i18n="donate.otherWays.share.text">Help us reach more people by sharing our mission with your friends, family, and social networks. Awareness creates action.</p>
+                        <a href="about.html" class="card-link" data-i18n="donate.otherWays.share.link">Share Our Story →</a>
                     </div>
                 </div>
             </div>
@@ -236,9 +236,9 @@
                     <!-- Impact Visualization - Left Side -->
                     <div class="donation-impact-visual">
                         <h2 id="modalTitle" style="margin-bottom: 1rem; color: #2C1810; font-size: 1.5rem;"></h2>
-                        <img id="modalImpactImage" src="" alt="Donation Impact" style="width: 100%; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+                        <img id="modalImpactImage" src="" data-i18n-alt="donate.modal.impactImageAlt" alt="Donation Impact" style="width: 100%; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); margin-bottom: 1rem;">
                         <div id="modalImpactList" style="background: rgba(46, 157, 216, 0.08); padding: 15px; border-radius: 8px; border-left: 3px solid #2E9DD8;">
-                            <p style="font-weight: 600; color: #1B76A8; margin-bottom: 8px; font-size: 14px;">Your Impact:</p>
+                            <p style="font-weight: 600; color: #1B76A8; margin-bottom: 8px; font-size: 14px;" data-i18n="donate.modal.yourImpact">Your Impact:</p>
                             <ul id="impactBullets" style="margin: 0; padding-left: 20px; color: #696969; font-size: 13px; line-height: 1.6;">
                             </ul>
                         </div>
@@ -248,20 +248,20 @@
                     <div class="donation-modal-form">
                         <form id="modalDonationForm">
                             <div class="form-group">
-                                <label for="modalDonorName">Your Name (Optional)</label>
-                                <input type="text" id="modalDonorName" name="donorName" placeholder="John Doe">
+                                <label for="modalDonorName" data-i18n="donate.modal.name">Your Name (Optional)</label>
+                                <input type="text" id="modalDonorName" name="donorName" data-i18n-placeholder="donate.modal.namePlaceholder" placeholder="John Doe">
                             </div>
 
                             <div class="form-group">
-                                <label for="modalDonorEmail">Email Address (Optional)</label>
-                                <input type="email" id="modalDonorEmail" name="donorEmail" placeholder="john@example.com">
-                                <small style="color: #666; display: block; margin-top: 5px;">We'll send you a thank-you email and receipt</small>
+                                <label for="modalDonorEmail" data-i18n="donate.modal.email">Email Address (Optional)</label>
+                                <input type="email" id="modalDonorEmail" name="donorEmail" data-i18n-placeholder="donate.modal.emailPlaceholder" placeholder="john@example.com">
+                                <small style="color: #666; display: block; margin-top: 5px;" data-i18n="donate.modal.emailNote">We'll send you a thank-you email and receipt</small>
                             </div>
 
                             <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="modalRecurring" name="recurring">
-                                    <span><strong>Make this a monthly donation</strong> - Help us plan for sustainable impact</span>
+                                    <span><strong data-i18n="donate.modal.recurringTitle">Make this a monthly donation</strong> - <span data-i18n="donate.modal.recurringNote">Help us plan for sustainable impact</span></span>
                                 </label>
                             </div>
 
@@ -272,12 +272,12 @@
                                     <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
                                     <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                                 </svg>
-                                Secure donation powered by PayPal
+                                <span data-i18n="donate.modal.secureNote">Secure donation powered by PayPal</span>
                             </p>
 
                             <div style="margin-top: 20px; padding: 15px; background: #f0f8ff; border-left: 3px solid #1B76A8; border-radius: 5px; font-size: 14px;">
-                                <strong>📧 Bank Transfer Alternative</strong><br>
-                                <span style="color: #666;">Prefer bank transfer? Email us at <a href="mailto:contact@acchm.org" style="color: #1B76A8;">contact@acchm.org</a> for details.</span>
+                                <strong data-i18n="donate.modal.bankAlternativeTitle">📧 Bank Transfer Alternative</strong><br>
+                                <span style="color: #666;" data-i18n="donate.modal.bankAlternativeText">Prefer bank transfer? Email us at <a href="mailto:contact@acchm.org" style="color: #1B76A8;">contact@acchm.org</a> for details.</span>
                             </div>
                         </form>
                     </div>

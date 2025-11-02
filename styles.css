@@ -116,7 +116,7 @@
     --space-16: 8rem;    /* 128px */
 
     /* Section Padding */
-    --section-padding: var(--space-12) 0;
+    --section-padding: var(--space-10) 0;
     --container-padding: 0 var(--space-4);
     --container-max-width: 1280px;
 
@@ -438,8 +438,8 @@ ul {
     background: var(--gradient-logo);
     position: relative;
     overflow: hidden;
-    padding: var(--space-16) 0;
-    min-height: 700px;
+    padding: var(--space-12) 0;
+    min-height: 550px;
     display: flex;
     align-items: center;
 }
@@ -1167,7 +1167,7 @@ ul {
 .about-hero {
     background: var(--gradient-logo);
     color: var(--white);
-    padding: 100px 0 80px;
+    padding: 80px 0 60px;
     text-align: center;
 }
 
@@ -1223,7 +1223,7 @@ ul {
 .contact-form-wrapper,
 .contact-info {
     background: var(--white);
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
 }
@@ -1340,14 +1340,14 @@ ul {
 .bank-transfer-card {
     background: var(--white);
     border-radius: 15px;
-    padding: 3rem;
+    padding: 2rem;
     max-width: 700px;
     margin: 2rem auto;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .form-group label {
@@ -1479,7 +1479,7 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
     color: var(--white);
-    padding: 100px 0 80px;
+    padding: 80px 0 60px;
     text-align: center;
     position: relative;
     overflow: hidden;

@@ -801,10 +801,9 @@ ul {
 
 .welcome-logo {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.08));
 }
 
 .welcome-text p {

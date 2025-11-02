@@ -120,6 +120,28 @@ ul {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: -4px;
+}
+
+.logo a {
+    display: block;
+    line-height: 0;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.logo-image:hover {
+    opacity: 0.8;
+}
+
 .logo h1 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -180,6 +202,33 @@ ul {
     box-shadow: 0 4px 15px rgba(232, 146, 111, 0.3);
 }
 
+.language-selector {
+    position: relative;
+}
+
+.language-selector select {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    background: var(--white);
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+}
+
+.language-selector select:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.language-selector select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(22, 132, 201, 0.2);
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -202,7 +251,11 @@ ul {
    Hero Section
    ============================================ */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #1a3f5f 100%);
+    background-image: url('https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1478147427282-58a87a120781%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3w1NTEzfDB8MXxzZWFyY2h8NjF8fGNoaWxkcmVuJTIwZm91bmRhdGlvbiUyMGZvciUyMG11c2ljJTIwZWR1Y2F0aW9ufGVufDB8fHx8MTcwNjQ4Nzk3M3ww%26ixlib%3Drb-4.0.3%26q%3D90%26w%3D2000%26utm_source%3Dendurance-innovation%26utm_medium%3Dreferral');
+    background-color: rgb(33, 33, 33);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--white);
     padding: 120px 0;
     position: relative;
@@ -216,8 +269,8 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-    background-size: cover;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
 .hero-content {
@@ -237,16 +290,28 @@ ul {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     opacity: 0.95;
     animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.3s backwards;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    animation: fadeInUp 1s ease 0.4s backwards;
+    animation: fadeInUp 1s ease 0.5s backwards;
+}
+
+.hero-buttons .btn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
 }
 
 @keyframes fadeInUp {
@@ -337,9 +402,17 @@ ul {
 
 .welcome-content {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 0.4fr 1fr;
     gap: 4rem;
     align-items: center;
+}
+
+.welcome-logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .welcome-text p {
@@ -887,10 +960,32 @@ ul {
 
 /* Donate Page */
 .donate-hero {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    background-image: url('https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1524601500432-1e1a4c71d692%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3w1NTEzfDB8MXxzZWFyY2h8OHx8bWFrZSUyMGNoaWxkcmVuJTIwaGFwcHl8ZW58MHx8fHwxNzA2NTQ4Mjc4fDA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D2000');
+    background-color: rgb(33, 33, 33);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--white);
     padding: 100px 0 80px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.donate-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.donate-hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 .donate-options {
@@ -932,6 +1027,10 @@ ul {
    Responsive Design
    ============================================ */
 @media (max-width: 768px) {
+    .logo-image {
+        height: 45px;
+    }
+
     .mobile-menu-toggle {
         display: flex;
     }

@@ -18,7 +18,9 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
-                        <h1>Accord and Harmony Foundation</h1>
+                        <a href="index.html">
+                            <img src="images/logo.jpg" alt="Accord and Harmony Foundation" class="logo-image">
+                        </a>
                     </div>
                     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
                         <span></span>
@@ -26,11 +28,19 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu" id="primary-navigation">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="donate.html" class="btn-donate">Donate</a></li>
+                        <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+                        <li><a href="donate.html" class="btn-donate" data-i18n="nav.donate">Donate</a></li>
+                        <li class="language-selector">
+                            <select id="languageSelector" aria-label="Select language">
+                                <option value="en">English</option>
+                                <option value="de">Deutsch</option>
+                                <option value="fr">Français</option>
+                                <option value="bg">Български</option>
+                            </select>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -43,11 +53,11 @@
             <div class="hero-overlay"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h2 class="hero-title">Harmony Unites, Accord Ignites:</h2>
-                    <p class="hero-subtitle">Transforming Lives Together!</p>
+                    <h1 class="hero-title" data-i18n="hero.title">Empowering Communities, Transforming Lives</h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">Harmony Unites, Accord Ignites:</p>
+                    <p class="hero-description" data-i18n="hero.description">Building Brighter Futures Together!</p>
                     <div class="hero-buttons">
-                        <a href="about.html" class="btn btn-primary">Learn More</a>
-                        <a href="donate.html" class="btn btn-secondary">Support Our Cause</a>
+                        <a href="contact.html" class="btn btn-primary" data-i18n="hero.cta">Read more</a>
                     </div>
                 </div>
             </div>
@@ -57,23 +67,18 @@
         <section class="welcome">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Welcome to our website</span>
-                    <h2>Building a Harmonious Future</h2>
+                    <span class="section-tag" data-i18n="welcome.tag">Welcome to our website</span>
+                    <h2 data-i18n="welcome.heading">Building a Harmonious Future</h2>
                 </div>
                 <div class="welcome-content">
-                    <div class="welcome-text">
-                        <p class="lead">Welcome to Accord and Harmony Foundation – a haven of compassion and action.</p>
-                        <p>Here, we unite to support those in need and champion children's education. Explore our initiatives, join us on the path of positive change, and together, let's build a harmonious future.</p>
-                        <p>At Accord and Harmony, we believe in the power of unity and the transformative impact it can have on the lives of those in need. Through our dedicated programs and community partnerships, we strive to create lasting change in education, healthcare, and social welfare.</p>
-                        <p class="emphasis">Thank you for being a part of our mission.</p>
+                    <div class="welcome-logo-wrapper">
+                        <img src="images/logo.jpg" alt="Accord and Harmony Foundation Logo" class="welcome-logo">
                     </div>
-                    <div class="welcome-image">
-                        <div class="image-placeholder">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
-                            </svg>
-                            <p>Together we make a difference</p>
-                        </div>
+                    <div class="welcome-text">
+                        <p class="lead" data-i18n="welcome.lead">At Accord and Harmony Foundation, we stand as a beacon of hope for communities across Sofia, Bulgaria.</p>
+                        <p data-i18n="welcome.text1">Our mission is rooted in the belief that when people come together in harmony, remarkable transformations become possible. We're dedicated to uplifting vulnerable families, empowering children through education, and creating pathways to brighter futures.</p>
+                        <p data-i18n="welcome.text2">Through strategic partnerships with local communities, schools, and compassionate supporters like you, we deliver essential resources, educational opportunities, and comprehensive support services that make a real difference in people's lives.</p>
+                        <p class="emphasis" data-i18n="welcome.emphasis">Join us in building a future where every child has access to quality education and every family finds the support they need to thrive.</p>
                     </div>
                 </div>
             </div>
@@ -90,8 +95,8 @@
                                 <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3>Support Those in Need</h3>
-                        <p>Providing essential resources and support to vulnerable communities across Bulgaria.</p>
+                        <h3 data-i18n="mission.support.title">Support Those in Need</h3>
+                        <p data-i18n="mission.support.description">Providing essential resources and support to vulnerable communities across Bulgaria.</p>
                     </div>
                     <div class="mission-card">
                         <div class="mission-icon">
@@ -99,8 +104,8 @@
                                 <path d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <h3>Children's Education</h3>
-                        <p>Championing educational opportunities and empowering the next generation to thrive.</p>
+                        <h3 data-i18n="mission.education.title">Children's Education</h3>
+                        <p data-i18n="mission.education.description">Championing educational opportunities and empowering the next generation to thrive.</p>
                     </div>
                     <div class="mission-card">
                         <div class="mission-icon">
@@ -108,8 +113,8 @@
                                 <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>Unity & Compassion</h3>
-                        <p>Building bridges within communities and fostering a culture of mutual support and understanding.</p>
+                        <h3 data-i18n="mission.unity.title">Unity & Compassion</h3>
+                        <p data-i18n="mission.unity.description">Building bridges within communities and fostering a culture of mutual support and understanding.</p>
                     </div>
                 </div>
             </div>
@@ -119,13 +124,13 @@
         <section class="newsletter">
             <div class="container">
                 <div class="newsletter-content">
-                    <h2>Stay Connected</h2>
-                    <p>Sign up to our newsletter and stay up to date with our latest initiatives and impact stories.</p>
+                    <h2 data-i18n="newsletter.title">Stay Connected</h2>
+                    <p data-i18n="newsletter.description">Sign up to our newsletter and stay up to date with our latest initiatives and impact stories.</p>
                     <form class="newsletter-form" id="newsletterForm">
-                        <input type="email" placeholder="Enter your e-mail address" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                        <input type="email" placeholder="Enter your e-mail address" data-i18n="newsletter.placeholder" required>
+                        <button type="submit" class="btn btn-primary" data-i18n="newsletter.button">Subscribe</button>
                     </form>
-                    <p class="newsletter-disclaimer">By submitting your information, you are granting us permission to email you. You may unsubscribe at any time.</p>
+                    <p class="newsletter-disclaimer" data-i18n="newsletter.disclaimer">By submitting your information, you are granting us permission to email you. You may unsubscribe at any time.</p>
                 </div>
             </div>
         </section>
@@ -137,38 +142,40 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Accord and Harmony Foundation</h3>
-                    <p>At Accord and Harmony, we believe in the power of unity and the transformative impact it can have on the lives of those in need.</p>
+                    <p data-i18n="footer.about.text">At Accord and Harmony, we believe in the power of unity and the transformative impact it can have on the lives of those in need.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><strong>Address:</strong><br>Odrin 95 st<br>Sofia 1303, BG</p>
-                    <p><strong>Phone:</strong><br><a href="tel:+359896097069">+359 (89) 609 7069</a></p>
-                    <p><strong>Email:</strong><br><a href="mailto:contact@acchm.org">contact@acchm.org</a></p>
+                    <h4 data-i18n="footer.contact.title">Contact</h4>
+                    <p><strong data-i18n="footer.contact.address">Address:</strong><br>Odrin 95 st<br>Sofia 1303, BG</p>
+                    <p><strong data-i18n="footer.contact.phone">Phone:</strong><br><a href="tel:+359896097069">+359 (89) 609 7069</a></p>
+                    <p><strong data-i18n="footer.contact.email">Email:</strong><br><a href="mailto:contact@acchm.org">contact@acchm.org</a></p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.links.title">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+                        <li><a href="donate.html" data-i18n="nav.donate">Donate</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Accord and Harmony Foundation. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 Accord and Harmony Foundation. All rights reserved.</p>
                 <div class="footer-links-bottom">
-                    <a href="#">Sitemap</a>
+                    <a href="#" data-i18n="footer.sitemap">Sitemap</a>
                     <span>|</span>
-                    <a href="#">Terms of Service</a>
+                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
                     <span>|</span>
-                    <a href="#">Privacy Policy</a>
+                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
+    <script src="language-switcher.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,66 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg100" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B5B4E;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#B87333;stop-opacity:0.12" />
+    </linearGradient>
+    <linearGradient id="blue100" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B76A8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5BB4E3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg100)"/>
+
+  <!-- Grocery bags and food items -->
+  <!-- Shopping bag 1 -->
+  <rect x="100" y="90" width="70" height="90" rx="4" fill="url(#blue100)"/>
+  <path d="M 115 90 Q 135 75, 155 90" stroke="#1B76A8" stroke-width="3" fill="none"/>
+
+  <!-- Bread sticking out -->
+  <ellipse cx="135" cy="85" rx="15" ry="8" fill="#D4A574"/>
+  <ellipse cx="135" cy="78" rx="12" ry="6" fill="#E5C29F"/>
+
+  <!-- Shopping bag 2 -->
+  <rect x="180" y="100" width="65" height="85" rx="4" fill="#6B5B4E"/>
+  <path d="M 192 100 Q 212 86, 232 100" stroke="#5B4B3E" stroke-width="3" fill="none"/>
+
+  <!-- Vegetables sticking out -->
+  <circle cx="200" cy="95" r="8" fill="#DC143C"/>
+  <circle cx="202" cy="92" r="2" fill="#A00000"/>
+  <circle cx="220" cy="93" r="9" fill="#FF7F50"/>
+  <circle cx="222" cy="90" r="2" fill="#D06030"/>
+
+  <!-- Food items on the ground -->
+  <!-- Milk carton -->
+  <rect x="260" y="140" width="35" height="50" rx="2" fill="#FFFFFF" stroke="#2E9DD8" stroke-width="2"/>
+  <rect x="265" y="145" width="25" height="15" rx="1" fill="#5BB4E3"/>
+  <text x="277" y="156" font-family="sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">MILK</text>
+
+  <!-- Can -->
+  <ellipse cx="140" cy="195" rx="18" ry="6" fill="#C0C0C0"/>
+  <rect x="122" y="170" width="36" height="25" fill="#E0E0E0"/>
+  <ellipse cx="140" cy="170" rx="18" ry="6" fill="#F0F0F0"/>
+  <rect x="125" y="175" width="30" height="12" rx="1" fill="#CD7F32"/>
+
+  <!-- Apple -->
+  <circle cx="200" cy="190" r="12" fill="#DC143C"/>
+  <ellipse cx="203" cy="188" rx="4" ry="3" fill="#FF6B8A" opacity="0.6"/>
+  <path d="M 200 178 Q 198 175, 200 173" stroke="#228B22" stroke-width="2" fill="none"/>
+
+  <!-- Carrot -->
+  <path d="M 240 185 L 245 200 L 250 185 Z" fill="#FF8C00"/>
+  <path d="M 247 182 L 245 178 M 247 182 L 250 179 M 247 182 L 244 179" stroke="#228B22" stroke-width="2"/>
+
+  <!-- Text -->
+  <text x="200" y="240" font-family="'Poppins', sans-serif" font-size="24" font-weight="700" fill="#2C1810" text-anchor="middle">
+    €100 Donation
+  </text>
+  <text x="200" y="268" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#6B5B4E" text-anchor="middle">
+    Monthly Food Package for a Family
+  </text>
+  <text x="200" y="286" font-family="'Inter', sans-serif" font-size="12" font-weight="400" fill="#696969" text-anchor="middle">
+    Essential groceries, fresh produce & staples
+  </text>
+</svg>

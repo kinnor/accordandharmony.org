@@ -233,16 +233,19 @@
                 <button class="donation-modal-close" aria-label="Close">&times;</button>
 
                 <div class="donation-modal-body">
-                    <!-- Impact Visualization -->
+                    <!-- Impact Visualization - Left Side -->
                     <div class="donation-impact-visual">
-                        <img id="modalImpactImage" src="" alt="Donation Impact" style="width: 100%; max-width: 500px; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+                        <h2 id="modalTitle" style="margin-bottom: 1rem; color: #2C1810; font-size: 1.5rem;"></h2>
+                        <img id="modalImpactImage" src="" alt="Donation Impact" style="width: 100%; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+                        <div id="modalImpactList" style="background: rgba(46, 157, 216, 0.08); padding: 15px; border-radius: 8px; border-left: 3px solid #2E9DD8;">
+                            <p style="font-weight: 600; color: #1B76A8; margin-bottom: 8px; font-size: 14px;">Your Impact:</p>
+                            <ul id="impactBullets" style="margin: 0; padding-left: 20px; color: #696969; font-size: 13px; line-height: 1.6;">
+                            </ul>
+                        </div>
                     </div>
 
-                    <!-- Donation Form -->
+                    <!-- Donation Form - Right Side -->
                     <div class="donation-modal-form">
-                        <h2 id="modalTitle" style="margin-bottom: 1rem; color: #2C1810;"></h2>
-                        <p id="modalDescription" style="margin-bottom: 2rem; color: #696969; line-height: 1.6;"></p>
-
                         <form id="modalDonationForm">
                             <div class="form-group">
                                 <label for="modalDonorName">Your Name (Optional)</label>

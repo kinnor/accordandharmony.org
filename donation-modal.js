@@ -6,41 +6,41 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalOverlay = document.querySelector('.donation-modal-overlay');
     const modalImpactImage = document.getElementById('modalImpactImage');
     const modalTitle = document.getElementById('modalTitle');
-    const modalDescription = document.getElementById('modalDescription');
+    const impactBullets = document.getElementById('impactBullets');
 
     // Donation tier data
     const donationData = {
         50: {
-            title: '€50 - School Supplies for 3 Students',
-            description: 'Your generous donation of €50 will provide complete school supply kits for three students in need. Each kit includes a quality backpack, notebooks for all subjects, pens, pencils, erasers, rulers, textbooks, and art supplies for one full semester. In Bulgaria, many families struggle to afford these essential materials, and your support ensures that children can fully participate in their education without the stress of missing supplies.',
+            title: '€50 - School Supplies',
             image: 'images/donation-50-euro.svg',
             impactList: [
-                '3 complete backpacks with school essentials',
-                'Notebooks, pens, pencils & art supplies',
-                'Core textbooks for main subjects',
-                'Calculator and geometry tools'
+                '3 complete backpacks with essentials',
+                'Notebooks, pens & art supplies',
+                'Core textbooks for all subjects',
+                'Calculator & geometry tools',
+                'Full semester coverage'
             ]
         },
         100: {
-            title: '€100 - Monthly Food Package for a Family',
-            description: 'With €100, you provide a complete monthly food package for a Bulgarian family of four. This includes essential groceries like bread, milk, eggs, fresh vegetables, fruits, rice, pasta, cooking oil, and other staple foods. In Sofia, the average cost of feeding a family can be challenging for low-income households. Your donation ensures that families have nutritious meals throughout the month, removing the daily worry of putting food on the table.',
+            title: '€100 - Food Package',
             image: 'images/donation-100-euro.svg',
             impactList: [
                 'Essential groceries for 30 days',
-                'Fresh produce, bread, milk & eggs',
+                'Fresh produce, bread & milk',
                 'Rice, pasta & cooking staples',
-                'Nutritious meals for 4 people'
+                'Feeds family of 4 people',
+                'Nutritious balanced meals'
             ]
         },
         250: {
-            title: '€250 - Three Months of After-School Tutoring',
-            description: 'Your donation of €250 funds professional after-school tutoring for five students over three months. This includes 36 sessions (3 hours per week) covering mathematics, Bulgarian language, sciences, and exam preparation. Many Bulgarian students from low-income families cannot afford private tutoring, which puts them at a disadvantage. Your support helps level the playing field, giving these children the academic support they need to excel in school and build confidence in their abilities.',
+            title: '€250 - After-School Tutoring',
             image: 'images/donation-250-euro.svg',
             impactList: [
                 '36 professional tutoring sessions',
-                'Support for 5 students simultaneously',
-                'Coverage of math, language & sciences',
-                '3 full months of academic support'
+                'Supports 5 students at once',
+                'Math, language & sciences',
+                '3 full months of support',
+                'Exam preparation included'
             ]
         }
     };
@@ -54,9 +54,17 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data) {
                 // Update modal content
                 modalTitle.textContent = data.title;
-                modalDescription.textContent = data.description;
                 modalImpactImage.src = data.image;
                 modalImpactImage.alt = data.title;
+
+                // Populate impact bullets
+                impactBullets.innerHTML = '';
+                data.impactList.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    li.style.marginBottom = '6px';
+                    impactBullets.appendChild(li);
+                });
 
                 // Show modal
                 donationModal.style.display = 'flex';
@@ -119,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             value: amount,
                             currency_code: 'EUR'
                         },
-                        description: `Donation to Accord and Harmony Foundation - ${donationData[amount].title}`
+                        description: `Donation to Accord and Harmony Foundation - €${amount}`
                     }]
                 });
             },

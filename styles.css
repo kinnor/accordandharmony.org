@@ -1851,10 +1851,10 @@ html {
 .donation-modal-content {
     position: relative;
     background: var(--white);
-    border-radius: 20px;
-    max-width: 1100px;
+    border-radius: 16px;
+    max-width: 900px;
     width: 100%;
-    max-height: 90vh;
+    max-height: 85vh;
     overflow-y: auto;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1911,18 +1911,15 @@ html {
 
 .donation-modal-body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 60px 50px 50px;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 30px;
+    padding: 40px 35px 35px;
 }
 
 .donation-impact-visual {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: linear-gradient(135deg, rgba(46, 157, 216, 0.05) 0%, rgba(91, 180, 227, 0.08) 100%);
-    border-radius: 16px;
+    flex-direction: column;
+    padding: 0;
 }
 
 .donation-modal-form {
@@ -1930,25 +1927,12 @@ html {
     flex-direction: column;
 }
 
-.donation-modal-form h2 {
-    font-family: var(--font-heading);
-    font-size: var(--font-size-3xl);
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-}
-
-.donation-modal-form p {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
 /* Responsive modal */
 @media (max-width: 968px) {
     .donation-modal-body {
         grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 50px 30px 40px;
+        gap: 25px;
+        padding: 40px 25px 30px;
     }
 
     .donation-impact-visual {
@@ -1956,7 +1940,7 @@ html {
     }
 
     .donation-modal-content {
-        max-height: 95vh;
+        max-height: 90vh;
     }
 
     .donation-modal-close {
@@ -1974,15 +1958,11 @@ html {
     }
 
     .donation-modal-body {
-        padding: 50px 20px 30px;
+        padding: 40px 20px 25px;
         gap: 20px;
     }
 
-    .donation-modal-form h2 {
-        font-size: var(--font-size-2xl);
-    }
-
-    .donation-impact-visual {
-        padding: 15px;
+    .donation-modal-content {
+        max-height: 92vh;
     }
 }

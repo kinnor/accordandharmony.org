@@ -251,12 +251,8 @@ ul {
    Hero Section
    ============================================ */
 .hero {
-    background-image: url('https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1478147427282-58a87a120781%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3w1NTEzfDB8MXxzZWFyY2h8NjF8fGNoaWxkcmVuJTIwZm91bmRhdGlvbiUyMGZvciUyMG11c2ljJTIwZWR1Y2F0aW9ufGVufDB8fHx8MTcwNjQ4Nzk3M3ww%26ixlib%3Drb-4.0.3%26q%3D90%26w%3D2000%26utm_source%3Dendurance-innovation%26utm_medium%3Dreferral');
-    background-color: rgb(33, 33, 33);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--white);
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 25%, #90caf9 50%, #64b5f6 75%, #42a5f5 100%);
+    color: var(--dark-color);
     padding: 120px 0;
     position: relative;
     overflow: hidden;
@@ -269,7 +265,8 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.4), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(150, 205, 212, 0.3), transparent 50%);
     z-index: 0;
 }
 
@@ -285,18 +282,23 @@ ul {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
+    color: var(--dark-color);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
     animation: fadeInUp 1s ease;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    opacity: 0.95;
+    color: var(--dark-color);
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
     animation: fadeInUp 1s ease 0.2s backwards;
 }
 
 .hero-description {
     font-size: 1.2rem;
+    color: var(--dark-color);
     margin-bottom: 2.5rem;
     opacity: 0.9;
     animation: fadeInUp 1s ease 0.3s backwards;

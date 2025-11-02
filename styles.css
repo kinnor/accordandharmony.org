@@ -901,6 +901,12 @@ ul {
     font-family: var(--font-heading);
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.about-hero p {
+    color: var(--accent-light);
+    font-size: 1.25rem;
 }
 
 .about-content {
@@ -1219,6 +1225,18 @@ ul {
 .donate-hero .container {
     position: relative;
     z-index: 1;
+}
+
+.donate-hero h1 {
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.donate-hero p {
+    color: var(--accent-light);
+    font-size: 1.25rem;
 }
 
 .donate-options {

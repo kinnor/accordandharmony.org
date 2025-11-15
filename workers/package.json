@@ -24,6 +24,7 @@
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
     "nanoid": "^5.0.4",
+    "pdf-lib": "^1.17.1",
     "stripe": "^14.10.0"
   },
   "devDependencies": {

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Email System - Accord and Harmony</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2E9DD8 0%, #1B76A8 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #1B76A8;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #2E9DD8;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .button {
+            background: linear-gradient(135deg, #2E9DD8 0%, #1B76A8 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 157, 216, 0.4);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .message.success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .info-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .info-box strong {
+            color: #856404;
+        }
+
+        .template-preview {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+            display: none;
+        }
+
+        .template-preview.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 Email System Test</h1>
+        <p class="subtitle">Test the Accord and Harmony email sending functionality</p>
+
+        <div class="info-box">
+            <strong>⚠️ Note:</strong> This page sends test emails through the Cloudflare Workers backend.
+            Make sure the worker is deployed and RESEND_API_KEY is configured.
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <form id="emailForm">
+            <div class="form-group">
+                <label for="emailType">Email Type</label>
+                <select id="emailType" required>
+                    <option value="">-- Select Email Type --</option>
+                    <option value="simple">Simple Notification</option>
+                    <option value="welcome">Welcome Email</option>
+                    <option value="contact">Contact Form Notification</option>
+                    <option value="book">Book Purchase (Test)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="recipient">Recipient Email</label>
+                <input type="email" id="recipient" value="rossen.kinov@gmail.com" required>
+                <small style="color: #666; font-size: 12px; display: block; margin-top: 5px;">
+                    ⚠️ With test domain, can only send to your verified Resend account email
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Recipient Name</label>
+                <input type="text" id="name" value="Rossen Kinov">
+            </div>
+
+            <div class="form-group">
+                <label for="language">Language</label>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="de">German (Deutsch)</option>
+                    <option value="fr">French (Français)</option>
+                    <option value="bg">Bulgarian (Български)</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="subjectGroup" style="display: none;">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Email subject">
+            </div>
+
+            <div class="form-group" id="messageGroup" style="display: none;">
+                <label for="messageText">Message</label>
+                <textarea id="messageText" placeholder="Email message content"></textarea>
+            </div>
+
+            <button type="submit" class="button">
+                <span id="buttonText">Send Test Email</span>
+            </button>
+        </form>
+
+        <div id="templatePreview" class="template-preview"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('emailForm');
+        const emailType = document.getElementById('emailType');
+        const messageDiv = document.getElementById('message');
+        const buttonText = document.getElementById('buttonText');
+        const subjectGroup = document.getElementById('subjectGroup');
+        const messageGroup = document.getElementById('messageGroup');
+        const templatePreview = document.getElementById('templatePreview');
+
+        // Show/hide fields based on email type
+        emailType.addEventListener('change', function() {
+            const type = this.value;
+
+            if (type === 'simple') {
+                subjectGroup.style.display = 'block';
+                messageGroup.style.display = 'block';
+            } else if (type === 'contact') {
+                subjectGroup.style.display = 'none';
+                messageGroup.style.display = 'block';
+            } else {
+                subjectGroup.style.display = 'none';
+                messageGroup.style.display = 'none';
+            }
+
+            // Show preview info
+            if (type) {
+                showPreview(type);
+            }
+        });
+
+        function showPreview(type) {
+            const previews = {
+                simple: 'Sends a basic notification email with your custom subject and message.',
+                welcome: 'Sends a welcome email in the selected language with foundation information.',
+                contact: 'Sends a contact form notification to the admin email.',
+                book: 'Sends a complete book purchase email with watermark info, receipt, and download link (TEST MODE).'
+            };
+
+            templatePreview.innerHTML = `<strong>📋 ${type.charAt(0).toUpperCase() + type.slice(1)} Email:</strong> ${previews[type]}`;
+            templatePreview.classList.add('show');
+        }
+
+        function showMessage(text, type) {
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type} show`;
+            setTimeout(() => {
+                messageDiv.classList.remove('show');
+            }, 5000);
+        }
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            buttonText.textContent = 'Sending...';
+
+            const data = {
+                type: emailType.value,
+                to: document.getElementById('recipient').value,
+                name: document.getElementById('name').value,
+                language: document.getElementById('language').value
+            };
+
+            if (emailType.value === 'simple') {
+                data.subject = document.getElementById('subject').value;
+                data.message = document.getElementById('messageText').value;
+            } else if (emailType.value === 'contact') {
+                data.message = document.getElementById('messageText').value;
+            }
+
+            try {
+                const response = await fetch('https://accordandharmony-workers.rossen-kinov.workers.dev/api/test-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showMessage(`✅ Email sent successfully! Check ${data.to} (and spam folder)`, 'success');
+                    if (result.data?.messageId) {
+                        console.log('Message ID:', result.data.messageId);
+                    }
+                } else {
+                    showMessage(`❌ Failed to send email: ${result.message}`, 'error');
+                }
+
+            } catch (error) {
+                showMessage(`❌ Error: ${error.message}`, 'error');
+            } finally {
+                submitButton.disabled = false;
+                buttonText.textContent = 'Send Test Email';
+            }
+        });
+    </script>
+</body>
+</html>

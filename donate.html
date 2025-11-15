@@ -41,6 +41,8 @@
                                 <option value="de">Deutsch</option>
                                 <option value="fr">Français</option>
                                 <option value="bg">Български</option>
+                                <option value="it">Italiano</option>
+                                <option value="es">Español</option>
                             </select>
                         </li>
                     </ul>
@@ -77,7 +79,7 @@
                                 <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20M4 19.5C4 20.163 4.26339 20.7989 4.73223 21.2678C5.20107 21.7366 5.83696 22 6.5 22H20V2H6.5C5.83696 2 5.20107 2.26339 4.73223 2.73223C4.26339 3.20107 4 3.83696 4 4.5V19.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>€50</h3>
+                        <h3><span data-i18n="donate.tier1.amount">$50</span></h3>
                         <p><strong data-i18n="donate.tier1.title">School Supplies for 3 Students</strong><br><span data-i18n="donate.tier1.description">Backpacks, notebooks, pens, textbooks and art supplies for one semester</span></p>
                         <div style="margin-top: 15px; padding: 10px; background: rgba(46, 157, 216, 0.1); border-radius: 8px; font-size: 14px;">
                             <strong style="color: #1B76A8;" data-i18n="donate.tier.cta">Click to donate →</strong>
@@ -90,7 +92,7 @@
                                 <path d="M17 9V7C17 5.67392 16.4732 4.40215 15.5355 3.46447C14.5979 2.52678 13.3261 2 12 2C10.6739 2 9.40215 2.52678 8.46447 3.46447C7.52678 4.40215 7 5.67392 7 7V9M5 9H19L20 21H4L5 9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>€100</h3>
+                        <h3><span data-i18n="donate.tier2.amount">$100</span></h3>
                         <p><strong data-i18n="donate.tier2.title">Monthly Food Package for a Family</strong><br><span data-i18n="donate.tier2.description">Essential groceries, fresh produce, bread, milk, and staple foods for 4 people</span></p>
                         <div style="margin-top: 15px; padding: 10px; background: rgba(107, 91, 78, 0.1); border-radius: 8px; font-size: 14px;">
                             <strong style="color: #6B5B4E;" data-i18n="donate.tier.cta">Click to donate →</strong>
@@ -104,7 +106,7 @@
                                 <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3>€250</h3>
+                        <h3><span data-i18n="donate.tier3.amount">$250</span></h3>
                         <p><strong data-i18n="donate.tier3.title">3 Months of After-School Tutoring</strong><br><span data-i18n="donate.tier3.description">Professional tutoring sessions for 5 students in mathematics, Bulgarian language, and sciences</span></p>
                         <div style="margin-top: 15px; padding: 10px; background: rgba(255, 215, 0, 0.15); border-radius: 8px; font-size: 14px;">
                             <strong style="color: #B87333;" data-i18n="donate.tier.cta">Click to donate →</strong>
@@ -128,11 +130,11 @@
                             <div class="form-group">
                                 <label class="form-group-label" data-i18n="donate.form.selectAmount">Select Donation Amount</label>
                                 <div class="donation-amount-grid">
-                                    <button type="button" class="donate-amount-btn" data-amount="10">€10</button>
-                                    <button type="button" class="donate-amount-btn" data-amount="25">€25</button>
-                                    <button type="button" class="donate-amount-btn" data-amount="50">€50</button>
-                                    <button type="button" class="donate-amount-btn" data-amount="100">€100</button>
-                                    <button type="button" class="donate-amount-btn" data-amount="250">€250</button>
+                                    <button type="button" class="donate-amount-btn" data-amount="10"><span data-i18n="donate.amount.10">$10</span></button>
+                                    <button type="button" class="donate-amount-btn" data-amount="25"><span data-i18n="donate.amount.25">$25</span></button>
+                                    <button type="button" class="donate-amount-btn" data-amount="50"><span data-i18n="donate.amount.50">$50</span></button>
+                                    <button type="button" class="donate-amount-btn" data-amount="100"><span data-i18n="donate.amount.100">$100</span></button>
+                                    <button type="button" class="donate-amount-btn" data-amount="250"><span data-i18n="donate.amount.250">$250</span></button>
                                     <button type="button" class="donate-amount-btn" data-amount="other" data-i18n="donate.form.other">Other</button>
                                 </div>
                             </div>
@@ -230,15 +232,26 @@
 
                         <div class="book-price-section">
                             <div class="book-price">
-                                <span class="price-amount">€25.00</span>
-                                <span class="price-label">Tax-deductible donation</span>
+                                <span class="price-amount" data-i18n="donate.book.price">$25.00</span>
+                                <span class="price-label" data-i18n="donate.book.priceLabel">Digital PDF (2.4MB • 28 Pages)</span>
                             </div>
                         </div>
 
                         <div class="book-description">
-                            <p><strong>By purchasing this book, you directly support the Accord and Harmony Foundation's mission</strong> to provide educational opportunities to children across Bulgaria.</p>
+                            <p><strong data-i18n="donate.book.description1">By purchasing this book, you directly support children's education programs run by the Accord and Harmony Foundation across Bulgaria. 100% of proceeds fund tutoring, school supplies, and educational opportunities for vulnerable children.</strong></p>
 
-                            <p>This comprehensive guide covers jazz trumpet techniques, improvisation strategies, and performance mastery. Perfect for intermediate to advanced players looking to elevate their craft.</p>
+                            <h4 style="color: #2E9DD8; margin: 1.5rem 0 1rem;" data-i18n="donate.book.whatsInside">What's Inside</h4>
+                            <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+                                <li data-i18n="donate.book.feature1"><strong>80+ Professional Jazz Licks</strong> - Inspired by masters: Clifford Brown, Miles Davis, Freddie Hubbard, Lee Morgan, Wynton Marsalis</li>
+                                <li data-i18n="donate.book.feature2"><strong>Complete Music Theory</strong> - Intervals, scales, chord construction, ii-V-I progressions, bebop theory</li>
+                                <li data-i18n="donate.book.feature3"><strong>All 12 Keys</strong> - Systematic transposition practice through the complete cycle of fourths</li>
+                                <li data-i18n="donate.book.feature4"><strong>4 Progressive Levels</strong> - Beginner Foundations • Intermediate Bebop • Advanced Modern Jazz • Master Signatures</li>
+                                <li data-i18n="donate.book.feature5"><strong>Bb Trumpet Transposition Guide</strong> - Complete side-by-side concert pitch to Bb trumpet examples</li>
+                                <li data-i18n="donate.book.feature6"><strong>24-Week Structured Curriculum</strong> - Week-by-week practice roadmap with daily routines</li>
+                                <li data-i18n="donate.book.feature7"><strong>Practice Exercises</strong> - Essential patterns, sequences, chromatic approaches, technical development</li>
+                                <li data-i18n="donate.book.feature8"><strong>Jazz Standards Guide</strong> - Recommended tunes organized by skill level</li>
+                                <li data-i18n="donate.book.feature9"><strong>Listening Recommendations</strong> - Essential albums and artists for each style period</li>
+                            </ul>
 
                             <div class="book-features">
                                 <div class="feature">

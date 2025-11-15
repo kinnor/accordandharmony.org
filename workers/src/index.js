@@ -6,6 +6,9 @@
 import { handleNewsletter } from './newsletter.js';
 import { handleContact } from './contact.js';
 import { handlePayPalNotification } from './paypal-notify.js';
+import { handleBookPurchase } from './book-purchase.js';
+import { handleBookDownload } from './download-book.js';
+import { handleTestEmail } from './test-email.js';
 import { generateCSRFToken, jsonResponse, handleCORS } from './utils.js';
 import { authenticateRequest } from './auth.js';
 
@@ -129,6 +132,22 @@ async function handleAPIRequest(request, env, url) {
 
     if (url.pathname === '/api/download/info' && method === 'GET') {
       return await handleDownloadInfo(request, env);
+    }
+
+    // Book purchase endpoint (PayPal direct)
+    if (url.pathname === '/api/book-purchase' && method === 'POST') {
+      return await handleBookPurchase(request, env);
+    }
+
+    // Book download endpoint (token-based)
+    if (url.pathname.startsWith('/api/download-book/') && method === 'GET') {
+      const token = url.pathname.split('/')[3];
+      return await handleBookDownload(token, env);
+    }
+
+    // Test email endpoint (for development/testing)
+    if (url.pathname === '/api/test-email' && method === 'POST') {
+      return await handleTestEmail(request, env);
     }
 
     // Stripe webhook (public but signature-verified)

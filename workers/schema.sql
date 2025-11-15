@@ -280,6 +280,46 @@ CREATE INDEX IF NOT EXISTS idx_audit_logs_action ON audit_logs(action_type, crea
 CREATE INDEX IF NOT EXISTS idx_audit_logs_entity ON audit_logs(entity_type, entity_id);
 
 -- ============================================
+-- Book Purchases Table (PayPal Direct Sales)
+-- Simplified table for book donations without user accounts
+-- ============================================
+CREATE TABLE IF NOT EXISTS book_purchases (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+  -- Customer information
+  email TEXT NOT NULL,
+  name TEXT,
+  language TEXT DEFAULT 'en',
+
+  -- Payment details
+  amount REAL NOT NULL,
+  currency TEXT DEFAULT 'USD', -- 'USD', 'EUR', 'CAD'
+  paypal_order_id TEXT UNIQUE NOT NULL,
+
+  -- Download details
+  download_token TEXT UNIQUE NOT NULL,
+  receipt_number TEXT UNIQUE NOT NULL,
+  r2_filename TEXT NOT NULL, -- Watermarked PDF filename in R2
+
+  -- Download tracking
+  download_count INTEGER DEFAULT 0,
+  max_downloads INTEGER DEFAULT 5,
+  last_download_date TEXT,
+
+  -- Timestamps
+  purchase_date TEXT NOT NULL,
+  expiry_date TEXT NOT NULL, -- 30 days from purchase
+
+  -- Indexes
+  CONSTRAINT unique_paypal_order UNIQUE (paypal_order_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_book_purchases_email ON book_purchases(email);
+CREATE INDEX IF NOT EXISTS idx_book_purchases_token ON book_purchases(download_token);
+CREATE INDEX IF NOT EXISTS idx_book_purchases_receipt ON book_purchases(receipt_number);
+CREATE INDEX IF NOT EXISTS idx_book_purchases_expiry ON book_purchases(expiry_date);
+
+-- ============================================
 -- Views for Analytics and Reporting
 -- ============================================
 

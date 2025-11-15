@@ -116,7 +116,41 @@ const translations = {
         "contact.location.heading": "Our Location",
         "contact.location.title": "Visit Us in Sofia",
         "contact.location.text": "Our office is located in the heart of Sofia, Bulgaria. We welcome visitors during our office hours and encourage you to stop by to learn more about our work.",
-        "contact.location.address": "Odrin 95 st, Sofia 1303, Bulgaria"
+        "contact.location.address": "Odrin 95 st, Sofia 1303, Bulgaria",
+
+        // Donation Tiers (English - USD)
+        "donate.tier1.amount": "$50",
+        "donate.tier2.amount": "$100",
+        "donate.tier3.amount": "$250",
+        "donate.amount.10": "$10",
+        "donate.amount.25": "$25",
+        "donate.amount.50": "$50",
+        "donate.amount.100": "$100",
+        "donate.amount.250": "$250",
+
+        // Book Purchase Section (English - USD)
+        "donate.book.tag": "📚 Support Children Through Purchase",
+        "donate.book.heading": "Jazz Trumpet Master Class - Educational Resource",
+        "donate.book.intro": "By purchasing this comprehensive jazz trumpet method book, you directly support children in need across Bulgaria. 100% of proceeds fund educational programs.",
+        "donate.book.price": "$25.00 USD",
+        "donate.book.priceLabel": "Digital PDF • Tax-Deductible Donation",
+        "donate.book.description1": "Your purchase directly supports vulnerable children by funding tutoring, school supplies, and educational opportunities. This is a tax-deductible charitable donation - you'll receive a receipt.",
+        "donate.book.whatsInside": "What's Inside This Educational Resource",
+        "donate.book.feature1": "<strong>80+ Professional Jazz Licks</strong> - Inspired by Clifford Brown, Miles Davis, Freddie Hubbard, Lee Morgan, Wynton Marsalis",
+        "donate.book.feature2": "<strong>Complete Music Theory</strong> - Intervals, scales, chord construction, ii-V-I progressions, bebop theory",
+        "donate.book.feature3": "<strong>All 12 Keys</strong> - Systematic transposition practice through the complete cycle of fourths",
+        "donate.book.feature4": "<strong>4 Progressive Levels</strong> - Beginner Foundations • Intermediate Bebop • Advanced Modern Jazz • Master Signatures",
+        "donate.book.feature5": "<strong>Bb Trumpet Transposition Guide</strong> - Complete side-by-side concert pitch to Bb trumpet examples",
+        "donate.book.feature6": "<strong>24-Week Structured Curriculum</strong> - Week-by-week practice roadmap with daily routines",
+        "donate.book.feature7": "<strong>Practice Exercises</strong> - Essential patterns, sequences, chromatic approaches, technical development",
+        "donate.book.feature8": "<strong>Jazz Standards Guide</strong> - Recommended tunes organized by skill level with application strategies",
+        "donate.book.feature9": "<strong>Listening Recommendations</strong> - Essential albums and artists for each style period",
+        "donate.book.quote": "\"Jazz is a language. Like learning any language, you need vocabulary (licks), grammar (theory), and conversation practice (playing standards). This book provides all three in a systematic, progressive order that builds mastery step by step.\"",
+        "donate.book.quoteSource": "— From the Jazz Trumpet Master Class Method",
+        "donate.book.benefit1": "Instant digital download after purchase",
+        "donate.book.benefit2": "Professional PDF format - works on all devices",
+        "donate.book.benefit3": "For personal, non-commercial use",
+        "donate.book.benefit4": "Tax-deductible donation receipt included"
     },
 
     de: {
@@ -183,6 +217,17 @@ const translations = {
         // Donate Page
         "donate.hero.title": "Machen Sie einen Unterschied",
         "donate.hero.subtitle": "Ihre Unterstützung verändert Leben",
+
+        // Donation Tiers (German - EUR)
+        "donate.tier1.amount": "€50",
+        "donate.tier2.amount": "€100",
+        "donate.tier3.amount": "€250",
+        "donate.amount.10": "€10",
+        "donate.amount.25": "€25",
+        "donate.amount.50": "€50",
+        "donate.amount.100": "€100",
+        "donate.amount.250": "€250",
+        "donate.book.price": "€25.00 EUR",
 
         // About Page - Extended
         "about.story.tag": "Unsere Geschichte",
@@ -462,6 +507,260 @@ const translations = {
         "contact.location.title": "Посетете ни в София",
         "contact.location.text": "Нашият офис се намира в сърцето на София, България. Приветстваме посетители през нашето работно време и ви насърчаваме да ни посетите, за да научите повече за нашата работа.",
         "contact.location.address": "ул. Одрин 95, София 1303, България"
+    },
+
+    it: {
+        // Navigation
+        "nav.home": "Home",
+        "nav.about": "Chi Siamo",
+        "nav.gallery": "Galleria",
+        "nav.contact": "Contatti",
+        "nav.donate": "Donare",
+
+        // Hero Section
+        "hero.title": "Rafforzare le Comunità, Trasformare Vite",
+        "hero.subtitle": "L'Armonia Unisce, l'Accordo Accende:",
+        "hero.description": "Costruire Futuri Migliori Insieme!",
+        "hero.cta": "Scopri di più",
+
+        // Welcome Section
+        "welcome.tag": "Benvenuti nel nostro sito",
+        "welcome.heading": "Costruire un Futuro Armonioso",
+        "welcome.lead": "Alla Fondazione Accord and Harmony, siamo un faro di speranza per le comunità di Sofia, Bulgaria.",
+        "welcome.text1": "La nostra missione si basa sulla convinzione che quando le persone si uniscono in armonia, diventano possibili trasformazioni straordinarie. Ci dedichiamo a sostenere famiglie vulnerabili, dare potere ai bambini attraverso l'istruzione e creare percorsi verso futuri migliori.",
+        "welcome.text2": "Attraverso partenariati strategici con comunità locali, scuole e sostenitori compassionevoli come voi, forniamo risorse essenziali, opportunità educative e servizi di supporto completi che fanno la vera differenza nella vita delle persone.",
+        "welcome.emphasis": "Unitevi a noi nel costruire un futuro in cui ogni bambino ha accesso a un'istruzione di qualità e ogni famiglia trova il supporto necessario per prosperare.",
+
+        // Mission Section
+        "mission.support.title": "Sostenere Chi Ne Ha Bisogno",
+        "mission.support.description": "Fornire risorse essenziali e supporto alle comunità vulnerabili in tutta la Bulgaria.",
+        "mission.education.title": "Istruzione dei Bambini",
+        "mission.education.description": "Promuovere opportunità educative e dare potere alla prossima generazione per prosperare.",
+        "mission.unity.title": "Unità e Compassione",
+        "mission.unity.description": "Costruire ponti all'interno delle comunità e promuovere una cultura di sostegno reciproco e comprensione.",
+
+        // Newsletter Section
+        "newsletter.title": "Rimani Connesso",
+        "newsletter.description": "Iscriviti alla nostra newsletter e rimani aggiornato sulle nostre ultime iniziative e storie di impatto.",
+        "newsletter.placeholder": "Inserisci il tuo indirizzo e-mail",
+        "newsletter.button": "Iscriviti",
+        "newsletter.disclaimer": "Inviando le tue informazioni, ci concedi il permesso di inviarti e-mail. Puoi annullare l'iscrizione in qualsiasi momento.",
+
+        // Footer
+        "footer.about.text": "Alla Fondazione Accord and Harmony, crediamo nel potere dell'unità e nell'impatto trasformativo che può avere sulla vita di chi è nel bisogno.",
+        "footer.contact.title": "Contatti",
+        "footer.contact.address": "Indirizzo:",
+        "footer.contact.phone": "Telefono:",
+        "footer.contact.email": "Email:",
+        "footer.links.title": "Link Rapidi",
+        "footer.copyright": "© 2025 Fondazione Accord and Harmony. Tutti i diritti riservati.",
+        "footer.sitemap": "Mappa del Sito",
+        "footer.terms": "Termini di Servizio",
+        "footer.privacy": "Politica sulla Privacy",
+
+        // Donate Page
+        "donate.hero.title": "Fai la Differenza Oggi",
+        "donate.hero.subtitle": "La Tua Generosità Crea Cambiamenti Duraturi",
+
+        // Donation Tiers (Italian - EUR)
+        "donate.tier1.amount": "€50",
+        "donate.tier1.title": "Materiale Scolastico per 3 Studenti",
+        "donate.tier1.description": "Zaini, quaderni, penne, libri di testo e materiale artistico per un semestre",
+        "donate.tier2.amount": "€100",
+        "donate.tier2.title": "Pacchetto Alimentare Mensile per una Famiglia",
+        "donate.tier2.description": "Generi alimentari essenziali, prodotti freschi, pane, latte e alimenti di base per 4 persone",
+        "donate.tier3.amount": "€250",
+        "donate.tier3.title": "3 Mesi di Ripetizioni Dopo Scuola",
+        "donate.tier3.description": "Sessioni di ripetizione professionale per 5 studenti in matematica, lingua bulgara e scienze",
+        "donate.tier.cta": "Clicca per donare →",
+
+        // Donation Amounts
+        "donate.amount.10": "€10",
+        "donate.amount.25": "€25",
+        "donate.amount.50": "€50",
+        "donate.amount.100": "€100",
+        "donate.amount.250": "€250",
+
+        // Donation Form
+        "donate.impact.tag": "Il Tuo Impatto",
+        "donate.impact.heading": "Come Aiuta la Tua Donazione",
+        "donate.impact.intro": "Ogni contributo, qualunque sia l'importo, fa una vera differenza nella vita di coloro che serviamo. Il tuo supporto ci aiuta a fornire opportunità educative, risorse essenziali e speranza alle famiglie in tutta la Bulgaria.",
+        "donate.form.tag": "Sostieni la Nostra Missione",
+        "donate.form.heading": "Scegli il Tuo Contributo",
+        "donate.form.selectAmount": "Seleziona Importo Donazione",
+        "donate.form.other": "Altro",
+        "donate.form.customAmount": "Importo Personalizzato (€)",
+        "donate.form.enterAmount": "Inserisci importo",
+        "donate.form.name": "Nome Completo (Opzionale)",
+        "donate.form.namePlaceholder": "Il tuo nome",
+        "donate.form.email": "Indirizzo Email (Opzionale)",
+        "donate.form.emailPlaceholder": "tua@email.com",
+        "donate.form.emailNote": "Ti invieremo un'email di ringraziamento e una ricevuta",
+        "donate.form.recurringTitle": "Rendi questa una donazione mensile",
+        "donate.form.recurringNote": "Il supporto ricorrente ci aiuta a pianificare il futuro",
+        "donate.form.secureNote": "Donazione sicura tramite PayPal. Le tue informazioni di pagamento sono criptate e non vengono mai memorizzate sui nostri server.",
+        "donate.form.whyPaypalTitle": "💡 Perché PayPal?",
+        "donate.form.whyPaypalText": "PayPal è una piattaforma di pagamento affidabile e sicura utilizzata in tutto il mondo. Non hai bisogno di un account PayPal - puoi donare con qualsiasi carta di credito o debito.",
+        "donate.bank.heading": "Oppure Dona tramite Bonifico Bancario",
+        "donate.bank.bankName": "Nome Banca:",
+        "donate.bank.accountName": "Intestatario:",
+        "donate.bank.currency": "Valuta:",
+        "donate.bank.reference": "Riferimento:",
+        "donate.bank.referenceText": "Donazione - [Il Tuo Nome]",
+        "donate.bank.note": "Si prega di inviarci un'email a <a href=\"mailto:contact@acchm.org\">contact@acchm.org</a> dopo aver effettuato un bonifico bancario in modo da potervi inviare una ricevuta.",
+
+        // Book Purchase (Italian - EUR)
+        "donate.book.tag": "📚 Sostieni i Bambini con l'Acquisto",
+        "donate.book.heading": "Jazz Trumpet Master Class - Risorsa Educativa",
+        "donate.book.intro": "Acquistando questo completo libro di metodo per tromba jazz, sostieni direttamente i bambini bisognosi in tutta la Bulgaria. Il 100% dei proventi finanzia programmi educativi.",
+        "donate.book.price": "€25.00 EUR",
+        "donate.book.priceLabel": "PDF Digitale • Donazione Deducibile dalle Tasse",
+
+        // Contact Page
+        "contact.hero.title": "Contattaci",
+        "contact.hero.subtitle": "Ci Piacerebbe Sentirti",
+        "contact.form.title": "Inviaci un Messaggio",
+        "contact.form.name": "Nome Completo",
+        "contact.form.email": "Indirizzo Email",
+        "contact.form.phone": "Numero di Telefono",
+        "contact.form.subject": "Oggetto",
+        "contact.form.message": "Messaggio",
+        "contact.form.submit": "Invia Messaggio",
+
+        // About Page
+        "about.hero.title": "Chi Siamo",
+        "about.hero.subtitle": "Dedicati a Creare un Cambiamento Positivo nella Nostra Comunità",
+
+        // Gallery Page
+        "gallery.hero.title": "La Nostra Galleria",
+        "gallery.hero.subtitle": "Catturare Momenti di Speranza, Unità e Trasformazione"
+    },
+
+    es: {
+        // Navigation
+        "nav.home": "Inicio",
+        "nav.about": "Sobre Nosotros",
+        "nav.gallery": "Galería",
+        "nav.contact": "Contacto",
+        "nav.donate": "Donar",
+
+        // Hero Section
+        "hero.title": "Empoderando Comunidades, Transformando Vidas",
+        "hero.subtitle": "La Armonía Une, el Acuerdo Enciende:",
+        "hero.description": "¡Construyendo Futuros Más Brillantes Juntos!",
+        "hero.cta": "Leer más",
+
+        // Welcome Section
+        "welcome.tag": "Bienvenidos a nuestro sitio web",
+        "welcome.heading": "Construyendo un Futuro Armonioso",
+        "welcome.lead": "En la Fundación Accord and Harmony, somos un faro de esperanza para las comunidades de Sofía, Bulgaria.",
+        "welcome.text1": "Nuestra misión se basa en la creencia de que cuando las personas se unen en armonía, se hacen posibles transformaciones extraordinarias. Nos dedicamos a elevar a las familias vulnerables, empoderar a los niños a través de la educación y crear caminos hacia futuros más brillantes.",
+        "welcome.text2": "A través de asociaciones estratégicas con comunidades locales, escuelas y partidarios compasivos como usted, entregamos recursos esenciales, oportunidades educativas y servicios de apoyo integral que marcan una verdadera diferencia en la vida de las personas.",
+        "welcome.emphasis": "Únase a nosotros en la construcción de un futuro donde cada niño tenga acceso a educación de calidad y cada familia encuentre el apoyo que necesita para prosperar.",
+
+        // Mission Section
+        "mission.support.title": "Apoyar a los Necesitados",
+        "mission.support.description": "Proporcionar recursos esenciales y apoyo a comunidades vulnerables en toda Bulgaria.",
+        "mission.education.title": "Educación Infantil",
+        "mission.education.description": "Defendiendo oportunidades educativas y empoderando a la próxima generación para prosperar.",
+        "mission.unity.title": "Unidad y Compasión",
+        "mission.unity.description": "Construir puentes dentro de las comunidades y fomentar una cultura de apoyo mutuo y comprensión.",
+
+        // Newsletter Section
+        "newsletter.title": "Mantente Conectado",
+        "newsletter.description": "Suscríbete a nuestro boletín y mantente al día con nuestras últimas iniciativas e historias de impacto.",
+        "newsletter.placeholder": "Ingresa tu dirección de correo electrónico",
+        "newsletter.button": "Suscribirse",
+        "newsletter.disclaimer": "Al enviar tu información, nos otorgas permiso para enviarte correos electrónicos. Puedes cancelar la suscripción en cualquier momento.",
+
+        // Footer
+        "footer.about.text": "En Accord and Harmony, creemos en el poder de la unidad y el impacto transformador que puede tener en la vida de los necesitados.",
+        "footer.contact.title": "Contacto",
+        "footer.contact.address": "Dirección:",
+        "footer.contact.phone": "Teléfono:",
+        "footer.contact.email": "Email:",
+        "footer.links.title": "Enlaces Rápidos",
+        "footer.copyright": "© 2025 Fundación Accord and Harmony. Todos los derechos reservados.",
+        "footer.sitemap": "Mapa del Sitio",
+        "footer.terms": "Términos de Servicio",
+        "footer.privacy": "Política de Privacidad",
+
+        // Donate Page
+        "donate.hero.title": "Haz la Diferencia Hoy",
+        "donate.hero.subtitle": "Tu Generosidad Crea Cambios Duraderos",
+
+        // Donation Tiers (Spanish - EUR)
+        "donate.tier1.amount": "€50",
+        "donate.tier1.title": "Material Escolar para 3 Estudiantes",
+        "donate.tier1.description": "Mochilas, cuadernos, bolígrafos, libros de texto y materiales de arte para un semestre",
+        "donate.tier2.amount": "€100",
+        "donate.tier2.title": "Paquete Mensual de Alimentos para una Familia",
+        "donate.tier2.description": "Alimentos esenciales, productos frescos, pan, leche y alimentos básicos para 4 personas",
+        "donate.tier3.amount": "€250",
+        "donate.tier3.title": "3 Meses de Tutorías Después de Clases",
+        "donate.tier3.description": "Sesiones de tutoría profesional para 5 estudiantes en matemáticas, idioma búlgaro y ciencias",
+        "donate.tier.cta": "Haz clic para donar →",
+
+        // Donation Amounts
+        "donate.amount.10": "€10",
+        "donate.amount.25": "€25",
+        "donate.amount.50": "€50",
+        "donate.amount.100": "€100",
+        "donate.amount.250": "€250",
+
+        // Donation Form
+        "donate.impact.tag": "Tu Impacto",
+        "donate.impact.heading": "Cómo Ayuda Tu Donación",
+        "donate.impact.intro": "Cada contribución, sin importar el tamaño, hace una diferencia real en la vida de aquellos a quienes servimos. Tu apoyo nos ayuda a proporcionar oportunidades educativas, recursos esenciales y esperanza a las familias en toda Bulgaria.",
+        "donate.form.tag": "Apoya Nuestra Misión",
+        "donate.form.heading": "Elige Tu Contribución",
+        "donate.form.selectAmount": "Selecciona el Monto de la Donación",
+        "donate.form.other": "Otro",
+        "donate.form.customAmount": "Monto Personalizado (€)",
+        "donate.form.enterAmount": "Ingresa el monto",
+        "donate.form.name": "Nombre Completo (Opcional)",
+        "donate.form.namePlaceholder": "Tu nombre",
+        "donate.form.email": "Dirección de Correo Electrónico (Opcional)",
+        "donate.form.emailPlaceholder": "tu@email.com",
+        "donate.form.emailNote": "Te enviaremos un correo de agradecimiento y un recibo",
+        "donate.form.recurringTitle": "Hacer esta una donación mensual",
+        "donate.form.recurringNote": "El apoyo recurrente nos ayuda a planificar el futuro",
+        "donate.form.secureNote": "Donación segura a través de PayPal. Tu información de pago está cifrada y nunca se almacena en nuestros servidores.",
+        "donate.form.whyPaypalTitle": "💡 ¿Por qué PayPal?",
+        "donate.form.whyPaypalText": "PayPal es una plataforma de pago confiable y segura utilizada en todo el mundo. No necesitas una cuenta PayPal - puedes donar con cualquier tarjeta de crédito o débito.",
+        "donate.bank.heading": "O Dona por Transferencia Bancaria",
+        "donate.bank.bankName": "Nombre del Banco:",
+        "donate.bank.accountName": "Nombre de la Cuenta:",
+        "donate.bank.currency": "Moneda:",
+        "donate.bank.reference": "Referencia:",
+        "donate.bank.referenceText": "Donación - [Tu Nombre]",
+        "donate.bank.note": "Por favor envíanos un correo electrónico a <a href=\"mailto:contact@acchm.org\">contact@acchm.org</a> después de realizar una transferencia bancaria para que podamos enviarte un recibo.",
+
+        // Book Purchase (Spanish - EUR)
+        "donate.book.tag": "📚 Apoya a los Niños con tu Compra",
+        "donate.book.heading": "Jazz Trumpet Master Class - Recurso Educativo",
+        "donate.book.intro": "Al comprar este completo libro de método de trompeta jazz, apoyas directamente a los niños necesitados en toda Bulgaria. El 100% de las ganancias financian programas educativos.",
+        "donate.book.price": "€25.00 EUR",
+        "donate.book.priceLabel": "PDF Digital • Donación Deducible de Impuestos",
+
+        // Contact Page
+        "contact.hero.title": "Contáctanos",
+        "contact.hero.subtitle": "Nos Encantaría Saber de Ti",
+        "contact.form.title": "Envíanos un Mensaje",
+        "contact.form.name": "Nombre Completo",
+        "contact.form.email": "Dirección de Correo Electrónico",
+        "contact.form.phone": "Número de Teléfono",
+        "contact.form.subject": "Asunto",
+        "contact.form.message": "Mensaje",
+        "contact.form.submit": "Enviar Mensaje",
+
+        // About Page
+        "about.hero.title": "Sobre Nosotros",
+        "about.hero.subtitle": "Dedicados a Crear un Cambio Positivo en Nuestra Comunidad",
+
+        // Gallery Page
+        "gallery.hero.title": "Nuestra Galería",
+        "gallery.hero.subtitle": "Capturando Momentos de Esperanza, Unidad y Transformación"
     }
 };
 
@@ -470,5 +769,7 @@ const languageNames = {
     en: "English",
     de: "Deutsch",
     fr: "Français",
-    bg: "Български"
+    bg: "Български",
+    it: "Italiano",
+    es: "Español"
 };

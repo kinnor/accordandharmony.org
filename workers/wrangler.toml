@@ -24,60 +24,54 @@ node_compat = true
 [[d1_databases]]
 binding = "DB" # Available as env.DB in workers
 database_name = "accordharmony-db"
-database_id = "YOUR_DATABASE_ID" # Replace with actual D1 database ID
+database_id = "061f959b-ad4e-40af-ab61-2c184682bc94"
 
 # ============================================
 # R2 Storage Binding
 # For PDF files and watermarked copies
 # ============================================
-[[r2_buckets]]
-binding = "R2_BUCKET" # Available as env.R2_BUCKET in workers
-bucket_name = "accordharmony-files"
+# [[r2_buckets]]
+# binding = "R2_BUCKET" # Available as env.R2_BUCKET in workers
+# bucket_name = "accordharmony-files"
+# Will be enabled when R2 bucket is created
 
 # ============================================
 # KV Namespace for Rate Limiting & Caching
 # ============================================
-[[kv_namespaces]]
-binding = "KV_CACHE"
-id = "YOUR_KV_NAMESPACE_ID" # Replace with actual KV namespace ID
+# [[kv_namespaces]]
+# binding = "KV_CACHE"
+# id = "YOUR_KV_NAMESPACE_ID" # Replace with actual KV namespace ID
+# Commented out - not needed for email system
 
 # ============================================
-# Production Environment
+# Production Environment (commented out until needed)
 # ============================================
-[env.production]
-name = "accordandharmony-workers"
-routes = [
-  { pattern = "accordandharmony.org/api/*", zone_name = "accordandharmony.org" }
-]
-
-[[env.production.d1_databases]]
-binding = "DB"
-database_name = "accordharmony-db-prod"
-database_id = "YOUR_PROD_DATABASE_ID"
-
-[[env.production.r2_buckets]]
-binding = "R2_BUCKET"
-bucket_name = "accordharmony-files-prod"
-
-[[env.production.kv_namespaces]]
-binding = "KV_CACHE"
-id = "YOUR_PROD_KV_ID"
+# [env.production]
+# name = "accordandharmony-workers"
+# routes = [
+#   { pattern = "accordandharmony.org/api/*", zone_name = "accordandharmony.org" }
+# ]
+#
+# [[env.production.d1_databases]]
+# binding = "DB"
+# database_name = "accordharmony-db-prod"
+# database_id = "YOUR_PROD_DATABASE_ID"
+#
+# [[env.production.r2_buckets]]
+# binding = "R2_BUCKET"
+# bucket_name = "accordharmony-files-prod"
 
 # ============================================
-# Development Environment
+# Development Environment (commented out until needed)
 # ============================================
-[env.development]
-name = "accordandharmony-workers-dev"
-
-[[env.development.d1_databases]]
-binding = "DB"
-database_name = "accordharmony-db-dev"
-database_id = "YOUR_DEV_DATABASE_ID"
-
-[[env.development.r2_buckets]]
-binding = "R2_BUCKET"
-bucket_name = "accordharmony-files-dev"
-
-[[env.development.kv_namespaces]]
-binding = "KV_CACHE"
-id = "YOUR_DEV_KV_ID"
+# [env.development]
+# name = "accordandharmony-workers-dev"
+#
+# [[env.development.d1_databases]]
+# binding = "DB"
+# database_name = "accordharmony-db-dev"
+# database_id = "YOUR_DEV_DATABASE_ID"
+#
+# [[env.development.r2_buckets]]
+# binding = "R2_BUCKET"
+# bucket_name = "accordharmony-files-dev"

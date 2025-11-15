@@ -1,7 +1,7 @@
 name = "accordandharmony-workers"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
-node_compat = true
+compatibility_flags = ["nodejs_compat"]
 
 # ============================================
 # Environment Variables
@@ -44,13 +44,18 @@ database_id = "061f959b-ad4e-40af-ab61-2c184682bc94"
 # Commented out - not needed for email system
 
 # ============================================
-# Production Environment (commented out until needed)
+# Production Routes
+# ============================================
+# Route all /api/* requests from main domain to this worker
+routes = [
+  { pattern = "accordandharmony.org/api/*", zone_name = "accordandharmony.org" }
+]
+
+# ============================================
+# Production Environment (for future multi-env setup)
 # ============================================
 # [env.production]
-# name = "accordandharmony-workers"
-# routes = [
-#   { pattern = "accordandharmony.org/api/*", zone_name = "accordandharmony.org" }
-# ]
+# name = "accordandharmony-workers-prod"
 #
 # [[env.production.d1_databases]]
 # binding = "DB"

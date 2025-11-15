@@ -6,9 +6,9 @@ This directory contains the preview and full versions of the Jazz Trumpet Master
 
 ### Preview PDF (Required for preview feature)
 
-**File name:** `JAZZ_TRUMPET_PREVIEW.pdf`
+**File name:** `JAZZ_TRUMPET_Preview.pdf`
 
-**Location:** Place it directly in this directory (`downloads/books/JAZZ_TRUMPET_PREVIEW.pdf`)
+**Location:** Place it directly in this directory (`downloads/books/JAZZ_TRUMPET_Preview.pdf`)
 
 **Content:** This should be a sample PDF with a few pages from the book (e.g., pages 1-5 or selected chapters) to give visitors a preview of the content before they purchase.
 
@@ -40,7 +40,7 @@ This directory contains the preview and full versions of the Jazz Trumpet Master
 ## How the Preview Feature Works
 
 1. **Visitor clicks "Preview Sample Pages" button** on the donate page
-2. **Modal opens** displaying the preview PDF (`JAZZ_TRUMPET_PREVIEW.pdf`)
+2. **Modal opens** displaying the preview PDF (`JAZZ_TRUMPET_Preview.pdf`)
 3. **Visitor can read** the sample pages in the browser
 4. **If they like it**, they can click "Purchase Full Book" to buy the complete version
 5. **After purchase**, they receive a personalized watermarked copy of `JAZZ_TRUMPET_MASTER_CLASS.pdf` via email
@@ -62,7 +62,7 @@ After you add the preview PDF:
 
 ## File Checklist
 
-- [ ] `JAZZ_TRUMPET_PREVIEW.pdf` - Preview sample (user must add)
+- [x] `JAZZ_TRUMPET_Preview.pdf` - Preview sample ✅ Added
 - [ ] `JAZZ_TRUMPET_MASTER_CLASS.pdf` - Full book for watermarking (user must add)
 
 ---

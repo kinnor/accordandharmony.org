@@ -5,7 +5,7 @@
     'use strict';
 
     // Configuration
-    const PREVIEW_PDF_PATH = 'downloads/books/JAZZ_TRUMPET_PREVIEW.pdf';
+    const PREVIEW_PDF_PATH = 'downloads/books/JAZZ_TRUMPET_Preview.pdf';
 
     // Get modal elements
     const modal = document.getElementById('book-preview-modal');

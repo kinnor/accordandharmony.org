@@ -10,6 +10,7 @@ publish = "."
 # Files to exclude from deployment
 [build.processing]
 skip = [
+  "api/**",
   "php/**",
   "workers/**",
   "*.md",

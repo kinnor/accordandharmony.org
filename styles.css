@@ -3287,6 +3287,165 @@ html {
     line-height: 1.6;
 }
 
+/* Book Action Buttons */
+.book-action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.book-action-buttons .btn-secondary {
+    background: linear-gradient(135deg, #6B5B4E 0%, #8B7355 100%);
+    border: none;
+}
+
+.book-action-buttons .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(107, 91, 78, 0.3);
+}
+
+/* ============================================
+   Book Preview Modal
+   ============================================ */
+.preview-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+}
+
+.preview-modal-content {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 95vh;
+    overflow: hidden;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+    animation: modalSlideIn 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 30px;
+    border-bottom: 2px solid #f0f0f0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.preview-modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.preview-close-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-close-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-primary);
+    transform: rotate(90deg);
+}
+
+.preview-modal-body {
+    padding: 30px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.preview-info {
+    background: linear-gradient(135deg, #E8F5FF 0%, #F0F8FF 100%);
+    border-left: 4px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.preview-info p {
+    margin: 0;
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.preview-pdf-container {
+    margin-bottom: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.preview-pdf-container iframe {
+    width: 100%;
+    min-height: 600px;
+    border: none;
+    display: block;
+}
+
+.preview-fallback {
+    padding: 40px;
+    text-align: center;
+    background: white;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+}
+
+.preview-fallback p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.preview-fallback a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.preview-cta {
+    background: linear-gradient(135deg, #FFF4E0 0%, #FFF8E8 100%);
+    border-left: 4px solid #FFD93D;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.preview-cta p {
+    margin: 0 0 20px 0;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.preview-cta .btn-primary {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
 /* ============================================
    Authentication Modal
    ============================================ */
@@ -3533,6 +3692,47 @@ html {
     }
 }
 
+@media (max-width: 768px) {
+    .book-action-buttons {
+        flex-direction: column;
+    }
+
+    .book-action-buttons .btn-secondary,
+    .book-action-buttons .btn-primary {
+        width: 100%;
+    }
+
+    .preview-modal {
+        padding: 10px;
+    }
+
+    .preview-modal-content {
+        max-height: 98vh;
+        border-radius: 12px;
+    }
+
+    .preview-modal-header {
+        padding: 20px;
+    }
+
+    .preview-modal-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .preview-modal-body {
+        padding: 20px;
+    }
+
+    .preview-pdf-container iframe {
+        min-height: 400px;
+    }
+
+    .preview-cta .btn-primary {
+        width: 100%;
+        max-width: none;
+    }
+}
+
 @media (max-width: 480px) {
     .auth-modal-content {
         padding: 30px 20px;
@@ -3545,5 +3745,26 @@ html {
     .btn-large {
         padding: 14px 24px;
         font-size: 1rem;
+    }
+
+    .preview-modal-header {
+        padding: 15px;
+    }
+
+    .preview-modal-header h3 {
+        font-size: 1.05rem;
+    }
+
+    .preview-modal-body {
+        padding: 15px;
+    }
+
+    .preview-info,
+    .preview-cta {
+        padding: 15px;
+    }
+
+    .preview-pdf-container iframe {
+        min-height: 300px;
     }
 }

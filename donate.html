@@ -281,12 +281,21 @@
                             </div>
                         </div>
 
-                        <button class="btn-primary btn-large" id="purchase-book-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
-                                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/>
-                            </svg>
-                            Purchase & Support Foundation
-                        </button>
+                        <div class="book-action-buttons">
+                            <button class="btn-secondary btn-large" id="preview-book-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                </svg>
+                                <span data-i18n="donate.book.previewBtn">Preview Sample Pages</span>
+                            </button>
+
+                            <button class="btn-primary btn-large" id="purchase-book-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/>
+                                </svg>
+                                Purchase & Support Foundation
+                            </button>
+                        </div>
 
                         <p class="book-notice">
                             <strong>🎺 About this book:</strong> All proceeds from this purchase go directly to supporting the Accord and Harmony Foundation. You'll receive a personalized PDF copy for your personal use, along with a tax-deductible receipt.
@@ -519,6 +528,53 @@
         </div>
     </footer>
 
+    <!-- Book Preview Modal -->
+    <div id="book-preview-modal" class="preview-modal">
+        <div class="preview-modal-content">
+            <div class="preview-modal-header">
+                <h3 data-i18n="donate.book.previewTitle">Book Preview - Jazz Trumpet Master Class</h3>
+                <button class="preview-close-btn" id="close-preview-btn" aria-label="Close preview">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="preview-modal-body">
+                <div class="preview-info">
+                    <p data-i18n="donate.book.previewInfo">
+                        This preview shows sample pages from the book. The full version contains 28 pages with 80+ jazz licks, complete music theory, and a 24-week structured curriculum.
+                    </p>
+                </div>
+                <div class="preview-pdf-container">
+                    <iframe
+                        id="preview-pdf-frame"
+                        src=""
+                        type="application/pdf"
+                        title="Book Preview PDF"
+                        style="width: 100%; height: 600px; border: none; border-radius: 8px;">
+                    </iframe>
+                    <div class="preview-fallback" style="display: none;">
+                        <p data-i18n="donate.book.previewFallback">
+                            Your browser doesn't support PDF preview.
+                            <a href="#" id="download-preview-link" download>Click here to download the preview</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="preview-cta">
+                    <p data-i18n="donate.book.previewCTA">
+                        <strong>Like what you see?</strong> Purchase the full book to support children's education programs.
+                    </p>
+                    <button class="btn-primary" id="preview-purchase-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/>
+                        </svg>
+                        <span data-i18n="donate.book.previewPurchaseBtn">Purchase Full Book</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="translations.js"></script>
     <script src="language-switcher.js"></script>
     <script src="script.js"></script>
@@ -526,5 +582,6 @@
     <script src="donation-modal.js"></script>
     <script src="auth-client.js"></script>
     <script src="book-purchase.js"></script>
+    <script src="book-preview.js"></script>
 </body>
 </html>

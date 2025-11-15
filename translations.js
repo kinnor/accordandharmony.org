@@ -150,7 +150,15 @@ const translations = {
         "donate.book.benefit1": "Instant digital download after purchase",
         "donate.book.benefit2": "Professional PDF format - works on all devices",
         "donate.book.benefit3": "For personal, non-commercial use",
-        "donate.book.benefit4": "Tax-deductible donation receipt included"
+        "donate.book.benefit4": "Tax-deductible donation receipt included",
+
+        // Book Preview Feature
+        "donate.book.previewBtn": "Preview Sample Pages",
+        "donate.book.previewTitle": "Book Preview - Jazz Trumpet Master Class",
+        "donate.book.previewInfo": "This preview shows sample pages from the book. The full version contains 28 pages with 80+ jazz licks, complete music theory, and a 24-week structured curriculum.",
+        "donate.book.previewFallback": "Your browser doesn't support PDF preview. Click here to download the preview",
+        "donate.book.previewCTA": "<strong>Like what you see?</strong> Purchase the full book to support children's education programs.",
+        "donate.book.previewPurchaseBtn": "Purchase Full Book"
     },
 
     de: {
@@ -228,6 +236,14 @@ const translations = {
         "donate.amount.100": "€100",
         "donate.amount.250": "€250",
         "donate.book.price": "€25.00 EUR",
+
+        // Book Preview Feature
+        "donate.book.previewBtn": "Beispielseiten ansehen",
+        "donate.book.previewTitle": "Buchvorschau - Jazz Trompeten Meisterklasse",
+        "donate.book.previewInfo": "Diese Vorschau zeigt Beispielseiten aus dem Buch. Die Vollversion enthält 28 Seiten mit über 80 Jazz-Licks, vollständiger Musiktheorie und einem 24-wöchigen strukturierten Lehrplan.",
+        "donate.book.previewFallback": "Ihr Browser unterstützt keine PDF-Vorschau. Klicken Sie hier, um die Vorschau herunterzuladen",
+        "donate.book.previewCTA": "<strong>Gefällt Ihnen, was Sie sehen?</strong> Kaufen Sie das vollständige Buch, um Bildungsprogramme für Kinder zu unterstützen.",
+        "donate.book.previewPurchaseBtn": "Vollständiges Buch kaufen",
 
         // About Page - Extended
         "about.story.tag": "Unsere Geschichte",
@@ -344,6 +360,14 @@ const translations = {
         "donate.hero.title": "Faire la différence",
         "donate.hero.subtitle": "Votre soutien change des vies",
 
+        // Book Preview Feature
+        "donate.book.previewBtn": "Aperçu des pages d'exemple",
+        "donate.book.previewTitle": "Aperçu du livre - Cours de maîtrise de la trompette jazz",
+        "donate.book.previewInfo": "Cet aperçu montre des exemples de pages du livre. La version complète contient 28 pages avec plus de 80 phrases de jazz, la théorie musicale complète et un programme structuré de 24 semaines.",
+        "donate.book.previewFallback": "Votre navigateur ne prend pas en charge l'aperçu PDF. Cliquez ici pour télécharger l'aperçu",
+        "donate.book.previewCTA": "<strong>Vous aimez ce que vous voyez?</strong> Achetez le livre complet pour soutenir les programmes d'éducation des enfants.",
+        "donate.book.previewPurchaseBtn": "Acheter le livre complet",
+
         // About Page - Extended
         "about.story.tag": "Notre Histoire",
         "about.story.heading": "Qui Nous Sommes",
@@ -458,6 +482,14 @@ const translations = {
         // Donate Page
         "donate.hero.title": "Направете разлика",
         "donate.hero.subtitle": "Вашата подкрепа променя животи",
+
+        // Book Preview Feature
+        "donate.book.previewBtn": "Преглед на примерни страници",
+        "donate.book.previewTitle": "Преглед на книгата - Майсторски клас по джаз тромпет",
+        "donate.book.previewInfo": "Този преглед показва примерни страници от книгата. Пълната версия съдържа 28 страници с над 80 джаз фрази, пълна музикална теория и 24-седмична структурирана програма.",
+        "donate.book.previewFallback": "Вашият браузър не поддържа преглед на PDF. Кликнете тук, за да изтеглите прегледа",
+        "donate.book.previewCTA": "<strong>Харесва ли ви това, което виждате?</strong> Закупете пълната книга, за да подкрепите образователните програми за деца.",
+        "donate.book.previewPurchaseBtn": "Закупи пълната книга",
 
         // About Page - Extended
         "about.story.tag": "Нашата История",
@@ -616,6 +648,14 @@ const translations = {
         "donate.book.price": "€25.00 EUR",
         "donate.book.priceLabel": "PDF Digitale • Donazione Deducibile dalle Tasse",
 
+        // Book Preview Feature
+        "donate.book.previewBtn": "Anteprima delle pagine di esempio",
+        "donate.book.previewTitle": "Anteprima del libro - Master Class di Tromba Jazz",
+        "donate.book.previewInfo": "Questa anteprima mostra pagine di esempio dal libro. La versione completa contiene 28 pagine con oltre 80 lick jazz, teoria musicale completa e un curriculum strutturato di 24 settimane.",
+        "donate.book.previewFallback": "Il tuo browser non supporta l'anteprima PDF. Clicca qui per scaricare l'anteprima",
+        "donate.book.previewCTA": "<strong>Ti piace quello che vedi?</strong> Acquista il libro completo per sostenere i programmi educativi per bambini.",
+        "donate.book.previewPurchaseBtn": "Acquista il libro completo",
+
         // Contact Page
         "contact.hero.title": "Contattaci",
         "contact.hero.subtitle": "Ci Piacerebbe Sentirti",
@@ -742,6 +782,14 @@ const translations = {
         "donate.book.intro": "Al comprar este completo libro de método de trompeta jazz, apoyas directamente a los niños necesitados en toda Bulgaria. El 100% de las ganancias financian programas educativos.",
         "donate.book.price": "€25.00 EUR",
         "donate.book.priceLabel": "PDF Digital • Donación Deducible de Impuestos",
+
+        // Book Preview Feature
+        "donate.book.previewBtn": "Vista previa de páginas de muestra",
+        "donate.book.previewTitle": "Vista previa del libro - Master Class de Trompeta Jazz",
+        "donate.book.previewInfo": "Esta vista previa muestra páginas de muestra del libro. La versión completa contiene 28 páginas con más de 80 licks de jazz, teoría musical completa y un plan de estudios estructurado de 24 semanas.",
+        "donate.book.previewFallback": "Tu navegador no admite vista previa de PDF. Haz clic aquí para descargar la vista previa",
+        "donate.book.previewCTA": "<strong>¿Te gusta lo que ves?</strong> Compra el libro completo para apoyar los programas educativos para niños.",
+        "donate.book.previewPurchaseBtn": "Comprar libro completo",
 
         // Contact Page
         "contact.hero.title": "Contáctanos",

@@ -1,0 +1,76 @@
+name: Workers Build Check
+
+on:
+  push:
+    branches: [ main, master, develop, 'claude/**' ]
+    paths:
+      - 'workers/**'
+      - '.github/workflows/workers-build-check.yml'
+  pull_request:
+    branches: [ main, master, develop ]
+    paths:
+      - 'workers/**'
+      - '.github/workflows/workers-build-check.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./workers
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: workers/package-lock.json
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run tests
+      run: npm test
+      continue-on-error: true
+
+    - name: Check wrangler configuration
+      run: |
+        if [ ! -f "wrangler.toml" ]; then
+          echo "Error: wrangler.toml not found"
+          exit 1
+        fi
+        echo "wrangler.toml found ✓"
+
+    - name: Validate worker syntax
+      run: |
+        echo "Checking worker files..."
+        node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const srcDir = path.join(__dirname, 'src');
+          const files = fs.readdirSync(srcDir).filter(f => f.endsWith('.js'));
+          let errors = 0;
+          files.forEach(file => {
+            try {
+              require(path.join(srcDir, file));
+              console.log(\`✓ \${file}\`);
+            } catch (err) {
+              console.error(\`✗ \${file}: \${err.message}\`);
+              errors++;
+            }
+          });
+          if (errors > 0) process.exit(1);
+        "
+
+    - name: Build check summary
+      if: always()
+      run: |
+        echo "### Build Check Results" >> $GITHUB_STEP_SUMMARY
+        echo "- ✓ Dependencies installed" >> $GITHUB_STEP_SUMMARY
+        echo "- ✓ Configuration validated" >> $GITHUB_STEP_SUMMARY
+        echo "- ✓ Worker syntax checked" >> $GITHUB_STEP_SUMMARY

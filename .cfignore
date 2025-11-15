@@ -1,0 +1,38 @@
+# Cloudflare Pages Ignore File
+# Exclude these files and directories from Cloudflare Pages deployment
+
+# PHP files and directories (not supported by Cloudflare Pages)
+api/
+php/
+
+# Cloudflare Workers (deployed separately)
+workers/
+
+# Documentation files
+*.md
+BOOK_PURCHASE_DEPLOYMENT.md
+BOOK_PURCHASE_README.md
+CLAUDE.md
+CLOUDFLARE_DEPLOYMENT.md
+CLOUDFLARE_PR_DESCRIPTION.md
+DEPLOYMENT_GUIDE.md
+DEPLOYMENT_SUCCESS.md
+DEPLOYMENT_SUMMARY.md
+EMAIL_SYSTEM.md
+FIX_DOWNLOAD_LINKS.md
+MULTILINGUAL_PR_DESCRIPTION.md
+PAYPAL_SETUP.md
+PR_DESCRIPTION.md
+README.md
+RESEND_DNS_SETUP.md
+TEST_REPORT.md
+
+# Documentation directory
+docs/
+
+# Git files
+.git/
+.gitignore
+
+# Development/testing files
+test-email.html

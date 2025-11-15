@@ -11,40 +11,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.svg" alt="Accord and Harmony Foundation Logo" width="150" height="60" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size: 1.5rem; font-weight: 700; color: var(--primary-color);\'>Accord & Harmony</span>';">
-                </a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo-header.svg" alt="Accord and Harmony Foundation" class="logo-image">
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="primary-navigation">
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+                        <li><a href="resources.html" class="active" data-i18n="nav.resources">Resources</a></li>
+                        <li><a href="donate.html" class="btn-donate" data-i18n="nav.donate">Donate</a></li>
+                        <li class="language-selector">
+                            <select id="languageSelector" aria-label="Select language">
+                                <option value="en">English</option>
+                                <option value="de">Deutsch</option>
+                                <option value="fr">Français</option>
+                                <option value="bg">Български</option>
+                                <option value="it">Italiano</option>
+                                <option value="es">Español</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-                <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
-                <li><a href="donate.html" data-i18n="nav.donate">Donate</a></li>
-                <li><a href="resources.html" class="active" data-i18n="nav.resources">Resources</a></li>
-                <li>
-                    <select id="languageSelector" aria-label="Select language">
-                        <option value="en">English</option>
-                        <option value="de">Deutsch</option>
-                        <option value="fr">Français</option>
-                        <option value="bg">Български</option>
-                        <option value="it">Italiano</option>
-                        <option value="es">Español</option>
-                    </select>
-                </li>
-            </ul>
         </nav>
     </header>
 
@@ -99,6 +101,26 @@
                                 <span class="price-label" data-i18n="donate.book.priceLabel">Digital PDF (2.4MB • 28 Pages)</span>
                             </div>
                         </div>
+
+                        <div class="book-action-buttons">
+                            <button class="btn-secondary btn-large" id="preview-book-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                </svg>
+                                <span data-i18n="donate.book.previewBtn">Preview Sample Pages</span>
+                            </button>
+
+                            <button class="btn-primary btn-large" id="purchase-book-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/>
+                                </svg>
+                                <span data-i18n="resources.book.purchaseBtn">Get Book & Support Children</span>
+                            </button>
+                        </div>
+
+                        <p class="book-notice">
+                            <strong>🎺 <span data-i18n="resources.book.noticeTitle">Double Impact:</span></strong> <span data-i18n="resources.book.noticeText">You receive professional jazz trumpet training delivered instantly via personalized PDF. Vulnerable children in Bulgaria receive educational support through 100% of your purchase. Plus, you get a tax-deductible donation receipt.</span>
+                        </p>
 
                         <div class="book-description">
                             <p><strong data-i18n="resources.book.impact">Your investment creates lasting impact: 100% of proceeds fund educational programs for vulnerable children in Bulgaria. You get professional jazz training. They get access to tutoring, school supplies, and brighter futures.</strong></p>
@@ -186,32 +208,6 @@
                                 <p class="author" data-i18n="donate.book.testimonial3.author">— Alex Rodriguez, Intermediate Player, Madrid</p>
                             </div>
                         </div>
-
-                        <!-- Urgency Banner -->
-                        <div class="urgency-banner">
-                            <span class="urgency-icon">⏰</span>
-                            <p data-i18n="donate.book.urgency"><strong>Limited Time:</strong> Every purchase this month includes a bonus video masterclass on bebop improvisation (€47 value)</p>
-                        </div>
-
-                        <div class="book-action-buttons">
-                            <button class="btn-secondary btn-large" id="preview-book-btn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
-                                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
-                                </svg>
-                                <span data-i18n="donate.book.previewBtn">Preview Sample Pages</span>
-                            </button>
-
-                            <button class="btn-primary btn-large" id="purchase-book-btn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
-                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/>
-                                </svg>
-                                <span data-i18n="resources.book.purchaseBtn">Get Book & Support Children</span>
-                            </button>
-                        </div>
-
-                        <p class="book-notice">
-                            <strong>🎺 <span data-i18n="resources.book.noticeTitle">Double Impact:</span></strong> <span data-i18n="resources.book.noticeText">You receive professional jazz trumpet training delivered instantly via personalized PDF. Vulnerable children in Bulgaria receive educational support through 100% of your purchase. Plus, you get a tax-deductible donation receipt.</span>
-                        </p>
 
                         <!-- Social Share Buttons -->
                         <div class="social-share-section">

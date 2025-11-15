@@ -145,8 +145,14 @@ export async function sendPurchaseConfirmationEmail(env, { to, userName, product
     ? 'Thank You for Your Donation - Accord and Harmony Foundation'
     : `Your Book is Ready to Download - ${productName}`;
 
+  // Use worker URL directly if FRONTEND_URL routes are not configured
+  // Once Cloudflare routes are set up, env.FRONTEND_URL should be https://accordandharmony.org
+  const workerUrl = env.FRONTEND_URL && env.FRONTEND_URL.includes('workers.dev')
+    ? env.FRONTEND_URL
+    : 'https://accordandharmony-workers.rossen-kinov.workers.dev';
+
   const downloadUrl = downloadToken
-    ? `${env.FRONTEND_URL}/api/download?token=${downloadToken}`
+    ? `${workerUrl}/api/download?token=${downloadToken}`
     : null;
 
   const html = `

@@ -2089,6 +2089,59 @@ ul {
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* Resources Page Footer - Beige Theme */
+.resources-page .footer {
+    background: linear-gradient(135deg, #F5F5DC 0%, #FFF8DC 100%);
+}
+
+.resources-page .footer-section h3 {
+    background: linear-gradient(135deg, #4A4A4A 0%, #2C2C2C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.resources-page .footer-section h4 {
+    color: #3D3D3D;
+    text-shadow: none;
+}
+
+.resources-page .footer-section p {
+    color: #4A4A4A;
+}
+
+.resources-page .footer-section a {
+    color: #4A4A4A;
+}
+
+.resources-page .footer-section a:hover {
+    color: #1684C9;
+}
+
+.resources-page .footer-bottom {
+    border-top: 2px solid rgba(74, 74, 74, 0.2);
+    color: #4A4A4A;
+}
+
+.resources-page .footer-links-bottom a {
+    color: #4A4A4A;
+}
+
+.resources-page .footer-links-bottom a:hover {
+    color: #1684C9;
+    background: rgba(22, 132, 201, 0.1);
+}
+
+.resources-page .footer-links-bottom span {
+    color: rgba(74, 74, 74, 0.5);
+}
+
+/* Hide decorative emojis on resources page footer */
+.resources-page .footer::before,
+.resources-page .footer::after {
+    display: none;
+}
+
 /* ============================================
    Page-Specific Styles
    ============================================ */

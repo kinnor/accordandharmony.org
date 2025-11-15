@@ -52,7 +52,8 @@
                 if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
                     element.placeholder = translation;
                 } else {
-                    element.textContent = translation;
+                    // Use innerHTML to support HTML tags in translations
+                    element.innerHTML = translation;
                 }
             }
         });

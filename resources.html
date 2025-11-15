@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="resources.pageTitle">Educational Resources - Help Us & Learn | Accord and Harmony Foundation</title>
+    <meta name="description" content="Support children's education while getting world-class jazz trumpet training. 100% of proceeds fund educational programs for vulnerable children in Bulgaria.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Accord and Harmony Foundation Logo" width="150" height="60" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size: 1.5rem; font-weight: 700; color: var(--primary-color);\'>Accord & Harmony</span>';">
+                </a>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+                <li><a href="donate.html" data-i18n="nav.donate">Donate</a></li>
+                <li><a href="resources.html" class="active" data-i18n="nav.resources">Resources</a></li>
+                <li>
+                    <select id="languageSelector" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="fr">Français</option>
+                        <option value="bg">Български</option>
+                        <option value="it">Italiano</option>
+                        <option value="es">Español</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1 data-i18n="resources.hero.title">Help Us Through Education.<br>Get World-Class Training.</h1>
+                <p class="hero-subtitle" data-i18n="resources.hero.subtitle">Every purchase directly supports children's education programs across Bulgaria</p>
+                <p class="hero-description" data-i18n="resources.hero.description">When you invest in your musical education through our resources, 100% of proceeds fund tutoring, school supplies, and educational opportunities for vulnerable children. It's not just a purchase—it's a partnership in changing lives.</p>
+                <a href="#book-section" class="btn-primary" data-i18n="resources.hero.cta">Explore Resources</a>
+            </div>
+        </section>
+
+        <!-- Book Purchase Section -->
+        <section class="about-content" id="book-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="resources.book.tag">📚 Featured Resource</span>
+                    <h2 data-i18n="resources.book.heading">Jazz Trumpet Master Class</h2>
+                    <p class="section-lead" data-i18n="resources.book.lead">Professional jazz trumpet training that supports children's education. Every purchase is a donation to our mission.</p>
+                </div>
+
+                <div class="book-showcase">
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <img src="images/jazz-trumpet-book-cover.jpg" alt="Jazz Trumpet Master Class Book Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="book-cover-placeholder" style="display: none;">
+                                <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="200" height="280" fill="#4A90E2"/>
+                                    <text x="100" y="140" text-anchor="middle" fill="white" font-size="24" font-weight="bold">Jazz Trumpet</text>
+                                    <text x="100" y="170" text-anchor="middle" fill="white" font-size="18">Master Class</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="book-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            <span data-i18n="resources.book.badge">100% Supports Children</span>
+                        </div>
+                    </div>
+
+                    <div class="book-details">
+                        <h3 class="book-title" data-i18n="resources.book.title">Jazz Trumpet Master Class</h3>
+                        <p class="book-publisher" data-i18n="resources.book.publisher">Published by Accord and Harmony Foundation<br>Montreal, Quebec, Canada</p>
+
+                        <div class="book-price-section">
+                            <div class="book-price">
+                                <span class="price-amount" data-i18n="donate.book.price">$25.00</span>
+                                <span class="price-label" data-i18n="donate.book.priceLabel">Digital PDF (2.4MB • 28 Pages)</span>
+                            </div>
+                        </div>
+
+                        <div class="book-description">
+                            <p><strong data-i18n="resources.book.impact">Your investment creates lasting impact: 100% of proceeds fund educational programs for vulnerable children in Bulgaria. You get professional jazz training. They get access to tutoring, school supplies, and brighter futures.</strong></p>
+
+                            <h4 style="color: #2E9DD8; margin: 1.5rem 0 1rem;" data-i18n="donate.book.whatsInside">What's Inside</h4>
+                            <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+                                <li data-i18n="donate.book.feature1"><strong>80+ Professional Jazz Licks</strong> - Inspired by masters: Clifford Brown, Miles Davis, Freddie Hubbard, Lee Morgan, Wynton Marsalis</li>
+                                <li data-i18n="donate.book.feature2"><strong>Complete Music Theory</strong> - Intervals, scales, chord construction, ii-V-I progressions, bebop theory</li>
+                                <li data-i18n="donate.book.feature3"><strong>All 12 Keys</strong> - Systematic transposition practice through the complete cycle of fourths</li>
+                                <li data-i18n="donate.book.feature4"><strong>4 Progressive Levels</strong> - Beginner Foundations • Intermediate Bebop • Advanced Modern Jazz • Master Signatures</li>
+                                <li data-i18n="donate.book.feature5"><strong>Bb Trumpet Transposition Guide</strong> - Complete side-by-side concert pitch to Bb trumpet examples</li>
+                                <li data-i18n="donate.book.feature6"><strong>24-Week Structured Curriculum</strong> - Week-by-week practice roadmap with daily routines</li>
+                                <li data-i18n="donate.book.feature7"><strong>Practice Exercises</strong> - Essential patterns, sequences, chromatic approaches, technical development</li>
+                                <li data-i18n="donate.book.feature8"><strong>Jazz Standards Guide</strong> - Recommended tunes organized by skill level</li>
+                                <li data-i18n="donate.book.feature9"><strong>Listening Recommendations</strong> - Essential albums and artists for each style period</li>
+                            </ul>
+
+                            <div class="book-features">
+                                <div class="feature">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                    <span data-i18n="resources.book.instant">Instant PDF download</span>
+                                </div>
+                                <div class="feature">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                    <span data-i18n="resources.book.watermark">Personalized watermark</span>
+                                </div>
+                                <div class="feature">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                    <span data-i18n="resources.book.personal">For personal use only</span>
+                                </div>
+                                <div class="feature">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                    <span data-i18n="resources.book.tax">Tax-deductible receipt included</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Proof Stats -->
+                        <div class="social-proof-stats">
+                            <div class="stat">
+                                <h4>500+</h4>
+                                <p data-i18n="donate.book.stat1">Players Worldwide</p>
+                            </div>
+                            <div class="stat">
+                                <h4>4.9/5</h4>
+                                <p data-i18n="donate.book.stat2">Average Rating</p>
+                            </div>
+                            <div class="stat">
+                                <h4>80+</h4>
+                                <p data-i18n="donate.book.stat3">Jazz Licks</p>
+                            </div>
+                            <div class="stat">
+                                <h4>100%</h4>
+                                <p data-i18n="donate.book.stat4">Supports Children</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonials Section -->
+                        <div class="testimonials-section">
+                            <h3 data-i18n="donate.book.testimonialsTitle">What Players Are Saying</h3>
+
+                            <div class="testimonial">
+                                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="quote" data-i18n="donate.book.testimonial1.quote">"This method transformed my jazz improvisation in just 8 weeks. The progressive approach and transposition exercises are genius."</p>
+                                <p class="author" data-i18n="donate.book.testimonial1.author">— Mark Stevens, Professional Trumpet Player, Boston</p>
+                            </div>
+
+                            <div class="testimonial">
+                                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="quote" data-i18n="donate.book.testimonial2.quote">"I've been teaching for 20 years and this is the most comprehensive jazz trumpet resource I've seen. My students love it."</p>
+                                <p class="author" data-i18n="donate.book.testimonial2.author">— Dr. Sarah Chen, Music Educator, Berklee College</p>
+                            </div>
+
+                            <div class="testimonial">
+                                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="quote" data-i18n="donate.book.testimonial3.quote">"The 24-week curriculum gave me the structure I desperately needed. Worth every penny, and it supports a great cause!"</p>
+                                <p class="author" data-i18n="donate.book.testimonial3.author">— Alex Rodriguez, Intermediate Player, Madrid</p>
+                            </div>
+                        </div>
+
+                        <!-- Urgency Banner -->
+                        <div class="urgency-banner">
+                            <span class="urgency-icon">⏰</span>
+                            <p data-i18n="donate.book.urgency"><strong>Limited Time:</strong> Every purchase this month includes a bonus video masterclass on bebop improvisation (€47 value)</p>
+                        </div>
+
+                        <div class="book-action-buttons">
+                            <button class="btn-secondary btn-large" id="preview-book-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                </svg>
+                                <span data-i18n="donate.book.previewBtn">Preview Sample Pages</span>
+                            </button>
+
+                            <button class="btn-primary btn-large" id="purchase-book-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/>
+                                </svg>
+                                <span data-i18n="resources.book.purchaseBtn">Get Book & Support Children</span>
+                            </button>
+                        </div>
+
+                        <p class="book-notice">
+                            <strong>🎺 <span data-i18n="resources.book.noticeTitle">Double Impact:</span></strong> <span data-i18n="resources.book.noticeText">You receive professional jazz trumpet training delivered instantly via personalized PDF. Vulnerable children in Bulgaria receive educational support through 100% of your purchase. Plus, you get a tax-deductible donation receipt.</span>
+                        </p>
+
+                        <!-- Social Share Buttons -->
+                        <div class="social-share-section">
+                            <p class="share-title" data-i18n="donate.book.shareTitle">Love this resource? Share with fellow musicians:</p>
+                            <div class="social-share-buttons">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://accordandharmony.org/resources.html" target="_blank" rel="noopener" class="share-btn facebook">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                    <span data-i18n="donate.book.shareFacebook">Share</span>
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url=https://accordandharmony.org/resources.html&text=Check%20out%20this%20professional%20jazz%20trumpet%20method%20book%20-%20100%25%20proceeds%20support%20children%27s%20education!" target="_blank" rel="noopener" class="share-btn twitter">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                    <span data-i18n="donate.book.shareTwitter">Tweet</span>
+                                </a>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://accordandharmony.org/resources.html&title=Jazz%20Trumpet%20Master%20Class" target="_blank" rel="noopener" class="share-btn linkedin">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                    <span data-i18n="donate.book.shareLinkedIn">Share</span>
+                                </a>
+                                <a href="mailto:?subject=Check%20out%20this%20Jazz%20Trumpet%20Method&body=I%20found%20this%20excellent%20jazz%20trumpet%20method%20book%20-%20100%25%20of%20proceeds%20support%20children's%20education!%20https://accordandharmony.org/resources.html" class="share-btn email">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                    <span data-i18n="donate.book.shareEmail">Email</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="faq-section">
+                            <h3 data-i18n="donate.book.faqTitle">Frequently Asked Questions</h3>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span data-i18n="donate.book.faq1.question">What skill level is this book for?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p data-i18n="donate.book.faq1.answer">The book is designed for intermediate to advanced players who want to master jazz improvisation. It includes 4 progressive levels: Beginner Foundations, Intermediate Bebop, Advanced Modern Jazz, and Master Signatures.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span data-i18n="donate.book.faq2.question">Is this for Bb trumpet or C trumpet?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p data-i18n="donate.book.faq2.answer">The book includes complete Bb trumpet transposition guide with side-by-side concert pitch to Bb trumpet examples. All exercises are presented in all 12 keys for comprehensive practice.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span data-i18n="donate.book.faq3.question">Do I get the PDF immediately after purchase?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p data-i18n="donate.book.faq3.answer">Yes! After completing your purchase through PayPal, you'll receive an email within minutes containing your personalized, watermarked PDF copy and your tax-deductible donation receipt.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span data-i18n="donate.book.faq4.question">How long does the 24-week curriculum take?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p data-i18n="donate.book.faq4.answer">The 24-week curriculum is designed for dedicated practice of 30-60 minutes daily. However, you can work through it at your own pace - faster or slower depending on your schedule and learning speed.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span data-i18n="donate.book.faq5.question">Is this purchase tax-deductible?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p data-i18n="donate.book.faq5.answer">Yes! Your purchase is a charitable donation to the Accord and Harmony Foundation (registered non-profit). You'll receive a tax-deductible donation receipt via email. 100% of proceeds support children's education programs in Bulgaria.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span data-i18n="donate.book.faq6.question">Can I share the PDF with others?</span>
+                                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p data-i18n="donate.book.faq6.answer">The PDF is for personal, non-commercial use only. Each copy is personalized with your information and watermarked. If you'd like to share this resource with others, please direct them to our website where they can purchase their own copy and support our mission.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2 data-i18n="newsletter.title">Stay Connected</h2>
+                <p data-i18n="newsletter.description">Sign up to our newsletter and stay up to date with our latest initiatives and impact stories.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" name="email" placeholder="Enter your e-mail address" required data-i18n="newsletter.placeholder">
+                    <button type="submit" class="btn-primary" data-i18n="newsletter.button">Subscribe</button>
+                </form>
+                <p class="newsletter-disclaimer" data-i18n="newsletter.disclaimer">By submitting your information, you are granting us permission to email you. You may unsubscribe at any time.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Accord and Harmony</h3>
+                    <p data-i18n="footer.about.text">At Accord and Harmony, we believe in the power of unity and the transformative impact it can have on the lives of those in need.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-i18n="footer.contact.title">Contact</h4>
+                    <p><strong data-i18n="footer.contact.address">Address:</strong> Odrin 95 st, Sofia 1303, BG</p>
+                    <p><strong data-i18n="footer.contact.phone">Phone:</strong> +359 (89) 609 7069</p>
+                    <p><strong data-i18n="footer.contact.email">Email:</strong> contact@acchm.org</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-i18n="footer.links.title">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+                        <li><a href="donate.html" data-i18n="nav.donate">Donate</a></li>
+                        <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2025 Accord and Harmony Foundation. All rights reserved.</p>
+                <div class="footer-links-bottom">
+                    <a href="#">Sitemap</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
+                    <span>|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Book Preview Modal -->
+    <div id="book-preview-modal" class="preview-modal">
+        <div class="preview-modal-content">
+            <div class="preview-modal-header">
+                <h3 data-i18n="donate.book.previewTitle">Book Preview - Jazz Trumpet Master Class</h3>
+                <button class="preview-close-btn" id="close-preview-btn" aria-label="Close preview">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="preview-modal-body">
+                <div class="preview-info">
+                    <p data-i18n="donate.book.previewInfo">
+                        This preview shows sample pages from the book. The full version contains 28 pages with 80+ jazz licks, complete music theory, and a 24-week structured curriculum.
+                    </p>
+                </div>
+                <div class="preview-pdf-container">
+                    <iframe
+                        id="preview-pdf-frame"
+                        src=""
+                        type="application/pdf"
+                        title="Book Preview PDF"
+                        style="width: 100%; height: 600px; border: none; border-radius: 8px;">
+                    </iframe>
+                    <div class="preview-fallback" style="display: none;">
+                        <p data-i18n="donate.book.previewFallback">
+                            Your browser doesn't support PDF preview.
+                            <a href="#" id="download-preview-link" download>Click here to download the preview</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="preview-cta">
+                    <p data-i18n="donate.book.previewCTA">
+                        <strong>Like what you see?</strong> Purchase the full book to support children's education programs.
+                    </p>
+                    <button class="btn-primary" id="preview-purchase-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/>
+                        </svg>
+                        <span data-i18n="donate.book.previewPurchaseBtn">Purchase Full Book</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="language-switcher.js"></script>
+    <script src="script.js"></script>
+    <script src="book-preview.js"></script>
+    <script src="book-purchase.js"></script>
+    <script src="faq-accordion.js"></script>
+</body>
+</html>

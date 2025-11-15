@@ -33,6 +33,18 @@ accordandharmony.org/
 ├── donate.html         # Donate page
 ├── styles.css          # Main stylesheet
 ├── script.js           # JavaScript functionality
+├── api/                # Email API handlers (Resend integration)
+│   ├── config.php      # Configuration & API key
+│   ├── contact.php     # Contact form handler
+│   ├── newsletter.php  # Newsletter signup handler
+│   └── lib/            # Helper libraries
+│       ├── resend.php  # Resend API client
+│       ├── csrf.php    # CSRF protection
+│       └── ratelimit.php # Rate limiting
+├── docs/               # Documentation
+│   ├── DNS-SETUP-GUIDE.md        # DNS configuration for Resend
+│   ├── RESEND-INTEGRATION.md     # Email integration guide
+│   └── MIGRATION-CHECKLIST.md    # Step-by-step migration guide
 └── README.md           # This file
 ```
 
@@ -106,22 +118,38 @@ Edit the bank transfer section in `donate.html` to include:
 - IBAN number
 - BIC/SWIFT code
 
-### Setting Up Forms
+### Setting Up Email Integration (Resend)
 
-The contact and donation forms currently show success messages without backend integration. To make them functional:
+The website uses **Resend** for email functionality with the subdomain `mail.accordandharmony.org`.
 
-1. **Option A - Email Service (Formspree, FormSubmit)**
-   - Sign up for a service like Formspree
-   - Update form `action` attributes with provided endpoints
+**Complete Setup Guide**: See [`docs/MIGRATION-CHECKLIST.md`](docs/MIGRATION-CHECKLIST.md)
 
-2. **Option B - Custom Backend**
-   - Set up a server-side script (PHP, Node.js, etc.)
-   - Update form `action` attributes to point to your script
-   - Configure email sending functionality
+**Quick Start**:
+1. Create Resend account at https://resend.com
+2. Configure DNS records for `mail.accordandharmony.org` (see [`docs/DNS-SETUP-GUIDE.md`](docs/DNS-SETUP-GUIDE.md))
+3. Upload `api/` folder to server
+4. Configure API key in `api/config.php`
+5. Test forms
 
-3. **Option C - Network Solutions Forms**
-   - Check if Network Solutions provides form handling
-   - Follow their documentation to integrate
+**Why Subdomain?**
+- Using `mail.accordandharmony.org` for sending emails preserves your main domain's email receiving capabilities
+- Improves deliverability and sender reputation
+- No disruption to existing email setup at `contact@acchm.org`
+
+**Email Configuration**:
+- **Send From**: `noreply@mail.accordandharmony.org`
+- **Reply To**: `contact@acchm.org`
+- **Receive At**: `contact@acchm.org` (unchanged)
+
+**Features**:
+- ✅ Contact form → Sends to admin email
+- ✅ Newsletter signup → Sends confirmation email
+- ✅ Rate limiting (5 requests/hour per IP)
+- ✅ Input sanitization and validation
+- ✅ CSRF protection (optional)
+- ✅ Error logging
+
+For detailed integration guide, see [`docs/RESEND-INTEGRATION.md`](docs/RESEND-INTEGRATION.md)
 
 ## Browser Support
 

@@ -1,0 +1,35 @@
+# Resend API Configuration
+# IMPORTANT: Never commit API keys to version control
+# Note: api/config.php is the template (committed)
+# Create api/config.local.php for production with real API key
+api/config.local.php
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+api/error.log
+
+# Rate limiting data
+/tmp/ratelimit/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+
+# Temporary files
+*.tmp

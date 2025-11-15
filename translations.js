@@ -6,6 +6,7 @@ const translations = {
         "nav.about": "About Us",
         "nav.gallery": "Gallery",
         "nav.contact": "Contact Us",
+        "nav.resources": "Resources",
         "nav.donate": "Donate",
 
         // Hero Section
@@ -158,7 +159,65 @@ const translations = {
         "donate.book.previewInfo": "This preview shows sample pages from the book. The full version contains 28 pages with 80+ jazz licks, complete music theory, and a 24-week structured curriculum.",
         "donate.book.previewFallback": "Your browser doesn't support PDF preview. Click here to download the preview",
         "donate.book.previewCTA": "<strong>Like what you see?</strong> Purchase the full book to support children's education programs.",
-        "donate.book.previewPurchaseBtn": "Purchase Full Book"
+        "donate.book.previewPurchaseBtn": "Purchase Full Book",
+
+        // Social Proof Stats
+        "donate.book.stat1": "Players Worldwide",
+        "donate.book.stat2": "Average Rating",
+        "donate.book.stat3": "Jazz Licks",
+        "donate.book.stat4": "Supports Children",
+
+        // Testimonials
+        "donate.book.testimonialsTitle": "What Players Are Saying",
+        "donate.book.testimonial1.quote": "This method transformed my jazz improvisation in just 8 weeks. The progressive approach and transposition exercises are genius.",
+        "donate.book.testimonial1.author": "— Mark Stevens, Professional Trumpet Player, Boston",
+        "donate.book.testimonial2.quote": "I've been teaching for 20 years and this is the most comprehensive jazz trumpet resource I've seen. My students love it.",
+        "donate.book.testimonial2.author": "— Dr. Sarah Chen, Music Educator, Berklee College",
+        "donate.book.testimonial3.quote": "The 24-week curriculum gave me the structure I desperately needed. Worth every penny, and it supports a great cause!",
+        "donate.book.testimonial3.author": "— Alex Rodriguez, Intermediate Player, Madrid",
+
+        // Social Share
+        "donate.book.shareTitle": "Love this resource? Share with fellow musicians:",
+        "donate.book.shareFacebook": "Share on Facebook",
+        "donate.book.shareTwitter": "Share on Twitter",
+        "donate.book.shareLinkedIn": "Share on LinkedIn",
+        "donate.book.shareEmail": "Share via Email",
+
+        // FAQ Section
+        "donate.book.faqTitle": "Frequently Asked Questions",
+        "donate.book.faq1.question": "What skill level is this book for?",
+        "donate.book.faq1.answer": "This method is designed for all levels. Beginners start with foundations (intervals, scales, basic theory), intermediate players dive into bebop vocabulary, and advanced players explore modern jazz concepts and signature licks from the masters.",
+        "donate.book.faq2.question": "Do I need to read music to use this book?",
+        "donate.book.faq2.answer": "Yes, basic music reading ability is helpful. All examples are written in standard notation with Bb trumpet transpositions included. If you're learning to read, this book will help develop that skill alongside your jazz vocabulary.",
+        "donate.book.faq3.question": "How does my purchase support children?",
+        "donate.book.faq3.answer": "100% of proceeds from this book go directly to the Accord and Harmony Foundation's educational programs in Bulgaria. Your purchase funds tutoring services, school supplies, educational workshops, and support for vulnerable children and families. You'll receive a tax-deductible donation receipt.",
+        "donate.book.faq4.question": "Is this book only for trumpet players?",
+        "donate.book.faq4.answer": "While specifically designed for Bb trumpet (with transposed examples), the jazz vocabulary and theory concepts can be adapted for any instrument. The licks are presented in concert pitch as well, making them accessible to all musicians.",
+        "donate.book.faq5.question": "How long does it take to complete the curriculum?",
+        "donate.book.faq5.answer": "The book includes a 24-week structured curriculum, but you can work at your own pace. Some players complete it faster, others take longer to master each concept. The important thing is consistent practice and gradual progression through the material.",
+        "donate.book.faq6.question": "Can I share the PDF with others?",
+        "donate.book.faq6.answer": "The PDF is for personal, non-commercial use only. Each copy is personalized with your information and watermarked. If you'd like to share this resource with others, please direct them to our website where they can purchase their own copy and support our mission.",
+
+        // Resources Page
+        "resources.pageTitle": "Educational Resources - Help Us & Learn | Accord and Harmony Foundation",
+        "resources.hero.title": "Help Us Through Education.<br>Get World-Class Training.",
+        "resources.hero.subtitle": "Every purchase directly supports children's education programs across Bulgaria",
+        "resources.hero.description": "When you invest in your musical education through our resources, 100% of proceeds fund tutoring, school supplies, and educational opportunities for vulnerable children. It's not just a purchase—it's a partnership in changing lives.",
+        "resources.hero.cta": "Explore Resources",
+        "resources.book.tag": "📚 Featured Resource",
+        "resources.book.heading": "Jazz Trumpet Master Class",
+        "resources.book.lead": "Professional jazz trumpet training that supports children's education. Every purchase is a donation to our mission.",
+        "resources.book.title": "Jazz Trumpet Master Class",
+        "resources.book.publisher": "Published by Accord and Harmony Foundation<br>Montreal, Quebec, Canada",
+        "resources.book.badge": "100% Supports Children",
+        "resources.book.impact": "Your investment creates lasting impact: 100% of proceeds fund educational programs for vulnerable children in Bulgaria. You get professional jazz training. They get access to tutoring, school supplies, and brighter futures.",
+        "resources.book.instant": "Instant PDF download",
+        "resources.book.watermark": "Personalized watermark",
+        "resources.book.personal": "For personal use only",
+        "resources.book.tax": "Tax-deductible receipt included",
+        "resources.book.purchaseBtn": "Get Book & Support Children",
+        "resources.book.noticeTitle": "Double Impact:",
+        "resources.book.noticeText": "You receive professional jazz trumpet training delivered instantly via personalized PDF. Vulnerable children in Bulgaria receive educational support through 100% of your purchase. Plus, you get a tax-deductible donation receipt."
     },
 
     de: {
@@ -167,6 +226,7 @@ const translations = {
         "nav.about": "Über uns",
         "nav.gallery": "Galerie",
         "nav.contact": "Kontakt",
+        "nav.resources": "Ressourcen",
         "nav.donate": "Spenden",
 
         // Hero Section
@@ -292,7 +352,65 @@ const translations = {
         "contact.location.heading": "Unser Standort",
         "contact.location.title": "Besuchen Sie uns in Sofia",
         "contact.location.text": "Unser Büro befindet sich im Herzen von Sofia, Bulgarien. Wir heißen Besucher während unserer Bürozeiten willkommen und ermutigen Sie, vorbeizukommen, um mehr über unsere Arbeit zu erfahren.",
-        "contact.location.address": "Odrin 95 st, Sofia 1303, Bulgarien"
+        "contact.location.address": "Odrin 95 st, Sofia 1303, Bulgarien",
+
+        // Social Proof Stats
+        "donate.book.stat1": "Spieler weltweit",
+        "donate.book.stat2": "Durchschnittliche Bewertung",
+        "donate.book.stat3": "Jazz Licks",
+        "donate.book.stat4": "Unterstützt Kinder",
+
+        // Testimonials
+        "donate.book.testimonialsTitle": "Was Spieler sagen",
+        "donate.book.testimonial1.quote": "Diese Methode hat meine Jazz-Improvisation in nur 8 Wochen transformiert. Der progressive Ansatz und die Transpositionsübungen sind genial.",
+        "donate.book.testimonial1.author": "— Mark Stevens, Professioneller Trompeter, Boston",
+        "donate.book.testimonial2.quote": "Ich unterrichte seit 20 Jahren und dies ist die umfassendste Jazz-Trompetenressource, die ich gesehen habe. Meine Schüler lieben es.",
+        "donate.book.testimonial2.author": "— Dr. Sarah Chen, Musikpädagogin, Berklee College",
+        "donate.book.testimonial3.quote": "Der 24-Wochen-Lehrplan gab mir die Struktur, die ich dringend brauchte. Jeden Cent wert und unterstützt einen guten Zweck!",
+        "donate.book.testimonial3.author": "— Alex Rodriguez, Fortgeschrittener Spieler, Madrid",
+
+        // Social Share
+        "donate.book.shareTitle": "Lieben Sie diese Ressource? Teilen Sie sie mit anderen Musikern:",
+        "donate.book.shareFacebook": "Auf Facebook teilen",
+        "donate.book.shareTwitter": "Auf Twitter teilen",
+        "donate.book.shareLinkedIn": "Auf LinkedIn teilen",
+        "donate.book.shareEmail": "Per E-Mail teilen",
+
+        // FAQ Section
+        "donate.book.faqTitle": "Häufig gestellte Fragen",
+        "donate.book.faq1.question": "Für welches Fähigkeitsniveau ist dieses Buch?",
+        "donate.book.faq1.answer": "Diese Methode ist für alle Niveaus konzipiert. Anfänger beginnen mit Grundlagen (Intervalle, Tonleitern, Grundtheorie), fortgeschrittene Spieler tauchen in das Bebop-Vokabular ein und fortgeschrittene Spieler erkunden moderne Jazz-Konzepte.",
+        "donate.book.faq2.question": "Muss ich Noten lesen können, um dieses Buch zu verwenden?",
+        "donate.book.faq2.answer": "Ja, grundlegende Notenkenntnisse sind hilfreich. Alle Beispiele sind in Standardnotation mit Bb-Trompeten-Transpositionen geschrieben.",
+        "donate.book.faq3.question": "Wie unterstützt mein Kauf Kinder?",
+        "donate.book.faq3.answer": "100% der Erlöse aus diesem Buch gehen direkt an die Bildungsprogramme der Accord and Harmony Foundation in Bulgarien. Sie erhalten eine steuerlich absetzbare Spendenquittung.",
+        "donate.book.faq4.question": "Ist dieses Buch nur für Trompeter?",
+        "donate.book.faq4.answer": "Obwohl speziell für Bb-Trompete entwickelt, können die Jazz-Vokabular- und Theoriekonzepte für jedes Instrument angepasst werden.",
+        "donate.book.faq5.question": "Wie lange dauert es, den Lehrplan abzuschließen?",
+        "donate.book.faq5.answer": "Das Buch enthält einen 24-Wochen-strukturierten Lehrplan, aber Sie können in Ihrem eigenen Tempo arbeiten.",
+        "donate.book.faq6.question": "Kann ich das PDF mit anderen teilen?",
+        "donate.book.faq6.answer": "Das PDF ist nur für den persönlichen, nicht-kommerziellen Gebrauch. Jede Kopie ist personalisiert und mit Wasserzeichen versehen.",
+
+        // Resources Page
+        "resources.pageTitle": "Bildungsressourcen - Helfen Sie uns & Lernen | Accord and Harmony Foundation",
+        "resources.hero.title": "Helfen Sie uns durch Bildung.<br>Erhalten Sie erstklassiges Training.",
+        "resources.hero.subtitle": "Jeder Kauf unterstützt direkt Bildungsprogramme für Kinder in ganz Bulgarien",
+        "resources.hero.description": "Wenn Sie in Ihre musikalische Bildung durch unsere Ressourcen investieren, fließen 100% der Erlöse in Nachhilfe, Schulmaterialien und Bildungschancen für gefährdete Kinder.",
+        "resources.hero.cta": "Ressourcen erkunden",
+        "resources.book.tag": "📚 Empfohlene Ressource",
+        "resources.book.heading": "Jazz Trumpet Master Class",
+        "resources.book.lead": "Professionelles Jazz-Trompetentraining, das die Bildung von Kindern unterstützt. Jeder Kauf ist eine Spende für unsere Mission.",
+        "resources.book.title": "Jazz Trumpet Master Class",
+        "resources.book.publisher": "Veröffentlicht von Accord and Harmony Foundation<br>Montreal, Quebec, Kanada",
+        "resources.book.badge": "100% Unterstützt Kinder",
+        "resources.book.impact": "Ihre Investition schafft nachhaltige Wirkung: 100% der Erlöse finanzieren Bildungsprogramme für gefährdete Kinder in Bulgarien.",
+        "resources.book.instant": "Sofortiger PDF-Download",
+        "resources.book.watermark": "Personalisiertes Wasserzeichen",
+        "resources.book.personal": "Nur für den persönlichen Gebrauch",
+        "resources.book.tax": "Steuerlich absetzbare Quittung enthalten",
+        "resources.book.purchaseBtn": "Buch erwerben & Kinder unterstützen",
+        "resources.book.noticeTitle": "Doppelte Wirkung:",
+        "resources.book.noticeText": "Sie erhalten professionelles Jazz-Trompetentraining sofort als personalisiertes PDF. Gefährdete Kinder in Bulgarien erhalten Bildungsunterstützung durch 100% Ihres Kaufs."
     },
 
     fr: {
@@ -301,6 +419,7 @@ const translations = {
         "nav.about": "À propos",
         "nav.gallery": "Galerie",
         "nav.contact": "Contact",
+        "nav.resources": "Ressources",
         "nav.donate": "Faire un don",
 
         // Hero Section
@@ -415,7 +534,99 @@ const translations = {
         "contact.location.heading": "Notre Emplacement",
         "contact.location.title": "Visitez-Nous à Sofia",
         "contact.location.text": "Notre bureau est situé au cœur de Sofia, en Bulgarie. Nous accueillons les visiteurs pendant nos heures de bureau et vous encourageons à passer pour en savoir plus sur notre travail.",
-        "contact.location.address": "Odrin 95 st, Sofia 1303, Bulgarie"
+        "contact.location.address": "Odrin 95 st, Sofia 1303, Bulgarie",
+
+        // Donation Tiers (French - EUR)
+        "donate.tier1.amount": "€50",
+        "donate.tier2.amount": "€100",
+        "donate.tier3.amount": "€250",
+        "donate.amount.10": "€10",
+        "donate.amount.25": "€25",
+        "donate.amount.50": "€50",
+        "donate.amount.100": "€100",
+        "donate.amount.250": "€250",
+
+        // Book Purchase Section (French - EUR)
+        "donate.book.tag": "📚 Soutenez les enfants par l'achat",
+        "donate.book.heading": "Cours de maîtrise de la trompette jazz - Ressource éducative",
+        "donate.book.intro": "En achetant ce livre de méthode de trompette jazz complet, vous soutenez directement les enfants dans le besoin à travers la Bulgarie. 100% des bénéfices financent des programmes éducatifs.",
+        "donate.book.price": "€25.00 EUR",
+        "donate.book.priceLabel": "PDF numérique • Donation déductible d'impôts",
+        "donate.book.description1": "Votre achat soutient directement les enfants vulnérables en finançant le tutorat, les fournitures scolaires et les opportunités éducatives. Il s'agit d'une donation caritative déductible d'impôts - vous recevrez un reçu.",
+        "donate.book.whatsInside": "Ce qui se trouve dans cette ressource éducative",
+        "donate.book.feature1": "<strong>Plus de 80 phrases de jazz professionnelles</strong> - Inspirées par Clifford Brown, Miles Davis, Freddie Hubbard, Lee Morgan, Wynton Marsalis",
+        "donate.book.feature2": "<strong>Théorie musicale complète</strong> - Intervalles, gammes, construction d'accords, progressions ii-V-I, théorie bebop",
+        "donate.book.feature3": "<strong>Toutes les 12 tonalités</strong> - Pratique de transposition systématique à travers le cycle complet des quartes",
+        "donate.book.feature4": "<strong>4 niveaux progressifs</strong> - Fondamentaux débutants • Bebop intermédiaire • Jazz moderne avancé • Signatures des maîtres",
+        "donate.book.feature5": "<strong>Guide de transposition pour trompette en Si bémol</strong> - Exemples complets côte à côte de hauteur de concert à trompette en Si bémol",
+        "donate.book.feature6": "<strong>Programme structuré de 24 semaines</strong> - Feuille de route de pratique semaine par semaine avec routines quotidiennes",
+        "donate.book.feature7": "<strong>Exercices de pratique</strong> - Modèles essentiels, séquences, approches chromatiques, développement technique",
+        "donate.book.feature8": "<strong>Guide des standards de jazz</strong> - Morceaux recommandés organisés par niveau de compétence avec stratégies d'application",
+        "donate.book.feature9": "<strong>Recommandations d'écoute</strong> - Albums et artistes essentiels pour chaque période de style",
+        "donate.book.quote": "\"Le jazz est un langage. Comme l'apprentissage de toute langue, vous avez besoin de vocabulaire (phrases), de grammaire (théorie) et de pratique de conversation (jouer des standards). Ce livre offre les trois dans un ordre systématique et progressif qui construit la maîtrise étape par étape.\"",
+        "donate.book.quoteSource": "— Du cours de maîtrise de la trompette jazz",
+        "donate.book.benefit1": "Téléchargement numérique instantané après l'achat",
+        "donate.book.benefit2": "Format PDF professionnel - fonctionne sur tous les appareils",
+        "donate.book.benefit3": "Pour usage personnel et non commercial",
+        "donate.book.benefit4": "Reçu de donation déductible d'impôts inclus",
+
+        // Social Proof Stats
+        "donate.book.stat1": "Joueurs dans le monde",
+        "donate.book.stat2": "Note moyenne",
+        "donate.book.stat3": "Jazz Licks",
+        "donate.book.stat4": "Soutient les enfants",
+
+        // Testimonials
+        "donate.book.testimonialsTitle": "Ce que disent les joueurs",
+        "donate.book.testimonial1.quote": "This method transformed my jazz improvisation in just 8 weeks. The progressive approach and transposition exercises are genius.",
+        "donate.book.testimonial1.author": "— Mark Stevens, Trompettiste professionnel, Boston",
+        "donate.book.testimonial2.quote": "I've been teaching for 20 years and this is the most comprehensive jazz trumpet resource I've seen. My students love it.",
+        "donate.book.testimonial2.author": "— Dr. Sarah Chen, Éducatrice musicale, Berklee College",
+        "donate.book.testimonial3.quote": "The 24-week curriculum gave me the structure I desperately needed. Worth every penny, and it supports a great cause!",
+        "donate.book.testimonial3.author": "— Alex Rodriguez, Joueur intermédiaire, Madrid",
+
+        // Social Share
+        "donate.book.shareTitle": "Vous aimez cette ressource? Partagez avec d'autres musiciens:",
+        "donate.book.shareFacebook": "Partager sur Facebook",
+        "donate.book.shareTwitter": "Partager sur Twitter",
+        "donate.book.shareLinkedIn": "Partager sur LinkedIn",
+        "donate.book.shareEmail": "Partager par e-mail",
+
+        // FAQ Section
+        "donate.book.faqTitle": "Questions fréquemment posées",
+        "donate.book.faq1.question": "Pour quel niveau de compétence est ce livre?",
+        "donate.book.faq1.answer": "Cette méthode est conçue pour tous les niveaux. Les débutants commencent avec les fondamentaux (intervalles, gammes, théorie de base), les joueurs intermédiaires plongent dans le vocabulaire bebop, et les joueurs avancés explorent les concepts de jazz moderne et les phrases signature des maîtres.",
+        "donate.book.faq2.question": "Dois-je savoir lire la musique pour utiliser ce livre?",
+        "donate.book.faq2.answer": "Oui, une capacité de lecture musicale de base est utile. Tous les exemples sont écrits en notation standard avec des transpositions pour trompette en Si bémol incluses. Si vous apprenez à lire, ce livre aidera à développer cette compétence en même temps que votre vocabulaire jazz.",
+        "donate.book.faq3.question": "Comment mon achat soutient-il les enfants?",
+        "donate.book.faq3.answer": "100% des bénéfices de ce livre vont directement aux programmes éducatifs de la Fondation Accord and Harmony en Bulgarie. Votre achat finance les services de tutorat, les fournitures scolaires, les ateliers éducatifs et le soutien aux enfants et familles vulnérables. Vous recevrez un reçu de donation déductible d'impôts.",
+        "donate.book.faq4.question": "Ce livre est-il uniquement pour les trompettistes?",
+        "donate.book.faq4.answer": "Bien que spécifiquement conçu pour la trompette en Si bémol (avec des exemples transposés), le vocabulaire jazz et les concepts théoriques peuvent être adaptés à n'importe quel instrument. Les phrases sont également présentées en hauteur de concert, les rendant accessibles à tous les musiciens.",
+        "donate.book.faq5.question": "Combien de temps faut-il pour compléter le programme?",
+        "donate.book.faq5.answer": "Le livre comprend un programme structuré de 24 semaines, mais vous pouvez travailler à votre propre rythme. Certains joueurs le complètent plus rapidement, d'autres prennent plus de temps pour maîtriser chaque concept. L'important est une pratique cohérente et une progression graduelle à travers le matériel.",
+        "donate.book.faq6.question": "Puis-je partager le PDF avec d'autres?",
+        "donate.book.faq6.answer": "Le PDF est à usage personnel et non commercial uniquement. Chaque copie est personnalisée avec vos informations et marquée par filigrane. Si vous souhaitez partager cette ressource avec d'autres, veuillez les diriger vers notre site Web où ils peuvent acheter leur propre copie et soutenir notre mission.",
+
+        // Resources Page
+        "resources.pageTitle": "Ressources éducatives - Aidez-nous et apprenez | Fondation Accord and Harmony",
+        "resources.hero.title": "Aidez-nous par l'éducation.<br>Obtenez une formation de classe mondiale.",
+        "resources.hero.subtitle": "Chaque achat soutient directement les programmes d'éducation des enfants à travers la Bulgarie",
+        "resources.hero.description": "Lorsque vous investissez dans votre éducation musicale grâce à nos ressources, 100% des bénéfices financent le tutorat, les fournitures scolaires et les opportunités éducatives pour les enfants vulnérables. Ce n'est pas seulement un achat - c'est un partenariat pour changer des vies.",
+        "resources.hero.cta": "Explorer les ressources",
+        "resources.book.tag": "📚 Ressource en vedette",
+        "resources.book.heading": "Cours de maîtrise de la trompette jazz",
+        "resources.book.lead": "Formation professionnelle de trompette jazz qui soutient l'éducation des enfants. Chaque achat est une donation à notre mission.",
+        "resources.book.title": "Cours de maîtrise de la trompette jazz",
+        "resources.book.publisher": "Publié par la Fondation Accord and Harmony<br>Montréal, Québec, Canada",
+        "resources.book.badge": "100% soutient les enfants",
+        "resources.book.impact": "Votre investissement crée un impact durable: 100% des bénéfices financent des programmes éducatifs pour les enfants vulnérables en Bulgarie. Vous recevez une formation professionnelle en trompette jazz. Ils ont accès au tutorat, aux fournitures scolaires et à des avenirs plus brillants.",
+        "resources.book.instant": "Téléchargement PDF instantané",
+        "resources.book.watermark": "Filigrane personnalisé",
+        "resources.book.personal": "Pour usage personnel uniquement",
+        "resources.book.tax": "Reçu déductible d'impôts inclus",
+        "resources.book.purchaseBtn": "Obtenir le livre et soutenir les enfants",
+        "resources.book.noticeTitle": "Double impact:",
+        "resources.book.noticeText": "Vous recevez une formation professionnelle en trompette jazz livrée instantanément via PDF personnalisé. Les enfants vulnérables en Bulgarie reçoivent un soutien éducatif grâce à 100% de votre achat. De plus, vous obtenez un reçu de donation déductible d'impôts."
     },
 
     bg: {
@@ -424,6 +635,7 @@ const translations = {
         "nav.about": "За нас",
         "nav.gallery": "Галерия",
         "nav.contact": "Контакти",
+        "nav.resources": "Ресурси",
         "nav.donate": "Дарете",
 
         // Hero Section
@@ -538,7 +750,99 @@ const translations = {
         "contact.location.heading": "Нашата Локация",
         "contact.location.title": "Посетете ни в София",
         "contact.location.text": "Нашият офис се намира в сърцето на София, България. Приветстваме посетители през нашето работно време и ви насърчаваме да ни посетите, за да научите повече за нашата работа.",
-        "contact.location.address": "ул. Одрин 95, София 1303, България"
+        "contact.location.address": "ул. Одрин 95, София 1303, България",
+
+        // Donation Tiers (Bulgarian - EUR)
+        "donate.tier1.amount": "€50",
+        "donate.tier2.amount": "€100",
+        "donate.tier3.amount": "€250",
+        "donate.amount.10": "€10",
+        "donate.amount.25": "€25",
+        "donate.amount.50": "€50",
+        "donate.amount.100": "€100",
+        "donate.amount.250": "€250",
+
+        // Book Purchase Section (Bulgarian - EUR)
+        "donate.book.tag": "📚 Подкрепете децата чрез покупка",
+        "donate.book.heading": "Майсторски клас по джаз тромпет - Образователна ресурс",
+        "donate.book.intro": "Като закупите тази цялостна методическа книга за джаз тромпет, вие директно подкрепяте нуждаещи се деца в цяла България. 100% от приходите финансират образователни програми.",
+        "donate.book.price": "€25.00 EUR",
+        "donate.book.priceLabel": "Цифров PDF • Данъчно приспадаща дарение",
+        "donate.book.description1": "Вашата покупка директно подкрепя уязвими деца чрез финансиране на допълнително обучение, учебни материали и образователни възможности. Това е данъчно приспадаща благотворителна дарение - ще получите разписка.",
+        "donate.book.whatsInside": "Какво има в този образователен ресурс",
+        "donate.book.feature1": "<strong>Над 80 професионални джаз фрази</strong> - Вдъхновени от Клифърд Браун, Майлс Дейвис, Фреди Хъбард, Лий Морган, Уинтън Марсалис",
+        "donate.book.feature2": "<strong>Пълна музикална теория</strong> - Интервали, гами, конструкция на акорди, прогресии ii-V-I, бибоп теория",
+        "donate.book.feature3": "<strong>Всичките 12 тоналности</strong> - Систематична практика на транспониране през пълния цикъл на квартите",
+        "donate.book.feature4": "<strong>4 прогресивни нива</strong> - Основи за начинаещи • Среднo бибоп • Модерен джаз за напреднали • Подписи на майсторите",
+        "donate.book.feature5": "<strong>Ръководство за транспониране за тромпет в Си бемол</strong> - Пълни примери едно до друго от концертна височина до тромпет в Си бемол",
+        "donate.book.feature6": "<strong>24-седмична структурирана програма</strong> - Пътна карта за практикуване седмица по седмица с ежедневни рутини",
+        "donate.book.feature7": "<strong>Упражнения за практикуване</strong> - Основни модели, последователности, хроматични подходи, техническо развитие",
+        "donate.book.feature8": "<strong>Ръководство за джаз стандарти</strong> - Препоръчани пиеси, организирани по ниво на умения със стратегии за приложение",
+        "donate.book.feature9": "<strong>Препоръки за слушане</strong> - Основни албуми и изпълнители за всеки стилов период",
+        "donate.book.quote": "\"Джазът е език. Както при изучаването на всеки език, имате нужда от речник (фрази), граматика (теория) и разговорна практика (свирене на стандарти). Тази книга предоставя и трите в систематичен, прогресивен ред, който изгражда майсторство стъпка по стъпка.\"",
+        "donate.book.quoteSource": "— От майсторския клас по джаз тромпет",
+        "donate.book.benefit1": "Незабавно цифрово изтегляне след покупка",
+        "donate.book.benefit2": "Професионален PDF формат - работи на всички устройства",
+        "donate.book.benefit3": "За лична, некомерсиална употреба",
+        "donate.book.benefit4": "Включена данъчно приспадаща разписка за дарение",
+
+        // Social Proof Stats
+        "donate.book.stat1": "Музиканти по света",
+        "donate.book.stat2": "Средна оценка",
+        "donate.book.stat3": "Джаз фрази",
+        "donate.book.stat4": "Подкрепя деца",
+
+        // Testimonials
+        "donate.book.testimonialsTitle": "Какво казват музикантите",
+        "donate.book.testimonial1.quote": "This method transformed my jazz improvisation in just 8 weeks. The progressive approach and transposition exercises are genius.",
+        "donate.book.testimonial1.author": "— Марк Стивънс, Професионален тромпетист, Бостън",
+        "donate.book.testimonial2.quote": "I've been teaching for 20 years and this is the most comprehensive jazz trumpet resource I've seen. My students love it.",
+        "donate.book.testimonial2.author": "— Д-р Сара Чен, Музикален педагог, Berklee College",
+        "donate.book.testimonial3.quote": "The 24-week curriculum gave me the structure I desperately needed. Worth every penny, and it supports a great cause!",
+        "donate.book.testimonial3.author": "— Алекс Родригес, Музикант средно ниво, Мадрид",
+
+        // Social Share
+        "donate.book.shareTitle": "Харесвате този ресурс? Споделете с други музиканти:",
+        "donate.book.shareFacebook": "Споделете във Facebook",
+        "donate.book.shareTwitter": "Споделете в Twitter",
+        "donate.book.shareLinkedIn": "Споделете в LinkedIn",
+        "donate.book.shareEmail": "Споделете по имейл",
+
+        // FAQ Section
+        "donate.book.faqTitle": "Често задавани въпроси",
+        "donate.book.faq1.question": "За какво ниво на умения е тази книга?",
+        "donate.book.faq1.answer": "Този метод е проектиран за всички нива. Начинаещите започват с основите (интервали, гами, основна теория), музиканти средно ниво навлизат в бибоп речника, а напредналите музиканти изследват модерни джаз концепции и характерни фрази от майсторите.",
+        "donate.book.faq2.question": "Трябва ли да чета ноти, за да използвам тази книга?",
+        "donate.book.faq2.answer": "Да, основна способност за четене на музика е полезна. Всички примери са написани в стандартна нотация с включени транспозиции за тромпет в Си бемол. Ако учите да четете, тази книга ще помогне за развиването на това умение заедно с вашия джаз речник.",
+        "donate.book.faq3.question": "Как моята покупка подкрепя децата?",
+        "donate.book.faq3.answer": "100% от приходите от тази книга отиват директно за образователните програми на Фондация Accord and Harmony в България. Вашата покупка финансира услуги за допълнително обучение, учебни материали, образователни семинари и подкрепа за уязвими деца и семейства. Ще получите данъчно приспадаща разписка за дарение.",
+        "donate.book.faq4.question": "Тази книга само ли е за тромпетисти?",
+        "donate.book.faq4.answer": "Въпреки че е специално проектирана за тромпет в Си бемол (с транспонирани примери), джаз речникът и теоретичните концепции могат да бъдат адаптирани за всеки инструмент. Фразите са представени и в концертна височина, което ги прави достъпни за всички музиканти.",
+        "donate.book.faq5.question": "Колко време отнема да се завърши програмата?",
+        "donate.book.faq5.answer": "Книгата включва 24-седмична структурирана програма, но можете да работите със собствено темпо. Някои музиканти я завършват по-бързо, други отделят повече време за овладяване на всяка концепция. Важното е последователна практика и постепенно напредване през материала.",
+        "donate.book.faq6.question": "Мога ли да споделя PDF-а с други?",
+        "donate.book.faq6.answer": "PDF-ът е само за лична, некомерсиална употреба. Всяко копие е персонализирано с вашата информация и е маркирано с воден знак. Ако искате да споделите този ресурс с други, моля насочете ги към нашия уебсайт, където могат да закупят собствено копие и да подкрепят нашата мисия.",
+
+        // Resources Page
+        "resources.pageTitle": "Образователни ресурси - Помогнете ни и се обучете | Фондация Accord and Harmony",
+        "resources.hero.title": "Помогнете ни чрез образование.<br>Получете обучение от световна класа.",
+        "resources.hero.subtitle": "Всяка покупка директно подкрепя програми за образование на деца в цяла България",
+        "resources.hero.description": "Когато инвестирате в музикалното си образование чрез нашите ресурси, 100% от приходите финансират допълнително обучение, учебни материали и образователни възможности за уязвими деца. Това не е просто покупка - това е партньорство за промяна на животи.",
+        "resources.hero.cta": "Разгледайте ресурсите",
+        "resources.book.tag": "📚 Препоръчан ресурс",
+        "resources.book.heading": "Майсторски клас по джаз тромпет",
+        "resources.book.lead": "Професионално обучение по джаз тромпет, което подкрепя образованието на деца. Всяка покупка е дарение за нашата мисия.",
+        "resources.book.title": "Майсторски клас по джаз тромпет",
+        "resources.book.publisher": "Публикувано от Фондация Accord and Harmony<br>Монреал, Квебек, Канада",
+        "resources.book.badge": "100% подкрепя децата",
+        "resources.book.impact": "Вашата инвестиция създава траен ефект: 100% от приходите финансират образователни програми за уязвими деца в България. Вие получавате професионално обучение по джаз тромпет. Те получават достъп до допълнително обучение, учебни материали и по-светло бъдеще.",
+        "resources.book.instant": "Незабавно изтегляне на PDF",
+        "resources.book.watermark": "Персонализиран воден знак",
+        "resources.book.personal": "Само за лична употреба",
+        "resources.book.tax": "Включена данъчно приспадаща разписка",
+        "resources.book.purchaseBtn": "Вземете книгата и подкрепете децата",
+        "resources.book.noticeTitle": "Двоен ефект:",
+        "resources.book.noticeText": "Вие получавате професионално обучение по джаз тромпет, доставено незабавно чрез персонализиран PDF. Уязвимите деца в България получават образователна подкрепа чрез 100% от вашата покупка. Плюс това, получавате данъчно приспадаща разписка за дарение."
     },
 
     it: {
@@ -547,6 +851,7 @@ const translations = {
         "nav.about": "Chi Siamo",
         "nav.gallery": "Galleria",
         "nav.contact": "Contatti",
+        "nav.resources": "Risorse",
         "nav.donate": "Donare",
 
         // Hero Section
@@ -673,7 +978,167 @@ const translations = {
 
         // Gallery Page
         "gallery.hero.title": "La Nostra Galleria",
-        "gallery.hero.subtitle": "Catturare Momenti di Speranza, Unità e Trasformazione"
+        "gallery.hero.subtitle": "Catturare Momenti di Speranza, Unità e Trasformazione",
+
+        // About Page - Extended
+        "about.story.tag": "La Nostra Storia",
+        "about.story.heading": "Chi Siamo",
+        "about.story.lead": "Alla Fondazione Accord and Harmony, crediamo nel potere dell'unità e nell'impatto trasformativo che può avere sulla vita di chi è nel bisogno.",
+        "about.story.text1": "Fondata con la visione di creare un cambiamento positivo nelle nostre comunità, ci dedichiamo a sostenere le popolazioni vulnerabili e a promuovere opportunità educative per i bambini in tutta la Bulgaria. Il nostro lavoro è guidato dalla compassione, dalla trasparenza e dall'impegno a fare una differenza duratura.",
+        "about.story.text2": "Con sede a Sofia, Bulgaria, la nostra fondazione serve come faro di speranza per coloro che affrontano difficoltà. Comprendiamo che il vero cambiamento deriva dall'affrontare sia le esigenze immediate che lo sviluppo a lungo termine, motivo per cui i nostri programmi si concentrano su sistemi di supporto completi che danno potere agli individui e alle famiglie di costruire futuri migliori.",
+        "about.story.text3": "Attraverso partenariati strategici con organizzazioni locali, scuole e leader comunitari, creiamo soluzioni sostenibili che affrontano le cause profonde della povertà e della disuguaglianza educativa. Il nostro approccio è olistico, riconoscendo che l'istruzione, l'assistenza sanitaria e il supporto sociale sono elementi interconnessi essenziali per il benessere della comunità.",
+        "about.mission.title": "La Nostra Missione",
+        "about.mission.text": "Unire le comunità a sostegno di chi è nel bisogno e fornire opportunità educative che trasformano vite e costruiscono futuri migliori per bambini e famiglie in tutta la Bulgaria.",
+        "about.vision.title": "La Nostra Visione",
+        "about.vision.text": "Un mondo in cui ogni bambino ha accesso a un'istruzione di qualità e ogni famiglia ha il supporto necessario per prosperare, creando comunità armoniose costruite sulla compassione e il rispetto reciproco.",
+        "about.values.title": "I Nostri Valori",
+        "about.values.text": "Siamo guidati da integrità, compassione, trasparenza e unità. Crediamo nel potere dell'azione collettiva e nell'importanza di trattare tutti con dignità e rispetto.",
+        "about.work.tag": "Il Nostro Lavoro",
+        "about.work.heading": "Cosa Facciamo",
+        "about.program.education.title": "Programmi Educativi",
+        "about.program.education.text": "Forniamo borse di studio, materiale scolastico, servizi di tutoraggio e laboratori educativi per garantire che ogni bambino abbia l'opportunità di imparare e crescere.",
+        "about.program.family.title": "Supporto Familiare",
+        "about.program.family.text": "Fornire risorse essenziali, assistenza alimentare e servizi di consulenza alle famiglie che affrontano difficoltà economiche e sfide sociali.",
+        "about.program.community.title": "Sensibilizzazione Comunitaria",
+        "about.program.community.text": "Coinvolgimento con le comunità locali per identificare i bisogni, costruire partenariati e creare cambiamenti positivi duraturi attraverso iniziative collaborative.",
+
+        // Gallery Page - Extended
+        "gallery.intro.tag": "Il Nostro Impatto in Immagini",
+        "gallery.intro.heading": "Storie di Cambiamento",
+        "gallery.intro.text": "Esplora il viaggio visivo del lavoro della nostra fondazione in tutta la Bulgaria. Ogni immagine rappresenta una storia di speranza, compassione e l'incredibile impatto che deriva dall'unità comunitaria. Dai programmi educativi alle iniziative di supporto familiare, testimonia come stiamo facendo la differenza insieme.",
+
+        // Contact Page - Extended
+        "contact.intro.tag": "Contattaci",
+        "contact.intro.heading": "Connettiamoci",
+        "contact.intro.text": "Che tu abbia domande sui nostri programmi, voglia fare volontariato o sia interessato a collaborare con noi, siamo qui per aiutarti. Contattaci e ti risponderemo il prima possibile.",
+        "contact.info.title": "Informazioni di Contatto",
+        "contact.info.office": "Indirizzo dell'Ufficio",
+        "contact.info.hours": "Orari d'Ufficio",
+        "contact.info.hours.weekday": "Lunedì - Venerdì: 9:00 - 17:00",
+        "contact.info.hours.saturday": "Sabato: 10:00 - 14:00",
+        "contact.info.hours.sunday": "Domenica: Chiuso",
+        "contact.info.volunteer.title": "Vuoi Partecipare?",
+        "contact.info.volunteer.text": "Siamo sempre alla ricerca di volontari appassionati e partner che condividono la nostra visione.",
+        "contact.info.volunteer.link": "Scopri di più sul volontariato →",
+        "contact.location.tag": "Trovaci",
+        "contact.location.heading": "La Nostra Posizione",
+        "contact.location.title": "Visitaci a Sofia",
+        "contact.location.text": "Il nostro ufficio si trova nel cuore di Sofia, Bulgaria. Accogliamo i visitatori durante i nostri orari d'ufficio e ti incoraggiamo a venirci a trovare per saperne di più sul nostro lavoro.",
+        "contact.location.address": "Odrin 95 st, Sofia 1303, Bulgaria",
+
+        // Donation Form Extended
+        "donate.impact.tag": "Il Tuo Impatto",
+        "donate.impact.heading": "Come Aiuta la Tua Donazione",
+        "donate.impact.intro": "Ogni contributo, indipendentemente dall'importo, fa una vera differenza nella vita di coloro che serviamo. Il tuo supporto ci aiuta a fornire opportunità educative, risorse essenziali e speranza alle famiglie in tutta la Bulgaria.",
+        "donate.form.tag": "Sostieni la Nostra Missione",
+        "donate.form.heading": "Scegli il Tuo Contributo",
+        "donate.form.selectAmount": "Seleziona Importo Donazione",
+        "donate.form.other": "Altro",
+        "donate.form.customAmount": "Importo Personalizzato (€)",
+        "donate.form.enterAmount": "Inserisci importo",
+        "donate.form.name": "Nome Completo (Opzionale)",
+        "donate.form.namePlaceholder": "Il tuo nome",
+        "donate.form.email": "Indirizzo Email (Opzionale)",
+        "donate.form.emailPlaceholder": "tua@email.com",
+        "donate.form.emailNote": "Ti invieremo un'email di ringraziamento e una ricevuta",
+        "donate.form.recurringTitle": "Rendi questa una donazione mensile",
+        "donate.form.recurringNote": "Il supporto ricorrente ci aiuta a pianificare il futuro",
+        "donate.form.secureNote": "Donazione sicura tramite PayPal. Le tue informazioni di pagamento sono criptate e non vengono mai memorizzate sui nostri server.",
+        "donate.form.whyPaypalTitle": "💡 Perché PayPal?",
+        "donate.form.whyPaypalText": "PayPal è una piattaforma di pagamento affidabile e sicura utilizzata in tutto il mondo. Non hai bisogno di un account PayPal - puoi donare con qualsiasi carta di credito o debito.",
+        "donate.bank.heading": "Oppure Dona tramite Bonifico Bancario",
+        "donate.bank.bankName": "Nome Banca:",
+        "donate.bank.accountName": "Intestatario:",
+        "donate.bank.currency": "Valuta:",
+        "donate.bank.reference": "Riferimento:",
+        "donate.bank.referenceText": "Donazione - [Il Tuo Nome]",
+        "donate.bank.note": "Si prega di inviarci un'email a <a href=\"mailto:contact@acchm.org\">contact@acchm.org</a> dopo aver effettuato un bonifico bancario in modo da potervi inviare una ricevuta.",
+
+        // Donation Tier Details
+        "donate.tier1.title": "Materiale Scolastico per 3 Studenti",
+        "donate.tier1.description": "Zaini, quaderni, penne, libri di testo e materiale artistico per un semestre",
+        "donate.tier2.title": "Pacchetto Alimentare Mensile per una Famiglia",
+        "donate.tier2.description": "Generi alimentari essenziali, prodotti freschi, pane, latte e alimenti di base per 4 persone",
+        "donate.tier3.title": "3 Mesi di Ripetizioni Dopo Scuola",
+        "donate.tier3.description": "Sessioni di ripetizione professionale per 5 studenti in matematica, lingua bulgara e scienze",
+        "donate.tier.cta": "Clicca per donare →",
+
+        // Book Purchase Section (Italian - EUR)
+        "donate.book.description1": "Il tuo acquisto supporta direttamente i bambini vulnerabili finanziando tutoraggio, materiale scolastico e opportunità educative. Questa è una donazione benefica deducibile dalle tasse - riceverai una ricevuta.",
+        "donate.book.whatsInside": "Cosa c'è Dentro Questa Risorsa Educativa",
+        "donate.book.feature1": "<strong>Oltre 80 Lick di Jazz Professionali</strong> - Ispirati da Clifford Brown, Miles Davis, Freddie Hubbard, Lee Morgan, Wynton Marsalis",
+        "donate.book.feature2": "<strong>Teoria Musicale Completa</strong> - Intervalli, scale, costruzione di accordi, progressioni ii-V-I, teoria bebop",
+        "donate.book.feature3": "<strong>Tutte le 12 Tonalità</strong> - Pratica sistematica di trasposizione attraverso il ciclo completo delle quarte",
+        "donate.book.feature4": "<strong>4 Livelli Progressivi</strong> - Fondamenti per principianti • Bebop intermedio • Jazz moderno avanzato • Firme dei maestri",
+        "donate.book.feature5": "<strong>Guida alla Trasposizione per Tromba in Si bemolle</strong> - Esempi completi affiancati da altezza da concerto a tromba in Si bemolle",
+        "donate.book.feature6": "<strong>Curriculum Strutturato di 24 Settimane</strong> - Roadmap di pratica settimana per settimana con routine quotidiane",
+        "donate.book.feature7": "<strong>Esercizi di Pratica</strong> - Modelli essenziali, sequenze, approcci cromatici, sviluppo tecnico",
+        "donate.book.feature8": "<strong>Guida agli Standard Jazz</strong> - Brani consigliati organizzati per livello di abilità con strategie di applicazione",
+        "donate.book.feature9": "<strong>Raccomandazioni d'Ascolto</strong> - Album e artisti essenziali per ogni periodo stilistico",
+        "donate.book.quote": "\"Il jazz è un linguaggio. Come l'apprendimento di qualsiasi lingua, hai bisogno di vocabolario (lick), grammatica (teoria) e pratica di conversazione (suonare standard). Questo libro fornisce tutti e tre in un ordine sistematico e progressivo che costruisce la padronanza passo dopo passo.\"",
+        "donate.book.quoteSource": "— Dal metodo Jazz Trumpet Master Class",
+        "donate.book.benefit1": "Download digitale istantaneo dopo l'acquisto",
+        "donate.book.benefit2": "Formato PDF professionale - funziona su tutti i dispositivi",
+        "donate.book.benefit3": "Per uso personale, non commerciale",
+        "donate.book.benefit4": "Ricevuta di donazione deducibile dalle tasse inclusa",
+
+        // Social Proof Stats
+        "donate.book.stat1": "Musicisti nel Mondo",
+        "donate.book.stat2": "Valutazione Media",
+        "donate.book.stat3": "Lick Jazz",
+        "donate.book.stat4": "Supporta i Bambini",
+
+        // Testimonials
+        "donate.book.testimonialsTitle": "Cosa Dicono i Musicisti",
+        "donate.book.testimonial1.quote": "This method transformed my jazz improvisation in just 8 weeks. The progressive approach and transposition exercises are genius.",
+        "donate.book.testimonial1.author": "— Mark Stevens, Trombettista Professionista, Boston",
+        "donate.book.testimonial2.quote": "I've been teaching for 20 years and this is the most comprehensive jazz trumpet resource I've seen. My students love it.",
+        "donate.book.testimonial2.author": "— Dr. Sarah Chen, Educatrice Musicale, Berklee College",
+        "donate.book.testimonial3.quote": "The 24-week curriculum gave me the structure I desperately needed. Worth every penny, and it supports a great cause!",
+        "donate.book.testimonial3.author": "— Alex Rodriguez, Musicista Intermedio, Madrid",
+
+        // Social Share
+        "donate.book.shareTitle": "Ti piace questa risorsa? Condividi con altri musicisti:",
+        "donate.book.shareFacebook": "Condividi su Facebook",
+        "donate.book.shareTwitter": "Condividi su Twitter",
+        "donate.book.shareLinkedIn": "Condividi su LinkedIn",
+        "donate.book.shareEmail": "Condividi via Email",
+
+        // FAQ Section
+        "donate.book.faqTitle": "Domande Frequenti",
+        "donate.book.faq1.question": "Per quale livello di abilità è questo libro?",
+        "donate.book.faq1.answer": "Questo metodo è progettato per tutti i livelli. I principianti iniziano con le fondamenta (intervalli, scale, teoria di base), i musicisti intermedi si immergono nel vocabolario bebop e i musicisti avanzati esplorano concetti di jazz moderno e lick caratteristici dei maestri.",
+        "donate.book.faq2.question": "Devo saper leggere la musica per usare questo libro?",
+        "donate.book.faq2.answer": "Sì, una capacità di lettura musicale di base è utile. Tutti gli esempi sono scritti in notazione standard con trasposizioni per tromba in Si bemolle incluse. Se stai imparando a leggere, questo libro aiuterà a sviluppare quella capacità insieme al tuo vocabolario jazz.",
+        "donate.book.faq3.question": "Come supporta i bambini il mio acquisto?",
+        "donate.book.faq3.answer": "Il 100% dei proventi di questo libro va direttamente ai programmi educativi della Fondazione Accord and Harmony in Bulgaria. Il tuo acquisto finanzia servizi di tutoraggio, materiale scolastico, laboratori educativi e supporto per bambini e famiglie vulnerabili. Riceverai una ricevuta di donazione deducibile dalle tasse.",
+        "donate.book.faq4.question": "Questo libro è solo per trombettisti?",
+        "donate.book.faq4.answer": "Sebbene sia specificamente progettato per tromba in Si bemolle (con esempi trasposti), il vocabolario jazz e i concetti teorici possono essere adattati per qualsiasi strumento. I lick sono presentati anche in altezza da concerto, rendendoli accessibili a tutti i musicisti.",
+        "donate.book.faq5.question": "Quanto tempo ci vuole per completare il curriculum?",
+        "donate.book.faq5.answer": "Il libro include un curriculum strutturato di 24 settimane, ma puoi lavorare al tuo ritmo. Alcuni musicisti lo completano più velocemente, altri impiegano più tempo per padroneggiare ogni concetto. L'importante è la pratica costante e la progressione graduale attraverso il materiale.",
+        "donate.book.faq6.question": "Posso condividere il PDF con altri?",
+        "donate.book.faq6.answer": "Il PDF è solo per uso personale, non commerciale. Ogni copia è personalizzata con le tue informazioni e contrassegnata con filigrana. Se desideri condividere questa risorsa con altri, indirizzali al nostro sito web dove possono acquistare la propria copia e supportare la nostra missione.",
+
+        // Resources Page
+        "resources.pageTitle": "Risorse Educative - Aiutaci e Impara | Fondazione Accord and Harmony",
+        "resources.hero.title": "Aiutaci Attraverso l'Educazione.<br>Ottieni Formazione di Livello Mondiale.",
+        "resources.hero.subtitle": "Ogni acquisto supporta direttamente i programmi educativi per bambini in tutta la Bulgaria",
+        "resources.hero.description": "Quando investi nella tua educazione musicale attraverso le nostre risorse, il 100% dei proventi finanzia tutoraggio, materiale scolastico e opportunità educative per bambini vulnerabili. Non è solo un acquisto—è una partnership nel cambiare vite.",
+        "resources.hero.cta": "Esplora le Risorse",
+        "resources.book.tag": "📚 Risorsa in Evidenza",
+        "resources.book.heading": "Jazz Trumpet Master Class",
+        "resources.book.lead": "Formazione professionale di tromba jazz che supporta l'educazione dei bambini. Ogni acquisto è una donazione alla nostra missione.",
+        "resources.book.title": "Jazz Trumpet Master Class",
+        "resources.book.publisher": "Pubblicato dalla Fondazione Accord and Harmony<br>Montreal, Quebec, Canada",
+        "resources.book.badge": "100% Supporta i Bambini",
+        "resources.book.impact": "Il tuo investimento crea un impatto duraturo: il 100% dei proventi finanzia programmi educativi per bambini vulnerabili in Bulgaria. Tu ricevi formazione professionale di tromba jazz. Loro ottengono accesso a tutoraggio, materiale scolastico e futuri più luminosi.",
+        "resources.book.instant": "Download PDF istantaneo",
+        "resources.book.watermark": "Filigrana personalizzata",
+        "resources.book.personal": "Solo per uso personale",
+        "resources.book.tax": "Ricevuta deducibile dalle tasse inclusa",
+        "resources.book.purchaseBtn": "Ottieni il Libro e Supporta i Bambini",
+        "resources.book.noticeTitle": "Doppio Impatto:",
+        "resources.book.noticeText": "Tu ricevi formazione professionale di tromba jazz consegnata istantaneamente tramite PDF personalizzato. I bambini vulnerabili in Bulgaria ricevono supporto educativo attraverso il 100% del tuo acquisto. Inoltre, ottieni una ricevuta di donazione deducibile dalle tasse."
     },
 
     es: {
@@ -682,6 +1147,7 @@ const translations = {
         "nav.about": "Sobre Nosotros",
         "nav.gallery": "Galería",
         "nav.contact": "Contacto",
+        "nav.resources": "Recursos",
         "nav.donate": "Donar",
 
         // Hero Section
@@ -808,7 +1274,167 @@ const translations = {
 
         // Gallery Page
         "gallery.hero.title": "Nuestra Galería",
-        "gallery.hero.subtitle": "Capturando Momentos de Esperanza, Unidad y Transformación"
+        "gallery.hero.subtitle": "Capturando Momentos de Esperanza, Unidad y Transformación",
+
+        // About Page - Extended
+        "about.story.tag": "Nuestra Historia",
+        "about.story.heading": "Quiénes Somos",
+        "about.story.lead": "En la Fundación Accord and Harmony, creemos en el poder de la unidad y el impacto transformador que puede tener en la vida de quienes lo necesitan.",
+        "about.story.text1": "Fundada con la visión de crear un cambio positivo en nuestras comunidades, nos dedicamos a apoyar a las poblaciones vulnerables y defender oportunidades educativas para los niños en toda Bulgaria. Nuestro trabajo está guiado por la compasión, la transparencia y el compromiso de hacer una diferencia duradera.",
+        "about.story.text2": "Con sede en Sofía, Bulgaria, nuestra fundación sirve como un faro de esperanza para aquellos que enfrentan dificultades. Entendemos que el verdadero cambio proviene de abordar tanto las necesidades inmediatas como el desarrollo a largo plazo, por lo que nuestros programas se centran en sistemas de apoyo integrales que empoderan a las personas y familias para construir mejores futuros.",
+        "about.story.text3": "A través de asociaciones estratégicas con organizaciones locales, escuelas y líderes comunitarios, creamos soluciones sostenibles que abordan las causas fundamentales de la pobreza y la desigualdad educativa. Nuestro enfoque es holístico, reconociendo que la educación, la atención médica y el apoyo social son elementos interconectados esenciales para el bienestar de la comunidad.",
+        "about.mission.title": "Nuestra Misión",
+        "about.mission.text": "Unir a las comunidades en apoyo de quienes lo necesitan y proporcionar oportunidades educativas que transformen vidas y construyan futuros más brillantes para niños y familias en toda Bulgaria.",
+        "about.vision.title": "Nuestra Visión",
+        "about.vision.text": "Un mundo donde cada niño tenga acceso a educación de calidad y cada familia tenga el apoyo que necesita para prosperar, creando comunidades armoniosas construidas sobre la compasión y el respeto mutuo.",
+        "about.values.title": "Nuestros Valores",
+        "about.values.text": "Nos guiamos por la integridad, la compasión, la transparencia y la unidad. Creemos en el poder de la acción colectiva y la importancia de tratar a todos con dignidad y respeto.",
+        "about.work.tag": "Nuestro Trabajo",
+        "about.work.heading": "Lo Que Hacemos",
+        "about.program.education.title": "Programas Educativos",
+        "about.program.education.text": "Proporcionamos becas, útiles escolares, servicios de tutoría y talleres educativos para garantizar que cada niño tenga la oportunidad de aprender y crecer.",
+        "about.program.family.title": "Apoyo Familiar",
+        "about.program.family.text": "Proporcionar recursos esenciales, asistencia alimentaria y servicios de asesoramiento a familias que enfrentan dificultades económicas y desafíos sociales.",
+        "about.program.community.title": "Alcance Comunitario",
+        "about.program.community.text": "Compromiso con las comunidades locales para identificar necesidades, construir asociaciones y crear cambios positivos duraderos a través de iniciativas colaborativas.",
+
+        // Gallery Page - Extended
+        "gallery.intro.tag": "Nuestro Impacto en Imágenes",
+        "gallery.intro.heading": "Historias de Cambio",
+        "gallery.intro.text": "Explora el viaje visual del trabajo de nuestra fundación en toda Bulgaria. Cada imagen representa una historia de esperanza, compasión y el increíble impacto que proviene de la unidad comunitaria. Desde programas educativos hasta iniciativas de apoyo familiar, presencia cómo estamos haciendo la diferencia juntos.",
+
+        // Contact Page - Extended
+        "contact.intro.tag": "Contáctanos",
+        "contact.intro.heading": "Conectémonos",
+        "contact.intro.text": "Ya sea que tengas preguntas sobre nuestros programas, quieras ser voluntario o estés interesado en asociarte con nosotros, estamos aquí para ayudar. Contáctanos y te responderemos lo antes posible.",
+        "contact.info.title": "Información de Contacto",
+        "contact.info.office": "Dirección de la Oficina",
+        "contact.info.hours": "Horario de Oficina",
+        "contact.info.hours.weekday": "Lunes - Viernes: 9:00 AM - 5:00 PM",
+        "contact.info.hours.saturday": "Sábado: 10:00 AM - 2:00 PM",
+        "contact.info.hours.sunday": "Domingo: Cerrado",
+        "contact.info.volunteer.title": "¿Quieres Participar?",
+        "contact.info.volunteer.text": "Siempre estamos buscando voluntarios apasionados y socios que compartan nuestra visión.",
+        "contact.info.volunteer.link": "Aprende más sobre el voluntariado →",
+        "contact.location.tag": "Encuéntranos",
+        "contact.location.heading": "Nuestra Ubicación",
+        "contact.location.title": "Visítanos en Sofía",
+        "contact.location.text": "Nuestra oficina está ubicada en el corazón de Sofía, Bulgaria. Damos la bienvenida a los visitantes durante nuestro horario de oficina y te animamos a pasar para aprender más sobre nuestro trabajo.",
+        "contact.location.address": "Odrin 95 st, Sofía 1303, Bulgaria",
+
+        // Donation Form Extended
+        "donate.impact.tag": "Tu Impacto",
+        "donate.impact.heading": "Cómo Ayuda Tu Donación",
+        "donate.impact.intro": "Cada contribución, sin importar el tamaño, hace una verdadera diferencia en la vida de aquellos a quienes servimos. Tu apoyo nos ayuda a proporcionar oportunidades educativas, recursos esenciales y esperanza a las familias en toda Bulgaria.",
+        "donate.form.tag": "Apoya Nuestra Misión",
+        "donate.form.heading": "Elige Tu Contribución",
+        "donate.form.selectAmount": "Selecciona el Monto de la Donación",
+        "donate.form.other": "Otro",
+        "donate.form.customAmount": "Monto Personalizado (€)",
+        "donate.form.enterAmount": "Ingresa el monto",
+        "donate.form.name": "Nombre Completo (Opcional)",
+        "donate.form.namePlaceholder": "Tu nombre",
+        "donate.form.email": "Dirección de Correo Electrónico (Opcional)",
+        "donate.form.emailPlaceholder": "tu@email.com",
+        "donate.form.emailNote": "Te enviaremos un correo de agradecimiento y un recibo",
+        "donate.form.recurringTitle": "Hacer esta una donación mensual",
+        "donate.form.recurringNote": "El apoyo recurrente nos ayuda a planificar el futuro",
+        "donate.form.secureNote": "Donación segura a través de PayPal. Tu información de pago está cifrada y nunca se almacena en nuestros servidores.",
+        "donate.form.whyPaypalTitle": "💡 ¿Por qué PayPal?",
+        "donate.form.whyPaypalText": "PayPal es una plataforma de pago confiable y segura utilizada en todo el mundo. No necesitas una cuenta PayPal - puedes donar con cualquier tarjeta de crédito o débito.",
+        "donate.bank.heading": "O Dona por Transferencia Bancaria",
+        "donate.bank.bankName": "Nombre del Banco:",
+        "donate.bank.accountName": "Nombre de la Cuenta:",
+        "donate.bank.currency": "Moneda:",
+        "donate.bank.reference": "Referencia:",
+        "donate.bank.referenceText": "Donación - [Tu Nombre]",
+        "donate.bank.note": "Por favor envíanos un correo electrónico a <a href=\"mailto:contact@acchm.org\">contact@acchm.org</a> después de realizar una transferencia bancaria para que podamos enviarte un recibo.",
+
+        // Donation Tier Details
+        "donate.tier1.title": "Material Escolar para 3 Estudiantes",
+        "donate.tier1.description": "Mochilas, cuadernos, bolígrafos, libros de texto y materiales de arte para un semestre",
+        "donate.tier2.title": "Paquete Mensual de Alimentos para una Familia",
+        "donate.tier2.description": "Alimentos esenciales, productos frescos, pan, leche y alimentos básicos para 4 personas",
+        "donate.tier3.title": "3 Meses de Tutorías Después de Clases",
+        "donate.tier3.description": "Sesiones de tutoría profesional para 5 estudiantes en matemáticas, idioma búlgaro y ciencias",
+        "donate.tier.cta": "Haz clic para donar →",
+
+        // Book Purchase Section (Spanish - EUR)
+        "donate.book.description1": "Tu compra apoya directamente a niños vulnerables financiando tutorías, material escolar y oportunidades educativas. Esta es una donación benéfica deducible de impuestos - recibirás un recibo.",
+        "donate.book.whatsInside": "Qué Hay Dentro de Este Recurso Educativo",
+        "donate.book.feature1": "<strong>Más de 80 Licks de Jazz Profesionales</strong> - Inspirados en Clifford Brown, Miles Davis, Freddie Hubbard, Lee Morgan, Wynton Marsalis",
+        "donate.book.feature2": "<strong>Teoría Musical Completa</strong> - Intervalos, escalas, construcción de acordes, progresiones ii-V-I, teoría bebop",
+        "donate.book.feature3": "<strong>Las 12 Tonalidades</strong> - Práctica sistemática de transposición a través del ciclo completo de cuartas",
+        "donate.book.feature4": "<strong>4 Niveles Progresivos</strong> - Fundamentos para principiantes • Bebop intermedio • Jazz moderno avanzado • Firmas de los maestros",
+        "donate.book.feature5": "<strong>Guía de Transposición para Trompeta en Si bemol</strong> - Ejemplos completos lado a lado de altura de concierto a trompeta en Si bemol",
+        "donate.book.feature6": "<strong>Currículo Estructurado de 24 Semanas</strong> - Hoja de ruta de práctica semana a semana con rutinas diarias",
+        "donate.book.feature7": "<strong>Ejercicios de Práctica</strong> - Patrones esenciales, secuencias, aproximaciones cromáticas, desarrollo técnico",
+        "donate.book.feature8": "<strong>Guía de Estándares de Jazz</strong> - Temas recomendados organizados por nivel de habilidad con estrategias de aplicación",
+        "donate.book.feature9": "<strong>Recomendaciones de Escucha</strong> - Álbumes y artistas esenciales para cada período de estilo",
+        "donate.book.quote": "\"El jazz es un lenguaje. Como aprender cualquier idioma, necesitas vocabulario (licks), gramática (teoría) y práctica de conversación (tocar estándares). Este libro proporciona los tres en un orden sistemático y progresivo que construye maestría paso a paso.\"",
+        "donate.book.quoteSource": "— Del método Jazz Trumpet Master Class",
+        "donate.book.benefit1": "Descarga digital instantánea después de la compra",
+        "donate.book.benefit2": "Formato PDF profesional - funciona en todos los dispositivos",
+        "donate.book.benefit3": "Para uso personal, no comercial",
+        "donate.book.benefit4": "Recibo de donación deducible de impuestos incluido",
+
+        // Social Proof Stats
+        "donate.book.stat1": "Músicos en el Mundo",
+        "donate.book.stat2": "Calificación Promedio",
+        "donate.book.stat3": "Licks de Jazz",
+        "donate.book.stat4": "Apoya a Niños",
+
+        // Testimonials
+        "donate.book.testimonialsTitle": "Lo Que Dicen los Músicos",
+        "donate.book.testimonial1.quote": "This method transformed my jazz improvisation in just 8 weeks. The progressive approach and transposition exercises are genius.",
+        "donate.book.testimonial1.author": "— Mark Stevens, Trompetista Profesional, Boston",
+        "donate.book.testimonial2.quote": "I've been teaching for 20 years and this is the most comprehensive jazz trumpet resource I've seen. My students love it.",
+        "donate.book.testimonial2.author": "— Dr. Sarah Chen, Educadora Musical, Berklee College",
+        "donate.book.testimonial3.quote": "The 24-week curriculum gave me the structure I desperately needed. Worth every penny, and it supports a great cause!",
+        "donate.book.testimonial3.author": "— Alex Rodriguez, Músico Intermedio, Madrid",
+
+        // Social Share
+        "donate.book.shareTitle": "¿Te gusta este recurso? Comparte con otros músicos:",
+        "donate.book.shareFacebook": "Compartir en Facebook",
+        "donate.book.shareTwitter": "Compartir en Twitter",
+        "donate.book.shareLinkedIn": "Compartir en LinkedIn",
+        "donate.book.shareEmail": "Compartir por Correo Electrónico",
+
+        // FAQ Section
+        "donate.book.faqTitle": "Preguntas Frecuentes",
+        "donate.book.faq1.question": "¿Para qué nivel de habilidad es este libro?",
+        "donate.book.faq1.answer": "Este método está diseñado para todos los niveles. Los principiantes comienzan con fundamentos (intervalos, escalas, teoría básica), los músicos intermedios se sumergen en el vocabulario bebop, y los músicos avanzados exploran conceptos de jazz moderno y licks característicos de los maestros.",
+        "donate.book.faq2.question": "¿Necesito saber leer música para usar este libro?",
+        "donate.book.faq2.answer": "Sí, una capacidad básica de lectura musical es útil. Todos los ejemplos están escritos en notación estándar con transposiciones de trompeta en Si bemol incluidas. Si estás aprendiendo a leer, este libro ayudará a desarrollar esa habilidad junto con tu vocabulario de jazz.",
+        "donate.book.faq3.question": "¿Cómo apoya mi compra a los niños?",
+        "donate.book.faq3.answer": "El 100% de las ganancias de este libro van directamente a los programas educativos de la Fundación Accord and Harmony en Bulgaria. Tu compra financia servicios de tutoría, materiales escolares, talleres educativos y apoyo para niños y familias vulnerables. Recibirás un recibo de donación deducible de impuestos.",
+        "donate.book.faq4.question": "¿Este libro es solo para trompetistas?",
+        "donate.book.faq4.answer": "Aunque está específicamente diseñado para trompeta en Si bemol (con ejemplos transpuestos), el vocabulario de jazz y los conceptos teóricos se pueden adaptar para cualquier instrumento. Los licks también se presentan en altura de concierto, haciéndolos accesibles para todos los músicos.",
+        "donate.book.faq5.question": "¿Cuánto tiempo lleva completar el currículo?",
+        "donate.book.faq5.answer": "El libro incluye un currículo estructurado de 24 semanas, pero puedes trabajar a tu propio ritmo. Algunos músicos lo completan más rápido, otros toman más tiempo para dominar cada concepto. Lo importante es la práctica consistente y la progresión gradual a través del material.",
+        "donate.book.faq6.question": "¿Puedo compartir el PDF con otros?",
+        "donate.book.faq6.answer": "El PDF es solo para uso personal, no comercial. Cada copia está personalizada con tu información y marcada con marca de agua. Si deseas compartir este recurso con otros, por favor dirígelos a nuestro sitio web donde pueden comprar su propia copia y apoyar nuestra misión.",
+
+        // Resources Page
+        "resources.pageTitle": "Recursos Educativos - Ayúdanos y Aprende | Fundación Accord and Harmony",
+        "resources.hero.title": "Ayúdanos a Través de la Educación.<br>Obtén Formación de Clase Mundial.",
+        "resources.hero.subtitle": "Cada compra apoya directamente los programas educativos para niños en toda Bulgaria",
+        "resources.hero.description": "Cuando inviertes en tu educación musical a través de nuestros recursos, el 100% de las ganancias financian tutorías, materiales escolares y oportunidades educativas para niños vulnerables. No es solo una compra—es una asociación para cambiar vidas.",
+        "resources.hero.cta": "Explorar Recursos",
+        "resources.book.tag": "📚 Recurso Destacado",
+        "resources.book.heading": "Jazz Trumpet Master Class",
+        "resources.book.lead": "Formación profesional de trompeta de jazz que apoya la educación de los niños. Cada compra es una donación a nuestra misión.",
+        "resources.book.title": "Jazz Trumpet Master Class",
+        "resources.book.publisher": "Publicado por la Fundación Accord and Harmony<br>Montreal, Quebec, Canadá",
+        "resources.book.badge": "100% Apoya a Niños",
+        "resources.book.impact": "Tu inversión crea un impacto duradero: el 100% de las ganancias financian programas educativos para niños vulnerables en Bulgaria. Tú recibes formación profesional de trompeta de jazz. Ellos obtienen acceso a tutorías, materiales escolares y futuros más brillantes.",
+        "resources.book.instant": "Descarga PDF instantánea",
+        "resources.book.watermark": "Marca de agua personalizada",
+        "resources.book.personal": "Solo para uso personal",
+        "resources.book.tax": "Recibo deducible de impuestos incluido",
+        "resources.book.purchaseBtn": "Obtener el Libro y Apoyar a los Niños",
+        "resources.book.noticeTitle": "Doble Impacto:",
+        "resources.book.noticeText": "Tú recibes formación profesional de trompeta de jazz entregada instantáneamente vía PDF personalizado. Los niños vulnerables en Bulgaria reciben apoyo educativo a través del 100% de tu compra. Además, obtienes un recibo de donación deducible de impuestos."
     }
 };
 

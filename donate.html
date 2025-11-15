@@ -196,6 +196,93 @@
             </div>
         </section>
 
+        <!-- Book Purchase Section -->
+        <section class="about-content" id="book-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Support & Learn</span>
+                    <h2>Purchase Our Educational Resource</h2>
+                </div>
+
+                <div class="book-showcase">
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <img src="images/jazz-trumpet-book-cover.jpg" alt="Jazz Trumpet Master Class Book Cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="book-cover-placeholder" style="display: none;">
+                                <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="200" height="280" fill="#4A90E2"/>
+                                    <text x="100" y="140" text-anchor="middle" fill="white" font-size="24" font-weight="bold">Jazz Trumpet</text>
+                                    <text x="100" y="170" text-anchor="middle" fill="white" font-size="18">Master Class</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="book-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            <span>100% Proceeds to Foundation</span>
+                        </div>
+                    </div>
+
+                    <div class="book-details">
+                        <h3 class="book-title">Jazz Trumpet Master Class</h3>
+                        <p class="book-publisher">Published by Accord and Harmony Foundation<br>Montreal, Quebec, Canada</p>
+
+                        <div class="book-price-section">
+                            <div class="book-price">
+                                <span class="price-amount">€25.00</span>
+                                <span class="price-label">Tax-deductible donation</span>
+                            </div>
+                        </div>
+
+                        <div class="book-description">
+                            <p><strong>By purchasing this book, you directly support the Accord and Harmony Foundation's mission</strong> to provide educational opportunities to children across Bulgaria.</p>
+
+                            <p>This comprehensive guide covers jazz trumpet techniques, improvisation strategies, and performance mastery. Perfect for intermediate to advanced players looking to elevate their craft.</p>
+
+                            <div class="book-features">
+                                <div class="feature">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                    <span>Instant PDF download</span>
+                                </div>
+                                <div class="feature">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                    <span>Personalized watermark</span>
+                                </div>
+                                <div class="feature">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                    <span>For personal use only</span>
+                                </div>
+                                <div class="feature">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                    <span>Tax-deductible receipt included</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-primary btn-large" id="purchase-book-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/>
+                            </svg>
+                            Purchase & Support Foundation
+                        </button>
+
+                        <p class="book-notice">
+                            <strong>🎺 About this book:</strong> All proceeds from this purchase go directly to supporting the Accord and Harmony Foundation. You'll receive a personalized PDF copy for your personal use, along with a tax-deductible receipt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Other Ways to Help Section -->
         <section class="about-content">
             <div class="container">
@@ -285,6 +372,100 @@
             </div>
         </div>
 
+        <!-- Authentication Modal -->
+        <div id="authModal" class="auth-modal" style="display: none;">
+            <div class="auth-modal-overlay"></div>
+            <div class="auth-modal-content">
+                <button class="auth-modal-close" aria-label="Close">&times;</button>
+
+                <div class="auth-modal-body">
+                    <div class="auth-header">
+                        <h2 id="authModalTitle">Sign In to Continue</h2>
+                        <p id="authModalSubtitle">Create an account or sign in to purchase the book</p>
+                    </div>
+
+                    <!-- Social Login Buttons -->
+                    <div class="social-login-buttons">
+                        <button class="social-btn google-btn" id="googleLoginBtn">
+                            <svg width="18" height="18" viewBox="0 0 18 18">
+                                <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"/>
+                                <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/>
+                                <path fill="#FBBC05" d="M3.964 10.71c-.18-.54-.282-1.117-.282-1.71s.102-1.17.282-1.71V4.958H.957C.347 6.173 0 7.548 0 9s.348 2.827.957 4.042l3.007-2.332z"/>
+                                <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/>
+                            </svg>
+                            <span>Continue with Google</span>
+                        </button>
+
+                        <button class="social-btn facebook-btn" id="facebookLoginBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            <span>Continue with Facebook</span>
+                        </button>
+                    </div>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <!-- Email/Password Forms -->
+                    <div id="loginForm" class="auth-form">
+                        <form id="emailLoginForm">
+                            <div class="form-group">
+                                <label for="loginEmail">Email Address</label>
+                                <input type="email" id="loginEmail" required placeholder="your@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="loginPassword">Password</label>
+                                <input type="password" id="loginPassword" required placeholder="Enter your password">
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-block" id="loginSubmitBtn">
+                                <span>Sign In</span>
+                            </button>
+                        </form>
+
+                        <p class="auth-switch">
+                            Don't have an account? <a href="#" id="showRegisterLink">Create one</a>
+                        </p>
+                    </div>
+
+                    <div id="registerForm" class="auth-form" style="display: none;">
+                        <form id="emailRegisterForm">
+                            <div class="form-group">
+                                <label for="registerName">Full Name</label>
+                                <input type="text" id="registerName" required placeholder="John Doe">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="registerEmail">Email Address</label>
+                                <input type="email" id="registerEmail" required placeholder="your@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="registerPassword">Password</label>
+                                <input type="password" id="registerPassword" required placeholder="At least 8 characters">
+                                <small>Minimum 8 characters</small>
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-block" id="registerSubmitBtn">
+                                <span>Create Account</span>
+                            </button>
+                        </form>
+
+                        <p class="auth-switch">
+                            Already have an account? <a href="#" id="showLoginLink">Sign in</a>
+                        </p>
+                    </div>
+
+                    <p class="auth-footer-text">
+                        By continuing, you agree to receive emails about your purchase and the foundation's work. We'll never share your information.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -330,5 +511,7 @@
     <script src="script.js"></script>
     <script src="paypal-donate.js"></script>
     <script src="donation-modal.js"></script>
+    <script src="auth-client.js"></script>
+    <script src="book-purchase.js"></script>
 </body>
 </html>

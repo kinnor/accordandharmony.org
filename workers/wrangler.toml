@@ -1,18 +1,83 @@
 name = "accordandharmony-workers"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
+node_compat = true
 
-# Environment variables (set these in Cloudflare dashboard)
+# ============================================
+# Environment Variables
+# Set these in Cloudflare dashboard:
+# ============================================
 # SMTP_HOST, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD, TO_EMAIL
+# STRIPE_SECRET_KEY - Stripe API secret key
+# STRIPE_WEBHOOK_SECRET - Stripe webhook signing secret
+# RESEND_API_KEY - Resend email API key
+# JWT_SECRET - Secret for JWT token signing (min 32 characters)
+# GOOGLE_CLIENT_ID - Google OAuth client ID
+# GOOGLE_CLIENT_SECRET - Google OAuth client secret
+# FACEBOOK_APP_ID - Facebook OAuth app ID
+# FACEBOOK_APP_SECRET - Facebook OAuth app secret
+# FRONTEND_URL - Frontend URL for CORS (e.g., https://accordandharmony.org)
 
-# Workers Routes
-# These will be bound to your domain: accordandharmony.org/api/*
+# ============================================
+# D1 Database Binding
+# ============================================
+[[d1_databases]]
+binding = "DB" # Available as env.DB in workers
+database_name = "accordharmony-db"
+database_id = "YOUR_DATABASE_ID" # Replace with actual D1 database ID
 
+# ============================================
+# R2 Storage Binding
+# For PDF files and watermarked copies
+# ============================================
+[[r2_buckets]]
+binding = "R2_BUCKET" # Available as env.R2_BUCKET in workers
+bucket_name = "accordharmony-files"
+
+# ============================================
+# KV Namespace for Rate Limiting & Caching
+# ============================================
+[[kv_namespaces]]
+binding = "KV_CACHE"
+id = "YOUR_KV_NAMESPACE_ID" # Replace with actual KV namespace ID
+
+# ============================================
+# Production Environment
+# ============================================
 [env.production]
 name = "accordandharmony-workers"
 routes = [
   { pattern = "accordandharmony.org/api/*", zone_name = "accordandharmony.org" }
 ]
 
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "accordharmony-db-prod"
+database_id = "YOUR_PROD_DATABASE_ID"
+
+[[env.production.r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "accordharmony-files-prod"
+
+[[env.production.kv_namespaces]]
+binding = "KV_CACHE"
+id = "YOUR_PROD_KV_ID"
+
+# ============================================
+# Development Environment
+# ============================================
 [env.development]
 name = "accordandharmony-workers-dev"
+
+[[env.development.d1_databases]]
+binding = "DB"
+database_name = "accordharmony-db-dev"
+database_id = "YOUR_DEV_DATABASE_ID"
+
+[[env.development.r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "accordharmony-files-dev"
+
+[[env.development.kv_namespaces]]
+binding = "KV_CACHE"
+id = "YOUR_DEV_KV_ID"

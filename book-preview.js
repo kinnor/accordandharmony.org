@@ -11,7 +11,6 @@
     const modal = document.getElementById('book-preview-modal');
     const previewBtn = document.getElementById('preview-book-btn');
     const closeBtn = document.getElementById('close-preview-btn');
-    const previewPurchaseBtn = document.getElementById('preview-purchase-btn');
     const pdfFrame = document.getElementById('preview-pdf-frame');
     const downloadLink = document.getElementById('download-preview-link');
     const fallbackDiv = document.querySelector('.preview-fallback');
@@ -118,9 +117,6 @@
             closePreview();
         }
     });
-
-    // Handle purchase button in modal
-    previewPurchaseBtn.addEventListener('click', scrollToPurchase);
 
     // Close modal on ESC key
     document.addEventListener('keydown', function(e) {

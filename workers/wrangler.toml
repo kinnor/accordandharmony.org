@@ -30,10 +30,9 @@ database_id = "061f959b-ad4e-40af-ab61-2c184682bc94"
 # R2 Storage Binding
 # For PDF files and watermarked copies
 # ============================================
-# [[r2_buckets]]
-# binding = "R2_BUCKET" # Available as env.R2_BUCKET in workers
-# bucket_name = "accordharmony-files"
-# Uncomment above after creating R2 bucket via Dashboard
+[[r2_buckets]]
+binding = "R2_BUCKET" # Available as env.R2_BUCKET in workers
+bucket_name = "accordharmony-files"
 
 # ============================================
 # KV Namespace for Rate Limiting & Caching

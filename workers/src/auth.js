@@ -356,6 +356,15 @@ export async function logoutUser(db, refreshToken) {
  */
 export async function handleGoogleOAuth(db, jwtSecret, code, env, requestInfo = {}) {
   try {
+    const redirectUri = `${env.FRONTEND_URL}/auth/google/callback`;
+
+    console.log('Google OAuth - Exchange code for tokens', {
+      hasCode: !!code,
+      hasClientId: !!env.GOOGLE_CLIENT_ID,
+      hasClientSecret: !!env.GOOGLE_CLIENT_SECRET,
+      redirectUri
+    });
+
     // Exchange code for tokens
     const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
       method: 'POST',
@@ -364,15 +373,21 @@ export async function handleGoogleOAuth(db, jwtSecret, code, env, requestInfo = 
         code,
         client_id: env.GOOGLE_CLIENT_ID,
         client_secret: env.GOOGLE_CLIENT_SECRET,
-        redirect_uri: `${env.FRONTEND_URL}/auth/google/callback`,
+        redirect_uri: redirectUri,
         grant_type: 'authorization_code'
       })
     });
 
     if (!tokenResponse.ok) {
+      const errorData = await tokenResponse.json().catch(() => ({}));
+      console.error('Google token exchange failed:', {
+        status: tokenResponse.status,
+        statusText: tokenResponse.statusText,
+        error: errorData
+      });
       return {
         success: false,
-        error: 'Failed to exchange Google authorization code'
+        error: `Failed to exchange Google authorization code: ${errorData.error_description || errorData.error || tokenResponse.statusText}`
       };
     }
 
@@ -450,9 +465,10 @@ export async function handleGoogleOAuth(db, jwtSecret, code, env, requestInfo = 
 
   } catch (error) {
     console.error('Google OAuth error:', error);
+    console.error('Error stack:', error.stack);
     return {
       success: false,
-      error: 'OAuth authentication failed'
+      error: `OAuth authentication failed: ${error.message}`
     };
   }
 }

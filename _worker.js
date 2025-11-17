@@ -4,6 +4,8 @@
  *
  * This file integrates the deployed Worker (accordandharmony-workers)
  * with the static Cloudflare Pages site.
+ *
+ * Service Binding configured: 2025-11-16
  */
 
 export default {

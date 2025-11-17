@@ -16,7 +16,15 @@
     "db:migrate": "wrangler d1 execute accordharmony-db-dev --file=./schema.sql",
     "db:migrate:prod": "wrangler d1 execute accordharmony-db-prod --file=./schema.sql --env production"
   },
-  "keywords": ["cloudflare", "workers", "serverless", "stripe", "authentication", "pdf", "ecommerce"],
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "serverless",
+    "stripe",
+    "authentication",
+    "pdf",
+    "ecommerce"
+  ],
   "author": "Accord and Harmony Foundation",
   "license": "ISC",
   "dependencies": {
@@ -28,8 +36,8 @@
     "stripe": "^14.10.0"
   },
   "devDependencies": {
-    "wrangler": "^3.22.0",
+    "@vitest/coverage-v8": "^1.1.0",
     "vitest": "^1.1.0",
-    "@vitest/coverage-v8": "^1.1.0"
+    "wrangler": "^4.47.0"
   }
 }

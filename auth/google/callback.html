@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sign-In - Accord and Harmony</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+    }
+    .spinner {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #fff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1.5rem;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+    .error {
+      background: #f44336;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="spinner"></div>
+    <h1>Completing Google Sign-In...</h1>
+    <p>Please wait while we finish signing you in.</p>
+    <div class="error" id="errorMessage"></div>
+  </div>
+
+  <script>
+    const API_BASE = window.location.hostname === 'localhost'
+      ? 'http://localhost:8787/api'
+      : 'https://accordandharmony.org/api';
+
+    async function handleGoogleCallback() {
+      try {
+        // Get authorization code from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const state = urlParams.get('state');
+        const error = urlParams.get('error');
+
+        // Check for errors
+        if (error) {
+          throw new Error(`Google authentication failed: ${error}`);
+        }
+
+        if (!code) {
+          throw new Error('No authorization code received from Google');
+        }
+
+        // Exchange code for tokens
+        const response = await fetch(`${API_BASE}/auth/google`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code })
+        });
+
+        const data = await response.json();
+
+        if (!data.success) {
+          throw new Error(data.message || 'Authentication failed');
+        }
+
+        // Save auth state to localStorage
+        localStorage.setItem('auth', JSON.stringify({
+          user: data.data.user,
+          accessToken: data.data.accessToken,
+          refreshToken: data.data.refreshToken
+        }));
+
+        // Redirect to resources page
+        window.location.href = '/resources.html';
+
+      } catch (error) {
+        console.error('Google callback error:', error);
+        document.getElementById('errorMessage').textContent = error.message;
+        document.getElementById('errorMessage').style.display = 'block';
+
+        // Redirect back to resources page after 3 seconds
+        setTimeout(() => {
+          window.location.href = '/resources.html';
+        }, 3000);
+      }
+    }
+
+    // Run on page load
+    handleGoogleCallback();
+  </script>
+</body>
+</html>

@@ -252,9 +252,9 @@ async function handleEmailRegister(full_name, email, password) {
  * Handle Google OAuth login
  */
 function handleGoogleLogin() {
-  const clientId = 'YOUR_GOOGLE_CLIENT_ID'; // Set via environment or config
-  const redirectUri = `${window.location.origin}/auth-callback.html`;
-  const scope = 'email profile';
+  const clientId = '1080656509773-e0vi9gsuhgsvmdfibqn8ehvhfqptb9ig.apps.googleusercontent.com';
+  const redirectUri = `${window.location.origin}/auth/google/callback`;
+  const scope = 'email profile openid';
 
   const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?` +
     `client_id=${clientId}&` +

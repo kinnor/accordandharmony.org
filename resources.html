@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- PayPal SDK for book purchase -->
+    <!-- Payment SDKs -->
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="https://www.paypal.com/sdk/js?client-id=ASHIOP4YK4F6SABzgEcxxvyr9EDex3VMa12kSxx2I4EWHAOvYS5okBFvVpWptHFGpmopjSqBEY8moMBG&currency=EUR&intent=capture&enable-funding=venmo&disable-funding=card"></script>
 </head>
 <body class="resources-page">
@@ -508,7 +509,8 @@
     <script src="config.js"></script>
     <script src="auth-client.js"></script>
     <script src="book-preview.js"></script>
-    <script src="paypal-book-purchase.js"></script>
+    <script src="book-purchase.js"></script>
+    <script src="dual-payment.js"></script>
     <script src="faq-accordion.js"></script>
 </body>
 </html>

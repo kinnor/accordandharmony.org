@@ -29,12 +29,24 @@ const CONFIG = {
     facebook: `${window.location.origin}/auth/facebook/callback`
   },
 
+  // Payment Configuration
+  payment: {
+    stripe: {
+      publishableKey: 'pk_live_51SUU76LD6eFiOR9dz58e39Zfcr9yBO9c3QRx8e5asXjUFOoghOIID3UZh5mPbnyexciQBxcJwHiLThOuqS7wKJ9I00ML7J8rfQ'
+    },
+    paypal: {
+      clientId: 'ASHIOP4YK4F6SABzgEcxxvyr9EDex3VMa12kSxx2I4EWHAOvYS5okBFvVpWptHFGpmopjSqBEY8moMBG'
+    }
+  },
+
   // Feature Flags
   features: {
     googleOAuth: true,
     facebookOAuth: false,
     emailRegistration: true,
-    guestCheckout: false
+    guestCheckout: false,
+    stripePayments: true,
+    paypalPayments: true
   }
 };
 

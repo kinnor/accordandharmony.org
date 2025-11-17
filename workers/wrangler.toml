@@ -30,10 +30,10 @@ database_id = "061f959b-ad4e-40af-ab61-2c184682bc94"
 # R2 Storage Binding
 # For PDF files and watermarked copies
 # ============================================
-# [[r2_buckets]]
-# binding = "R2_BUCKET" # Available as env.R2_BUCKET in workers
-# bucket_name = "accordharmony-files"
-# Will be enabled when R2 bucket is created
+[[r2_buckets]]
+binding = "R2_BUCKET" # Available as env.R2_BUCKET in workers
+bucket_name = "accordharmony-files"
+# Uncomment above after creating R2 bucket via Dashboard
 
 # ============================================
 # KV Namespace for Rate Limiting & Caching
@@ -46,10 +46,11 @@ database_id = "061f959b-ad4e-40af-ab61-2c184682bc94"
 # ============================================
 # Production Routes
 # ============================================
-# Route all /api/* requests from main domain to this worker
-routes = [
-  { pattern = "accordandharmony.org/api/*", zone_name = "accordandharmony.org" }
-]
+# Routes configuration for deploying to custom domain
+# Note: For Pages, binding is done via Dashboard or _worker.js
+# [[routes]]
+# pattern = "accordandharmony.org/api/*"
+# zone_name = "accordandharmony.org"
 
 # ============================================
 # Production Environment (for future multi-env setup)

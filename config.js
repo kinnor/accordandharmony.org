@@ -35,7 +35,7 @@ const CONFIG = {
       publishableKey: 'pk_live_51SUU76LD6eFiOR9dz58e39Zfcr9yBO9c3QRx8e5asXjUFOoghOIID3UZh5mPbnyexciQBxcJwHiLThOuqS7wKJ9I00ML7J8rfQ'
     },
     paypal: {
-      clientId: 'ASHIOP4YK4F6SABzgEcxxvyr9EDex3VMa12kSxx2I4EWHAOvYS5okBFvVpWptHFGpmopjSqBEY8moMBG'
+      clientId: 'AUJS8XBsF_R1mU1zNNUzbaQOl54PiWJ1swklXmLhHiXzKsXEY6jSedQlZTm5FFsKXMwXrVGvldXCQpwj'
     }
   },
 

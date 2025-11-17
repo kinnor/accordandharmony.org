@@ -3,9 +3,12 @@
  * Handles user authentication, registration, and session management
  */
 
-const API_BASE = window.location.hostname === 'localhost'
-  ? 'http://localhost:8787/api'
-  : 'https://accordandharmony.org/api';
+// Use centralized config (loaded from config.js)
+const API_BASE = window.CONFIG?.api.baseUrl || (
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:8787/api'
+    : 'https://accordandharmony.org/api'
+);
 
 // Authentication state
 let currentUser = null;
@@ -252,9 +255,16 @@ async function handleEmailRegister(full_name, email, password) {
  * Handle Google OAuth login
  */
 function handleGoogleLogin() {
-  const clientId = '1080656509773-e0vi9gsuhgsvmdfibqn8ehvhfqptb9ig.apps.googleusercontent.com';
-  const redirectUri = `${window.location.origin}/auth/google/callback`;
-  const scope = 'email profile openid';
+  // Use config values
+  const clientId = window.CONFIG?.oauth.google.clientId || '';
+  const redirectUri = window.CONFIG?.redirects.google || `${window.location.origin}/auth/google/callback`;
+  const scope = window.CONFIG?.oauth.google.scopes || 'email profile openid';
+
+  if (!clientId) {
+    console.error('Google Client ID not configured in config.js');
+    showMessage('Google Sign-In is not configured', 'error');
+    return;
+  }
 
   const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?` +
     `client_id=${clientId}&` +
@@ -270,13 +280,21 @@ function handleGoogleLogin() {
  * Handle Facebook OAuth login
  */
 function handleFacebookLogin() {
-  const appId = 'YOUR_FACEBOOK_APP_ID'; // Set via environment or config
-  const redirectUri = `${window.location.origin}/auth-callback.html`;
+  // Use config values
+  const appId = window.CONFIG?.oauth.facebook.appId || '';
+  const redirectUri = window.CONFIG?.redirects.facebook || `${window.location.origin}/auth/facebook/callback`;
+  const scope = window.CONFIG?.oauth.facebook.scopes || 'email';
+
+  if (!appId || appId === 'YOUR_FACEBOOK_APP_ID') {
+    console.error('Facebook App ID not configured in config.js');
+    showMessage('Facebook Sign-In is not configured', 'error');
+    return;
+  }
 
   const authUrl = `https://www.facebook.com/v18.0/dialog/oauth?` +
     `client_id=${appId}&` +
     `redirect_uri=${encodeURIComponent(redirectUri)}&` +
-    `scope=email&` +
+    `scope=${scope}&` +
     `state=facebook`;
 
   window.location.href = authUrl;

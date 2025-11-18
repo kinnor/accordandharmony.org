@@ -20,7 +20,7 @@ function getStripeClient(env) {
 /**
  * Create Stripe Checkout Session for book purchase
  */
-export async function createBookCheckoutSession(env, { userId, productId, userEmail, userName }) {
+export async function createBookCheckoutSession(env, { userId, productId, userEmail, userName, currency, amount }) {
   try {
     const stripe = getStripeClient(env);
 
@@ -35,12 +35,16 @@ export async function createBookCheckoutSession(env, { userId, productId, userEm
 
     const product = productResult.result;
 
+    // Use provided currency/amount or fall back to product defaults
+    const finalCurrency = currency || product.currency;
+    const finalAmount = amount ? Math.round(amount * 100) : product.price_cents;
+
     // Create transaction record (pending)
     const transactionResult = await TransactionDB.create(env.DB, {
       user_id: userId,
       product_id: productId,
-      amount_cents: product.price_cents,
-      currency: product.currency,
+      amount_cents: finalAmount,
+      currency: finalCurrency,
       payment_method: 'stripe',
       payment_status: 'pending',
       transaction_type: 'product_purchase',
@@ -61,8 +65,8 @@ export async function createBookCheckoutSession(env, { userId, productId, userEm
       line_items: [
         {
           price_data: {
-            currency: product.currency.toLowerCase(),
-            unit_amount: product.price_cents,
+            currency: finalCurrency.toLowerCase(),
+            unit_amount: finalAmount,
             product_data: {
               name: product.name,
               description: product.description,

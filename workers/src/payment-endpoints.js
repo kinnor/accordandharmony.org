@@ -69,7 +69,7 @@ export async function handleBookCheckout(request, env, authResult) {
     }
 
     const body = await request.json();
-    const { productId } = body;
+    const { productId, currency, amount } = body;
 
     if (!productId) {
       return jsonResponse(false, 'Product ID required', {}, 400);
@@ -81,7 +81,9 @@ export async function handleBookCheckout(request, env, authResult) {
       userId: user.id,
       productId: productId,
       userEmail: user.email,
-      userName: user.full_name
+      userName: user.full_name,
+      currency: currency,  // Optional: override product currency
+      amount: amount       // Optional: override product price
     });
 
     if (!result.success) {

@@ -8,7 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let currentDonationAmount = null;
+let currentDonationCurrency = 'EUR'; // Default to EUR
 let currentDonorInfo = {};
+
+// Currency symbols mapping
+const CURRENCY_SYMBOLS = {
+  'USD': '$',
+  'CAD': 'CA$',
+  'EUR': '€',
+  'GBP': '£'
+};
 
 /**
  * Initialize dual payment for donations
@@ -70,7 +79,11 @@ function handleTierCardClick(e) {
   e.stopPropagation();
   const card = e.currentTarget;
   const amount = card.getAttribute('data-amount');
+  const currency = card.getAttribute('data-currency') || 'EUR';
+
   currentDonationAmount = amount;
+  currentDonationCurrency = currency;
+
   collectDonorInfo();
 }
 
@@ -113,7 +126,7 @@ function showPaymentMethodModal() {
         <div class="donation-summary" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; text-align: center;">
           <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; color: #1684C9;">Support Our Mission</h3>
           <p style="margin: 0; color: #555; font-size: 0.95rem;">One-time donation • 100% goes to education programs</p>
-          <p style="margin: 1rem 0 0 0; font-size: 2rem; font-weight: bold; color: #1684C9;" id="donation-amount-display">€${parseFloat(currentDonationAmount).toFixed(2)}</p>
+          <p style="margin: 1rem 0 0 0; font-size: 2rem; font-weight: bold; color: #1684C9;" id="donation-amount-display">${CURRENCY_SYMBOLS[currentDonationCurrency] || '€'}${parseFloat(currentDonationAmount).toFixed(2)}</p>
         </div>
 
         <div class="payment-methods" style="display: grid; gap: 1rem;">
@@ -173,7 +186,7 @@ function showPaymentMethodModal() {
     // Update amount if modal already exists
     const amountDisplay = document.getElementById('donation-amount-display');
     if (amountDisplay) {
-      amountDisplay.textContent = `€${parseFloat(currentDonationAmount).toFixed(2)}`;
+      amountDisplay.textContent = `${CURRENCY_SYMBOLS[currentDonationCurrency] || '€'}${parseFloat(currentDonationAmount).toFixed(2)}`;
     }
   }
 
@@ -289,7 +302,7 @@ async function processDonationStripeCheckout() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         amount: currentDonationAmount,
-        currency: 'EUR',
+        currency: currentDonationCurrency,
         donorName: currentDonorInfo.name || 'Anonymous',
         donorEmail: currentDonorInfo.email || '',
         recurring: currentDonorInfo.recurring || false
@@ -336,7 +349,7 @@ function showDonationPayPalCheckoutModal() {
         <div class="donation-summary" style="background: #f5f5f5; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center;">
           <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Support Our Mission</h3>
           <p style="margin: 0; color: #666; font-size: 0.9rem;">One-time donation</p>
-          <p style="margin: 0.5rem 0 0 0; font-size: 1.5rem; font-weight: bold; color: #1684C9;">€${parseFloat(currentDonationAmount).toFixed(2)}</p>
+          <p style="margin: 0.5rem 0 0 0; font-size: 1.5rem; font-weight: bold; color: #1684C9;">${CURRENCY_SYMBOLS[currentDonationCurrency] || '€'}${parseFloat(currentDonationAmount).toFixed(2)}</p>
         </div>
         <div id="donation-paypal-checkout-button-container"></div>
         <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #666;">
@@ -381,7 +394,7 @@ function renderDonationPayPalButton() {
         purchase_units: [{
           description: 'Donation to Accord and Harmony Foundation',
           amount: {
-            currency_code: 'EUR',
+            currency_code: currentDonationCurrency,
             value: parseFloat(currentDonationAmount).toFixed(2)
           }
         }]
@@ -406,7 +419,7 @@ function renderDonationPayPalButton() {
             payerName: details.payer.name?.given_name + ' ' + (details.payer.name?.surname || ''),
             payerEmail: details.payer.email_address,
             amount: currentDonationAmount,
-            currency: 'EUR',
+            currency: currentDonationCurrency,
             donorName: currentDonorInfo.name || 'Anonymous',
             donorEmail: currentDonorInfo.email || '',
             recurring: currentDonorInfo.recurring || false
@@ -437,11 +450,20 @@ function renderDonationPayPalButton() {
  * Show donation success
  */
 function showDonationSuccess(details) {
-  showDonationMessage(`✅ Thank you for your donation! Transaction ID: ${details.id}. You'll receive a confirmation email.`, 'success');
+  showDonationMessage(`✅ Thank you for your donation! Redirecting...`, 'success');
 
+  // Extract amount and currency from PayPal details
+  const amount = details.purchase_units && details.purchase_units[0] && details.purchase_units[0].amount
+    ? details.purchase_units[0].amount.value
+    : currentDonationAmount;
+
+  const currency = details.purchase_units && details.purchase_units[0] && details.purchase_units[0].amount
+    ? details.purchase_units[0].amount.currency_code
+    : currentDonationCurrency;
+
+  // Redirect to success page with amount, currency, and order ID
   setTimeout(() => {
-    alert(`🎉 Thank you for your generous donation!\n\nTransaction ID: ${details.id}\n\nYou will receive a confirmation email with your donation receipt.`);
-    location.reload();
+    window.location.href = `donation-success.html?amount=${amount}&currency=${currency}&order=${details.id}`;
   }, 1500);
 }
 

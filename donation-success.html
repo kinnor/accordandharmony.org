@@ -141,13 +141,23 @@
     </main>
 
     <script>
-        // Get donation amount and order ID from URL
+        // Get donation amount, currency, and order ID from URL
         const urlParams = new URLSearchParams(window.location.search);
         const amount = urlParams.get('amount');
+        const currency = urlParams.get('currency') || 'EUR';
         const orderID = urlParams.get('order');
 
+        // Currency symbols mapping
+        const currencySymbols = {
+            'USD': '$',
+            'CAD': 'CA$',
+            'EUR': '€',
+            'GBP': '£'
+        };
+
         if (amount) {
-            document.getElementById('donationAmount').textContent = '€' + parseFloat(amount).toFixed(2);
+            const symbol = currencySymbols[currency] || '€';
+            document.getElementById('donationAmount').textContent = symbol + parseFloat(amount).toFixed(2);
         }
 
         if (orderID) {

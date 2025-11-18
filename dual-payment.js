@@ -1,11 +1,29 @@
 /**
  * Dual Payment Integration - PayPal + Stripe
  * Allows customers to choose their preferred payment method
+ * Supports multiple currencies
  */
 
 const BOOK_PRODUCT_ID = 'jazz-trumpet-masterclass-2025';
-const BOOK_PRICE = 25.00;
-const BOOK_CURRENCY = 'EUR';
+
+// Multi-currency pricing
+const BOOK_PRICES = {
+  'USD': 19.99,
+  'CAD': 25.99,
+  'EUR': 18.99,
+  'GBP': 15.99
+};
+
+const CURRENCY_SYMBOLS = {
+  'USD': '$',
+  'CAD': 'CA$',
+  'EUR': '€',
+  'GBP': '£'
+};
+
+// Default currency (can be changed based on user's location)
+let BOOK_CURRENCY = 'EUR';
+let BOOK_PRICE = BOOK_PRICES[BOOK_CURRENCY];
 
 document.addEventListener('DOMContentLoaded', () => {
   initDualPayment();
@@ -51,12 +69,23 @@ function showPaymentMethodModal() {
         <button class="auth-modal-close" onclick="closePaymentModal()">&times;</button>
 
         <h2 style="margin-bottom: 0.5rem; text-align: center;">Complete Your Purchase</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 2rem;">Choose your preferred payment method</p>
+        <p style="text-align: center; color: #666; margin-bottom: 1rem;">Choose your preferred payment method</p>
+
+        <!-- Currency Selector -->
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.5rem; color: #666; font-size: 0.9rem;">Select Currency:</label>
+          <select id="currency-selector" onchange="updateBookCurrency(this.value)" style="padding: 0.5rem 1rem; font-size: 1rem; border: 2px solid #e0e0e0; border-radius: 8px; background: white; cursor: pointer;">
+            <option value="USD">🇺🇸 USD - $19.99</option>
+            <option value="CAD">🇨🇦 CAD - $25.99</option>
+            <option value="EUR" selected>🇪🇺 EUR - €18.99</option>
+            <option value="GBP">🇬🇧 GBP - £15.99</option>
+          </select>
+        </div>
 
         <div class="book-summary" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; text-align: center;">
           <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; color: #1684C9;">Jazz Trumpet Master Class</h3>
           <p style="margin: 0; color: #555; font-size: 0.95rem;">Digital PDF • Instant Download • Tax-Deductible</p>
-          <p style="margin: 1rem 0 0 0; font-size: 2rem; font-weight: bold; color: #1684C9;">€${BOOK_PRICE.toFixed(2)}</p>
+          <p id="book-price-display" style="margin: 1rem 0 0 0; font-size: 2rem; font-weight: bold; color: #1684C9;">${CURRENCY_SYMBOLS[BOOK_CURRENCY]}${BOOK_PRICE.toFixed(2)}</p>
         </div>
 
         <div class="payment-methods" style="display: grid; gap: 1rem;">
@@ -146,6 +175,20 @@ function addPaymentOptionStyles() {
 }
 
 /**
+ * Update book currency and price
+ */
+window.updateBookCurrency = function(currency) {
+  BOOK_CURRENCY = currency;
+  BOOK_PRICE = BOOK_PRICES[currency];
+
+  // Update price display
+  const priceDisplay = document.getElementById('book-price-display');
+  if (priceDisplay) {
+    priceDisplay.textContent = `${CURRENCY_SYMBOLS[currency]}${BOOK_PRICE.toFixed(2)}`;
+  }
+};
+
+/**
  * Select payment method
  */
 window.selectPaymentMethod = function(method) {
@@ -205,7 +248,11 @@ async function processStripeCheckout() {
     const response = await authFetch(`${API_BASE}/checkout/book`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ productId: BOOK_PRODUCT_ID })
+      body: JSON.stringify({
+        productId: BOOK_PRODUCT_ID,
+        currency: BOOK_CURRENCY,
+        amount: BOOK_PRICE
+      })
     });
 
     const data = await response.json();
@@ -249,7 +296,7 @@ function showPayPalCheckoutModal() {
         <div class="book-summary" style="background: #f5f5f5; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center;">
           <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Jazz Trumpet Master Class</h3>
           <p style="margin: 0; color: #666; font-size: 0.9rem;">Digital PDF • Instant Download</p>
-          <p style="margin: 0.5rem 0 0 0; font-size: 1.5rem; font-weight: bold; color: #1684C9;">€${BOOK_PRICE.toFixed(2)}</p>
+          <p style="margin: 0.5rem 0 0 0; font-size: 1.5rem; font-weight: bold; color: #1684C9;">${CURRENCY_SYMBOLS[BOOK_CURRENCY]}${BOOK_PRICE.toFixed(2)}</p>
         </div>
         <div id="paypal-checkout-button-container"></div>
         <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #666;">

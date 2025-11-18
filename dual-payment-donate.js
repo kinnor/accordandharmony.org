@@ -253,6 +253,13 @@ function updateDonationPaymentSelection() {
 window.continueWithSelectedDonationPayment = function() {
   if (!window.selectedDonationPaymentMethod) return;
 
+  // Check authentication for Stripe (required by backend)
+  if (window.selectedDonationPaymentMethod === 'stripe' && !isAuthenticated()) {
+    closeDonationPaymentModal();
+    showAuthModal();
+    return;
+  }
+
   closeDonationPaymentModal();
 
   if (window.selectedDonationPaymentMethod === 'stripe') {
@@ -271,7 +278,13 @@ async function processDonationStripeCheckout() {
 
     const API_BASE = window.CONFIG?.api.baseUrl || 'https://accordandharmony.org/api';
 
-    const response = await fetch(`${API_BASE}/checkout/donation`, {
+    // Check if user is authenticated
+    if (!isAuthenticated()) {
+      showAuthModal();
+      return;
+    }
+
+    const response = await authFetch(`${API_BASE}/checkout/donation`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
